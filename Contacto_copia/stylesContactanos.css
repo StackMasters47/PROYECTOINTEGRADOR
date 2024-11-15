@@ -1,0 +1,68 @@
+body {
+    background-color: black;
+    color: white;
+    font-family: 'Montserrat', sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+h1 {
+    font-family: 'Overlock', serif;
+    font-weight: 700;
+    font-size: 50px;
+    color: #98BF3E;
+    text-align: center;
+    margin: 20px 0;
+}
+
+#mainContainer {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    padding: 20px;
+    margin: 40px auto; /* Para centrar y dar espacio superior/inferior */
+    width: 90%; /* Ajusta el ancho del contenedor principal */
+    max-width: 1800px; /* Limita el ancho máximo */
+    gap: 20px; 
+}
+
+#ContactanosDatos, #formularioDatos {
+    background-color: #222; /* Fondo para mayor contraste */
+    border-radius: 10px;
+    padding: 20px;
+    width: 48%; /* Asegura el mismo tamaño */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+}
+
+#ContactanosDatos h5, #ContactanosDatos p {
+    display: inline;
+}
+
+#ContactanosDatos h5 {
+    font-family: 'Overlock', serif;
+    color: white;
+    margin-right: 5px;
+}
+
+#ContactanosDatos p {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 27px;
+    color: white;
+}
+
+p {
+    font-family: 'Montserrat', sans-serif;
+    color: white;
+}
+
+.form-control {
+    background-color: transparent;
+    color: white;
+    border: 2px solid green;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+.form-label {
+    color: rgb(253, 252, 252);
+}
