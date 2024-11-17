@@ -60,7 +60,7 @@ header {
 #botonp1 {
   color: white;
   border-width: 2px;
-  border-color: #3dbfbb;
+  border-color:#98bf3e;
   cursor: pointer;
   font-size: 15px;
 }
@@ -68,7 +68,7 @@ header {
 #botonp2 {
   color: white;
   border-width: 2px;
-  border-color: #9f2884;
+  border-color:#9f2884;
   cursor: pointer;
   font-size: 15px;
 }
@@ -76,7 +76,7 @@ header {
 #botonp3 {
   color: white;
   border-width: 2px;
-  border-color: #f36b37;
+  border-color:#3dbfbb;
   cursor: pointer;
   font-size: 15px;
 }
@@ -84,7 +84,7 @@ header {
 #botonp4 {
   color: white;
   border-width: 2px;
-  border-color: #98bf3e;
+  border-color:#f1645a;
   cursor: pointer;
   font-size: 15px;
 }
