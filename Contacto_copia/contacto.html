@@ -16,8 +16,8 @@
 <body>
 
     <h1> Contactanos</h1>
-    <div id="mainContainer">
-        <div id="ContactanosDatos">
+    <div class="row" id="mainContainer" >
+        <div class="col-12 col-md-6" id="contactanosDatos">
             <p>¡Háblanos de tu experiencia! Aquí tienes nuestro formulario  de contacto. Para nosotros es muy importante tu opinión.</p>
             <br>
             <h5 class="d-inline">Telefono:</h5>
@@ -25,6 +25,7 @@
             <br>
             <h5 class="d-inline">Correo:</h5>
             <p class="d-inline">stackmasters@gmail.com</p>
+            <iframe src="https://www.google.com/maps/embed?pb=!1m16!1m12!1m3!1d60199.40589865093!2d-99.15684614729973!3d19.435600468257856!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!2m1!1sgoogle%20maps!5e0!3m2!1ses!2smx!4v1731831095552!5m2!1ses!2smx" width="400" height="300" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
         </div>
 
         <div class="container" id="formularioDatos">
@@ -33,36 +34,36 @@
                 <div class="col-12">
                     <label for="nameInput" class="form-label">Nombre</label>
                     <input type="name" class="form-control" id="nameInput" placeholder="Introduce tu nombre"
-                    style="border: 6px solid #98BF3E; padding: 10px; border-radius: 5px; width: 50%;">
+                    style="border: 6px solid #98BF3E; padding: 10px; border-radius: 5px; width: 100%;">
                 </div>
 
                 <div class="col-12">
                     <label for="lastNameInput" class="form-label">Apellido</label>
                     <input type="name" class="form-control" id="nameInput" placeholder="Introduce tu apellido"
-                    style="border: 6px solid #F6B94F; padding: 10px; border-radius: 10px; width: 50%;">
+                    style="border: 6px solid #F6B94F; padding: 10px; border-radius: 10px; width: 100%;">
                 </div>
 
                 <div class="col-12">
                     <label for="emailInput" class="form-label">Email</label>
                     <input type="email" class="form-control" id="emailInput" placeholder="Introduce tu correo"
-                    style="border: 6px solid #9F2884; padding: 10px; border-radius: 10px; width: 50%;">
+                    style="border: 6px solid #9F2884; padding: 10px; border-radius: 10px; width: 100%;">
                 </div>
 
                 <div class="col-12">
                     <label for="subjectInput" class="form-label">Asunto</label>
                     <input type="text" class="form-control" id="subjectInput" placeholder="Introduce el asunto"
-                    style="border: 6px solid #CA6120; padding: 10px; border-radius: 10px; width: 50%;" required>
+                    style="border: 6px solid #CA6120; padding: 10px; border-radius: 10px; width: 100%;" required>
                 </div>
 
                 <div class="col-12">
                     <label for="messageInput" class="form-label">Comentarios</label>
                     <textarea class="form-control" id="messageInput" rows="4" placeholder="Escribe tus comentarios aquí"
-                        style="border: 6px solid rgb(206, 27, 81); padding: 10px; border-radius: 10px; width: 50%;"
+                        style="border: 6px solid rgb(206, 27, 81); padding: 10px; border-radius: 10px; width: 100%;"
                         required></textarea>
                 </div>
 
                 <div class="col-12 mt-3">
-                    <button type="submit" class="btn btn-primary">
+                    <button type="submit" class="btn btn-primary" style="background-color:#3DC1B4">
                         Enviar
                     </button>
                 </div>
