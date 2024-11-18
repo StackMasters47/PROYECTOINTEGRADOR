@@ -128,8 +128,9 @@ p {
 #descripcion {
     text-align: center;
 }
+
 .custom-border {
-    margin: 25px;
+    margin: 8px;
     border-radius: 10px;
 }
 
