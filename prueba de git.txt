@@ -1,2 +1,0 @@
-class="col-12 col-md-6"
-class="row"
