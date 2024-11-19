@@ -1,0 +1,159 @@
+body {
+    background-color: #000000;
+}
+
+header {
+    font-family: 'Overlock';
+}
+
+.image-container {
+    display: flexbox;
+    height: 10vh;
+    width: 100%;
+    max-height: 100%;
+    max-width: 1800px;
+    overflow: hidden;
+}
+
+.image-container img {
+    width: 100%;
+    object-fit: cover;
+}
+
+.container-logo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 15vh;
+    max-width: 1500px;
+    max-height: 100%;
+    background-color: #246784;
+    overflow: hidden;
+}
+
+.container-logo img {
+    width: 18vw;
+    height: 8vw;
+}
+
+.container-fluid {
+    display: flex;
+    background-color: #000000;
+    justify-content: center;
+    align-items: center;
+    font-family: overlock;
+}
+
+.nav-pills {
+    gap: 10px;
+}
+
+.dropdown-menu {
+    background-color: #000000;
+}
+
+.dropdown-item {
+    color: white;
+    background-color: #000000;
+}
+
+#botonp1 {
+    color: white;
+    border-width: 2px;
+    border-color: #98bf3e;
+    cursor: pointer;
+    font-size: 15px;
+}
+
+#botonp2 {
+    color: white;
+    border-width: 2px;
+    border-color: #9f2884;
+    cursor: pointer;
+    font-size: 15px;
+}
+
+#botonp3 {
+    color: white;
+    border-width: 2px;
+    border-color: #3dbfbb;
+    cursor: pointer;
+    font-size: 15px;
+}
+
+#botonp4 {
+    color: white;
+    border-width: 2px;
+    border-color: #f1645a;
+    cursor: pointer;
+    font-size: 15px;
+}
+
+/* Show the dropdown menu on hover */
+.dropdown:hover .dropdown-menu {
+    display: block;
+}
+
+.navbar button:hover {
+    background-color: #f6b94f;
+}
+
+* {
+    color: white;
+    font-style: normal;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: "Overlock";
+    font-weight: 700;
+    text-align: center;
+}
+
+h2 {
+    font-size: 3em;
+}
+
+h3 {
+    font-size: 2em;
+}
+
+p {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 1em;
+    text-align: justify;
+}
+
+#descripcion {
+    text-align: center;
+}
+.custom-border {
+    margin: 25px;
+    border-radius: 10px;
+}
+
+#mision, #vision, #valores {
+    background-color: black;
+    transition: background-color 0.3s ease;
+}
+
+#mision {
+    border: 10px solid #3dbfbb;
+}
+#vision {
+    border: 10px solid #98bf3e;
+}
+#valores {
+    border: 10px solid #f0769f;
+}
+
+#mision:hover {
+    background-color:#3dbfbb;
+}
+#vision:hover {
+    background-color:#98bf3e;
+}
+#valores:hover {
+    background-color:#f0769f;
+}
