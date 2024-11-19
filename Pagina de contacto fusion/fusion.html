@@ -106,31 +106,46 @@
                     <label for="nameInput" class="form-label">Nombre</label>
                     <input type="name" class="form-control" id="nameInput" placeholder="Introduce tu nombre"
                     style="border: 6px solid #98BF3E; padding: 10px; border-radius: 5px; width: 100%;">
+                    <div class="invalid-feedback">
+                      Por favor, ingresa tu nombre.
+                    </div>
                 </div>
 
                 <div class="col-12">
                     <label for="lastNameInput" class="form-label">Apellido</label>
                     <input type="name" class="form-control" id="lastNameInput" placeholder="Introduce tu apellido"
-                    style="border: 6px solid #F6B94F; padding: 10px; border-radius: 10px; width: 100%;">
+                    style="border: 6px solid #F6B94F; padding: 10px; border-radius: 10px; width: 100%;" required>
+                    <div class="invalid-feedback">
+                      Por favor, ingresa tu apellido.
+                    </div>
                 </div>
 
                 <div class="col-12">
                     <label for="emailInput" class="form-label">Email</label>
                     <input type="email" class="form-control" id="emailInput" placeholder="Introduce tu correo"
                     style="border: 6px solid #9F2884; padding: 10px; border-radius: 10px; width: 100%;">
+                    <div class="invalid-feedback">
+                      Por favor, ingresa un email válido.
+                    </div>
                 </div>
 
                 <div class="col-12">
                     <label for="subjectInput" class="form-label">Asunto</label>
                     <input type="text" class="form-control" id="subjectInput" placeholder="Introduce el asunto"
                     style="border: 6px solid #CA6120; padding: 10px; border-radius: 10px; width: 100%;" required>
+                    <div class="invalid-feedback">
+                      Por favor, añade un asunto.
+                    </div>
                 </div>
 
                 <div class="col-12">
                     <label for="messageInput" class="form-label">Comentarios</label>
                     <textarea class="form-control" rows="4" placeholder="Escribe tus comentarios aquí"
                         style="border: 6px solid rgb(206, 27, 81); padding: 10px; border-radius: 10px; width: 100%;"
-                        required></textarea>
+                        id="messageInput" required></textarea>
+                    <div class="invalid-feedback">
+                      Por favor, añade tu mensaje.
+                    </div>
                 </div>
 
                 <div class="col-12 mt-3">
@@ -240,4 +255,6 @@
     crossorigin="anonymous"></script>
     <script src="https://unpkg.com/boxicons@2.1.4/dist/boxicons.js"></script>
     <script src="fusion.js"></script>
+    <script type="text/javascript"
+  src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
 </body>
