@@ -2,6 +2,7 @@ document.getElementById("Enviar").addEventListener("click",function(event){
     event.preventDefault();
     const nombre = document.getElementById("nameInput");//.value.trim()
     const apellido = document.getElementById("lastNameInput");//.value.trim()
+    const telefono = document.getElementById("TelefonoInput");
     const email = document.getElementById("emailInput");//.value.trim()
     const asunto = document.getElementById("subjectInput");//.value.trim()
     const mensaje = document.getElementById("messageInput");//.value.trim()
@@ -24,6 +25,13 @@ document.getElementById("Enviar").addEventListener("click",function(event){
     }else{
         apellido.classList.remove("is-invalid");
         apellido.classList.add('is-valid');
+    }
+    if(telefono.value === "" || !regexTelefono.test(telefono.value){
+        telefono.classList.add('is-invalid');
+        valido=false;
+    }else{
+        telefono.classList.remove("is-invalid");
+        telefono.classList.add('is-valid');
     }
     if(email.value === ""){
         email.classList.add('is-invalid');
@@ -63,6 +71,7 @@ document.getElementById("Enviar").addEventListener("click",function(event){
         const templateParams = {
             nombre: nombre.value,
             apellido: apellido.value,
+            telefono: telefono.value,
             asunto: asunto.value,
             email: email.value,
             mensaje: mensaje.value
