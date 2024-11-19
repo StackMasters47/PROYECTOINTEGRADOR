@@ -211,7 +211,7 @@ footer {
    
   }
   
-   .container {
+   .containerF {
     padding: 4rem;
     display: flex;
     flex-wrap: wrap;
@@ -309,6 +309,7 @@ footer {
     flex-direction: column;
     gap: 2px;
     align-items: center;
+    list-style-type: none;
   }
    .info ul li,
    .nosotros ul li,

@@ -54,10 +54,7 @@ document.getElementById("Enviar").addEventListener("click",function(event){
         mensaje.classList.add('is-valid');
     }
     
-    // if (!validateForm(form)) {
-    //     event.preventDefault();
-    //     event.stopPropagation();
-    // }
+
 
     if(valido){
         // alert("Formulario enviado");
@@ -71,7 +68,7 @@ document.getElementById("Enviar").addEventListener("click",function(event){
             mensaje: mensaje.value
         };
         console.log(templateParams);
-        emailjs.init('gdqTyXuttHmlg-Yl5')
+        emailjs.init('Psm2YGmZjcvgWMnjt')
         emailjs.send("service_1y4sfmj", "template_ykv4kti", templateParams)
             .then(function(response) {
                 alert("Formulario enviado exitosamente.");
