@@ -26,7 +26,7 @@ document.getElementById("Enviar").addEventListener("click",function(event){
         apellido.classList.remove("is-invalid");
         apellido.classList.add('is-valid');
     }
-    if(telefono.value === ""){
+    if(telefono.value === "" || !regexTelefono.test(telefono.value){
         telefono.classList.add('is-invalid');
         valido=false;
     }else{
