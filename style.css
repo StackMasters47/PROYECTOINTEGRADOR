@@ -186,8 +186,8 @@ p {
     width: 50%;
     border: 10px;
     margin: auto ;
-
-    
+    overflow-y: auto; 
+    overflow-x: hidden;
 }
 .card{
     width: 325px;
@@ -199,6 +199,8 @@ p {
     margin: 20px;
     align-items: flex-end;
     transition: 0.5s ease-in-out;
+    overflow-y: auto; 
+    overflow-x: hidden;
 }
 .card img{
     width: 100%;
@@ -215,7 +217,45 @@ p {
     margin-bottom: 8px;
     font-family: 'Overlock';
     text-align: center;
+    border-radius: 10px
 }
+#Are{
+  border: 10px solid #246784;
+}
+#Are:hover {
+  background-color:#246784;
+}
+#Abby{
+  border: 10px solid #9f2884;
+}
+#Abby:hover {
+  background-color:#9f2884;
+}
+#Mayte{
+  border: 10px solid #f1645a;
+}
+#Mayte:hover {
+  background-color:#f1645a;
+}
+#Rafa{
+  border: 10px solid #f6b94f;
+}
+#Rafa:hover {
+  background-color:#f6b94f;
+}
+#Hanni{
+  border: 10px solid #3dbfbb;
+}
+#Hanni:hover {
+  background-color:#3dbfbb;
+}
+#Irving{
+    border: 10px solid #f36b37;
+  }
+#Irving:hover {
+    background-color:#f36b37;
+  }
+
 .card .card-content p{
     color:#fff;
     font-size: 15px;
