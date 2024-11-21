@@ -102,21 +102,30 @@ p, label, input, textarea, button {
 
 @media (max-width: 768px) {
    #mainContainer {
-       flex-direction: column; 
-       align-items: center;
+      flex-direction: column; 
+      align-items: center;
    }
 
    #contactanosDatos, #formularioDatos {
-       width: 100%; 
-       margin-bottom: 20px; 
+      width: 100%; 
+      margin-bottom: 20px; 
    }
 
    h1 {
-       font-size: 30px; 
+      font-size: 30px; 
    }
    #contactanosDatos iframe {
       margin-top: 10px; 
-      height: 200px;
-      width: 300px;
+      height: 90%;
+      width: 90%;
    }
+}
+#alertaFormulario {
+   position: fixed;
+   top: 5%;
+   left: 50%;
+   transform: translateX(-50%); 
+   width: auto;
+   max-width: 90%;
+   text-align: center;   
 }
