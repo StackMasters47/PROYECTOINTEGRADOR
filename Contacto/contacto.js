@@ -79,7 +79,7 @@ document.getElementById("Enviar").addEventListener("click", function (event) {
         emailjs.init('Psm2YGmZjcvgWMnjt')
         emailjs.send("service_1y4sfmj", "template_ykv4kti", templateParams)
             .then(function (response) {
-                alert("Formulario enviado exitosamente.");
+                mostrarAlerta('Formulario enviado exitosamente.', 'success');
                 limpiarFormulario();
             }, function (error) {
                 alert("Ocurrió un error al enviar el formulario, por favor intenta de nuevo.");
