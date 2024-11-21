@@ -8,13 +8,19 @@ body {
 }
 
 
-h1, h5 {
+h1 {
    font-family: 'Overlock', serif;
    font-weight: 700;
-   font-size: 50px;
+   font-size: 3rem;
    color: #98BF3E;
    text-align: center;
-   margin: 20px 0;
+} 
+h5 {
+   font-family: 'Overlock', serif;
+   font-weight: 700;
+   font-size: 1.5rem;
+   color: #98BF3E;
+   text-align: center;
 }
 
 #mainContainer {
@@ -22,7 +28,7 @@ h1, h5 {
    justify-content: space-between;
    align-items: stretch;
    padding: 20px;
-   margin: 40px auto; 
+   /* margin: 40px auto;  */
    max-width: 1800px; 
    gap: 20px; 
    
@@ -49,7 +55,7 @@ h1, h5 {
 
 #contactanosDatos p {
    font-family: 'Montserrat', sans-serif;
-   font-size: 27px;
+   font-size: 1.15rem;
    color: white;
 }
 
@@ -90,6 +96,8 @@ p, label, input, textarea, button {
 
 #contactanosDatos iframe {
    margin-top: 10px; 
+   height: auto;
+   aspect-ratio: 1 / 1;
 }
 
 @media (max-width: 768px) {
@@ -105,5 +113,10 @@ p, label, input, textarea, button {
 
    h1 {
        font-size: 30px; 
+   }
+   #contactanosDatos iframe {
+      margin-top: 10px; 
+      height: 200px;
+      width: 300px;
    }
 }
