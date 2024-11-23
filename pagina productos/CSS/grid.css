@@ -1,3 +1,9 @@
+/*Esta hoja de estilos nos asegura que nuestro diseño sea completamente responsive como pueden ver 
+hay diferentes clases de col al momento que llamamos a estas clases en nuestro html ya se adaptan directamente al tamaño
+ejemplo de como se veria en el html
+<div class="col-m-10 col-l-7">
+            <div include-html="partials/productos1.html"></div>
+          </div*/
 .container1{
     max-width: 1200px;
     margin: 0 auto;

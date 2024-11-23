@@ -1,3 +1,6 @@
+/* esta hoja de stylos nos permite tener organizados todos nuestros colores y ya solo llamarlos con 
+var(--color1) */
+
 :root{
     --color1: #F1645A;
     --color2: #246784;

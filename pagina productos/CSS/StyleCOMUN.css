@@ -1,4 +1,5 @@
-/*estilos generales*/
+/*estilos generales
+este doc de styleComun.css es donde se aplican los estilos que tendran en comun toda la pagina  como el mardin paddin la fuente etc*/
 *{
     box-sizing: border-box; /*para que los width y heigth utilice su tamaño y no se le sume lo que pongamos de margin y pading*/
 
