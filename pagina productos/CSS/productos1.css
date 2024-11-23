@@ -1,23 +1,29 @@
 @import "COLORES.CSS";
 .title-products{
-    font-weight: lighter;
+    /*font-weight: lighter;*/
     text-align: center;
     margin: 10px 0 30px 0;
+    color: var(--color6);
+    font-family: 'Overlock', sans-serif;
+
 }
 .search-input {
     float: left;
     padding: 10px;
-    width: 50%;
+    width: 30%;
     border: 0;
-    outline: 0;
+    outline: 10;
     background: transparent;
     border-image: none;
     outline-offset: -2px;
-    border-color: transparent;
-    outline-color: transparent;
+    border-color: var(--color5);
+    outline-color: var(--color2) /*transparent*/;
     box-shadow: none;
     /*-webkit-appearance: none;*/
-    border-bottom: 1px solid var(--color3);
+    border-bottom: 5px solid var(--color2);
+    border-radius: 10px;
+    color: var(--color8)
+
 }
 
 .search-input:focus{
@@ -28,14 +34,17 @@
     float: right;
     padding: 10px;
     cursor: pointer;
-    border: 0;
+    border: 10;
     outline: 0;
-    background: transparent;
+    background: transparent ;
     border-image: none;
     outline-offset: -2px;
-    border-color: transparent;
+    border-color:var(--color2) ;
     outline-color: transparent;
     box-shadow: none;
+    /*border-bottom: 5px solid var(--color3);*/
+    border-radius: 10px;
+    color: var(--color8)
 }
 
 .product-box{
