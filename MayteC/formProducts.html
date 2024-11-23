@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulario de Creación de Modelo</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+</head>
+
+<body>
+    <div class="container mt-5">
+        <h1>Crear Modelo</h1>
+        <form id="modelForm">
+            <div class="form-group">
+                <label for="title">Título</label>
+                <input type="text" class="form-control" id="title" placeholder="Título">
+            </div>
+            <div class="form-group">
+                <label for="description">Descripción</label>
+                <textarea class="form-control" id="description" rows="3" placeholder="Descripción"></textarea>
+            </div>
+            <div class="form-group">
+                <label for="price">Precio</label>
+                <input type="number" class="form-control" id="price" placeholder="Precio">
+            </div>
+            <div class="form-group">
+                <label for="category">Categoría</label>
+                <select class="form-control" name="category" id="category">
+                    <option value="" disabled selected>Seleccione una categoría</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="subcategory">Subcategoría</label>
+                <select class="form-control" name="subcategory" id="subcategory">
+                    <option value="" disabled selected>Seleccione una subcategoría</option>
+                </select>
+            </div>
+            <div class="input-group mb-3">
+                <div class="custom-file">
+                    <input type="file" class="custom-file-input" id="inputGroupFile02">
+                    <label class="custom-file-label" for="inputGroupFile02"
+                        aria-describedby="inputGroupFileAddon02">Agrega una imagen</label>
+                </div>
+                <div class="input-group-append">
+                    <span class="input-group-text" id="inputGroupFileAddon02">Upload</span>
+                </div>
+            </div>
+            <button type="submit" class="btn btn-primary">Agregar Producto</button>
+        </form>
+        <div id="alert" class="alert alert-danger mt-3 d-none"></div> <!-- Div para mostrar alertas -->
+    </div>
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+    <script src="productos.js"></script>
+</body>
+
+</html>
+
+
+
+
+
+
+
+
+
+<!--        <div class="card">
+            <h1 class="card_title">Ingresa tu producto</h1>
+            <div class="container_select">
+                <select class="select" name="categorias" id="categorias">
+                    <option value="">Selecciona la categoria de tu producto</option>
+                </select>
+                <select class="select" name="subcategorias" id="subcategorias">
+                    <option value="">Selecciona una subcategoria</option>
+                </select>
+            </div>
+        </div>
+    </main>
+    <script src="productos.js"></script>
+</body>
+</html>-->
