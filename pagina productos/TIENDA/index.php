@@ -1,5 +1,6 @@
 <?php
-include'global/config.php';
+require 'global/conexion.php';
+
 
 ?>
 <!DOCTYPE html>
@@ -14,7 +15,7 @@ include'global/config.php';
 
 <body>
     <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
-        <a class="nav-brand" hfre="#">Sicarú</a>
+        <a class="nav-brand" href="#">Sicarú</a>
         <!-- boton para cuando la pantalla sea mas pequeña-->
         <button class="navbar-toggler" data-target="#my-nav" data-toggle="collapse" aria-controls="my-nav" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
@@ -41,195 +42,58 @@ include'global/config.php';
         </div>
         <div class="row">
             <?php
-            $sentencia=$pdo->prepare("SELECT *FROM tblproductos");
-            $sentencia->execute();
-            $listaProductos=$sentencia->fetchALL(PDO::FETCH_ASSOC);
-            print_r($listaProductos);
+            try {
+                $pdo = new PDO('mysql:host=localhost;dbname=tienda', 'root', '');
+                $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+                $pdo->exec('SET NAMES UTF8');
+              
+                $sentencia = $pdo->prepare("SELECT * FROM `tblproductos`");
+                $sentencia->execute();
+                $listaProductos = $sentencia->fetchALL(PDO::FETCH_ASSOC);
+                print_r($listaProductos);
+            } catch (PDOException $e) {
+                echo 'Error' . $e->getMessage();
+            }
             ?>
             <div class="col-3">
                 <div class="card">
-                    <img
-                        title="=Título del pructo"
-                        alt="Título"
-                        class="card-img-top"
-                        src="/pagina productos/IMG/fondoPajaro.png">
+                    <img title="Título del producto" alt="Título" class="card-img-top" src="/pagina productos/IMG/fondoPajaro.png">
                     <div class="card-body">
-                        <span>Tírulo del producto</span>
-                        <h5 class="card-title"> $800.00</h5>
-                        <p class="card-text"> Descripción</p>
-
-                        <button class="btn btn-primary"
-                            name="btAccion"
-                            value="Agregar-"
-                            type="submit">
-                            Agregar al carrito
-                        </button>
+                        <span>Título del producto</span>
+                        <h5 class="card-title">$800.00</h5>
+                        <p class="card-text">Descripción</p>
+                        <button class="btn btn-primary" name="btAccion" value="Agregar-" type="submit">Agregar al carrito</button>
+                    </div>
+                </div>
+            </div>
+            <!-- Repetir el bloque anterior para otros productos -->
+            <div class="col-3">
+                <div class="card">
+                    <img title="Título del producto" alt="Título" class="card-img-top" src="/pagina productos/IMG/fondoPajaro.png">
+                    <div class="card-body">
+                        <span>Título del producto</span>
+                        <h5 class="card-title">$800.00</h5>
+                        <p class="card-text">Descripción</p>
+                        <button class="btn btn-primary" name="btAccion" value="Agregar-" type="submit">Agregar al carrito</button>
                     </div>
                 </div>
             </div>
             <div class="col-3">
                 <div class="card">
-                    <img
-                        title="=Título del pructo"
-                        alt="Título"
-                        class="card-img-top"
-                        src="/pagina productos/IMG/fondoPajaro.png">
+                    <img title="Título del producto" alt="Título" class="card-img-top" src="/pagina productos/IMG/fondoPajaro.png">
                     <div class="card-body">
-                        <span>Tírulo del producto</span>
-                        <h5 class="card-title"> $800.00</h5>
-                        <p class="card-text"> Descripción</p>
-
-                        <button class="btn btn-primary"
-                            name="btAccion"
-                            value="Agregar-"
-                            type="submit">
-                            Agregar al carrito
-                        </button>
+                        <span>Título del producto</span>
+                        <h5 class="card-title">$800.00</h5>
+                        <p class="card-text">Descripción</p>
+                        <button class="btn btn-primary" name="btAccion" value="Agregar-" type="submit">Agregar al carrito</button>
                     </div>
                 </div>
             </div>
-            <div class="col-3">
-                <div class="card">
-                    <img
-                        title="=Título del pructo"
-                        alt="Título"
-                        class="card-img-top"
-                        src="/pagina productos/IMG/fondoPajaro.png">
-                    <div class="card-body">
-                        <span>Tírulo del producto</span>
-                        <h5 class="card-title"> $800.00</h5>
-                        <p class="card-text"> Descripción</p>
-
-                        <button class="btn btn-primary"
-                            name="btAccion"
-                            value="Agregar-"
-                            type="submit">
-                            Agregar al carrito
-                        </button>
-                    </div>
-                </div>
-            </div>
-            <div class="col-3">
-                <div class="card">
-                    <img
-                        title="=Título del pructo"
-                        alt="Título"
-                        class="card-img-top"
-                        src="/pagina productos/IMG/fondoPajaro.png">
-                    <div class="card-body">
-                        <span>Tírulo del producto</span>
-                        <h5 class="card-title"> $800.00</h5>
-                        <p class="card-text"> Descripción</p>
-
-                        <button class="btn btn-primary"
-                            name="btAccion"
-                            value="Agregar-"
-                            type="submit">
-                            Agregar al carrito
-                        </button>
-                    </div>
-                </div>
-            </div>
-            <div class="col-3">
-                <div class="card">
-                    <img
-                        title="=Título del pructo"
-                        alt="Título"
-                        class="card-img-top"
-                        src="/pagina productos/IMG/fondoPajaro.png">
-                    <div class="card-body">
-                        <span>Tírulo del producto</span>
-                        <h5 class="card-title"> $800.00</h5>
-                        <p class="card-text"> Descripción</p>
-
-                        <button class="btn btn-primary"
-                            name="btAccion"
-                            value="Agregar-"
-                            type="submit">
-                            Agregar al carrito
-                        </button>
-                    </div>
-                </div>
-            </div>
-            <div class="col-3">
-                <div class="card">
-                    <img
-                        title="=Título del pructo"
-                        alt="Título"
-                        class="card-img-top"
-                        src="/pagina productos/IMG/fondoPajaro.png">
-                    <div class="card-body">
-                        <span>Tírulo del producto</span>
-                        <h5 class="card-title"> $800.00</h5>
-                        <p class="card-text"> Descripción</p>
-
-                        <button class="btn btn-primary"
-                            name="btAccion"
-                            value="Agregar-"
-                            type="submit">
-                            Agregar al carrito
-                        </button>
-                    </div>
-                </div>
-            </div>
-            <div class="col-3">
-                <div class="card">
-                    <img
-                        title="=Título del pructo"
-                        alt="Título"
-                        class="card-img-top"
-                        src="/pagina productos/IMG/fondoPajaro.png">
-                    <div class="card-body">
-                        <span>Tírulo del producto</span>
-                        <h5 class="card-title"> $800.00</h5>
-                        <p class="card-text"> Descripción</p>
-
-                        <button class="btn btn-primary"
-                            name="btAccion"
-                            value="Agregar-"
-                            type="submit">
-                            Agregar al carrito
-                        </button>
-                    </div>
-                </div>
-            </div>
-            <div class="col-3">
-                <div class="card">
-                    <img
-                        title="=Título del pructo"
-                        alt="Título"
-                        class="card-img-top"
-                        src="/pagina productos/IMG/fondoPajaro.png">
-                    <div class="card-body">
-                        <span>Tírulo del producto</span>
-                        <h5 class="card-title"> $800.00</h5>
-                        <p class="card-text"> Descripción</p>
-
-                        <button class="btn btn-primary"
-                            name="btAccion"
-                            value="Agregar-"
-                            type="submit">
-                            Agregar al carrito
-                        </button>
-                    </div>
-                </div>
-            </div>
-
-
         </div>
+    </div>
 
-
-
-
-
-
-
-
-
-
-
-        <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
-        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js" integrity="sha384-0pUGZvbkm6XF6gxjEnlmuGrJXVbNuzT9qBBavbLwCsOGabYfZo0T0to5eqruptLy" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js" integrity="sha384-0pUGZvbkm6XF6gxjEnlmuGrJXVbNuzT9qBBavbLwCsOGabYfZo0T0to5eqruptLy" crossorigin="anonymous"></script>
 </body>
 
 </html>
