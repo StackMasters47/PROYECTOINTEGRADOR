@@ -1,7 +1,9 @@
 @import "COLORES.CSS"; /* a este documento tambien llamamos a la hoja de stylos de colores 
 y en lugar de que estemmos aplicando los colores por separado con (var(--color#) ya solo selecionamos el color 123...etc que queramos  */
 
-
+body{
+    background-color: var(--colorblack);
+}
 .title-products{
     /*font-weight: lighter;*/
     text-align: center;
