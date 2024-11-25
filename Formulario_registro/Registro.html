@@ -18,73 +18,74 @@
     <h1>Crea una cuenta</h1>
     <div id="alertContainer"></div>
 
-    <form class="row g-3">
-      <div class="col-md-12">
+    <form class="row g-3 needs-validation" novalidate>
+      <div class="col-md-12 form-group">
         <label for="nombreInput" class="form-label">Nombre Completo:</label>
-        <input type="text" class="form-control" id="nombreInput" placeholder="Ingresa tu nombre completo"
+        <input type="text" class="form-control" id="nombreInput" placeholder="Ingresa tu nombre completo" required
           style="border: 3px solid #98BF3E; padding: 1px; border-radius: 5px; width: 100%;">
           <div class="invalid-feedback">
             Por favor, ingresa tu nombre.
           </div>
       </div>
 
-      <div class="col-md-12">
+      <div class="col-md-12 form-group">
         <label for="telefonoInput" class="form-label">Telefono</label>
-        <input type="tel" class="form-control" id="telefonoInput" placeholder="Ingresa tu numero de telefono"
+        <input type="tel" class="form-control" id="telefonoInput" placeholder="Ingresa tu numero de telefono" required
           style="border: 3px solid #F6B94F; padding: 1px; border-radius: 5px; width: 100%;">
           <div class="invalid-feedback">
             Por favor, ingresa numero de telefono valido.
           </div>
       </div>
       
-      <div class="col-md-12">
+      <div class="col-md-12 form-group">
         <label for="inputEmail4" class="form-label">Email:</label>
-        <input type="email" class="form-control" id="inputEmail4" placeholder="Escribe tu email"
+        <input type="email" class="form-control" id="inputEmail4" placeholder="Escribe tu email" required
           style="border: 3px solid #3DC1B4; padding: 1px; border-radius: 5px; width: 100%;">
           <div class="invalid-feedback">
             Por favor, ingresa un correo valido.
           </div>
       </div>
       
-      <div class="col-md-12">
+      <div class="col-md-12 form-group">
         <label for="usuarioInput" class="form-label">Nombre de usuario:</label>
-        <input type="text" class="form-control" id="usuarioInput" placeholder="Ingresa tu nombre de usuario"
+        <input type="text" class="form-control" id="usuarioInput" placeholder="Ingresa tu nombre de usuario" required
           style="border: 3px solid #9F2884; padding: 1px; border-radius: 5px; width: 100%;">
           <div class="invalid-feedback">
             Por favor, ingresa tu nombre de usuario.
           </div>
       </div>
       
-      <div class="col-md-12">
+      <div class="col-md-12 form-group">
         <label for="passInput1" class="form-label">Contraseña:</label>
-          <input type="password" class="form-control" id="passInput1" placeholder="Escribe tu contraseña" style="border: 3px solid #CA6120; padding: 1px; border-radius: 5px; width: 100%;">
+          <input type="password" class="form-control" id="passInput1" placeholder="Escribe tu contraseña" required style="border: 3px solid #CA6120; padding: 1px; border-radius: 5px; width: 100%;">
         <div class="invalid-feedback">
           Por favor, ingresa contraseña valida
         </div>
       </div>
       
-      <div class="col-md-12">
+      <div class="col-md-12 form-group">
         <label for="passInput2" class="form-label">Vuelve a escribir contraseña:</label>
-        <input type="password" class="form-control" id="passInput2" placeholder="Escribe tu contraseña nuevamente"
+        <input type="password" class="form-control" id="passInput2" placeholder="Escribe tu contraseña nuevamente" required
           style="border: 3px solid  rgb(206, 27, 81); padding: 1px; border-radius: 5px; width: 100%;">
           <div class="invalid-feedback">
             Por favor, ingresa la misma contraseña
           </div>
       </div>
       
-      <div class="col-12">
+      <div class="col-12 form-group">
         <div class="form-check">
-          <input class="form-check-input" type="checkbox" id="gridCheck">
+          <input class="form-check-input" type="checkbox" id="gridCheck" required>
           <label class="form-check-label" for="gridCheck">
             Acepto los terminos y condiciones
           </label>
         </div>
       </div>
       <div class="col-12">
-        <button type="button" class="btn btn-primary" id="Registrarse">Registrarse</button>
+        <button type="submit" class="btn btn-primary" id="Registrarse" >Registrarse</button>
       </div>
     </form>
   </div>
+  <!-- <script src="../verificacion.js"></script> -->
   <script src="registro.js"></script>
 </body>
 

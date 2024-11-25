@@ -48,7 +48,7 @@ document.getElementById("Registrarse").addEventListener("click", function (event
         telefonoInput.classList.add("is-invalid");
         valido = false;
         
-    } else {
+    } else {    
         telefonoInput.classList.remove("is-invalid");
         telefonoInput.classList.add("is-valid");
     }
@@ -104,9 +104,20 @@ document.getElementById("Registrarse").addEventListener("click", function (event
 
     // Mensaje final si todo es válido
     if (valido) {
-        showAlert("Formulario enviado con éxito. ¡Bienvenido/a!", "success");
-        // Aquí puedes procesar los datos o enviar la información al servidor.
+        const usuario = {
+            nombreCompleto: nombreInput.value.trim(),
+            telefono: telefonoInput.value.trim(),
+            email: emailInput.value.trim(),
+            nombreUsuario: usuarioInput.value.trim(),
+            contraseña: pass1Input.value.trim()
+        };
+
+        const jsonUsuario = JSON.stringify(usuario);
+        
+        // Guardar en Local Storage
+        localStorage.setItem("usuario", jsonUsuario);
+        console.log("Datos del usuario guardados en Local Storage:", jsonUsuario);
+
+        showAlert("Formulario enviado con éxito. Datos almacenados localmente.", "success");
     }
 });
-
-
