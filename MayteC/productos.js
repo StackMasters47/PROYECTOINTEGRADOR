@@ -41,11 +41,12 @@ const categoria = [
         ]
     }
 ];
-//Trae elementos categoria y subcategorias
-let selectCategory = document.getElementById("category");
-let selectSubCategory = document.getElementById("subcategory");
 
-// Cargar las opciones de categorías en el primer select
+// Referencias a elementos del DOM
+const selectCategory = document.getElementById("category");
+const selectSubCategory = document.getElementById("subcategory");
+
+// Cargar las opciones de categorías en el select correspondiente
 const loadCategory = () => {
     categoria.map(item => {
         selectCategory.innerHTML += `<option value="${item.id}">${item.name}</option>`;
@@ -54,30 +55,31 @@ const loadCategory = () => {
 
 loadCategory();
 
-// Filtra resultado segun la categoria que se seleccione
+// Cargar subcategorías basadas en la categoría seleccionada
 const loadSubCategory = (idCategoria) => {
-    let options = `<option value="">Selecciona una subcategoria</option>`;
+    let options = `<option value="" disabled selected>Selecciona una subcategoría</option>`;
 
-    // Convierte idCategoria a núm porque e.target.value es una cadena
+    // Convertir idCategoria a número porque e.target.value es una cadena
     categoria[Number(idCategoria)].subCategoria.map(item => {
         options += `<option value="${item.id}">${item.name}</option>`;
     });
+
     selectSubCategory.innerHTML = options;
 };
 
-// Evento para cuando se selecciona una categoría
+// Evento para manejar el cambio de categoría
 selectCategory.addEventListener("change", function (e) {
     const selectedCategoryId = e.target.value;
 
-     // Si no se selecciona ninguna categoría, restablece
+    // Si no hay selección, restablecer las subcategorías
     if (!selectedCategoryId) {
-        selectSubCategory.innerHTML = `<option value="">Selecciona una subcategoria</option>`;
+        selectSubCategory.innerHTML = `<option value="" disabled selected>Selecciona una subcategoría</option>`;
     } else {
-        // Cargar las subcategorías correspondientes a la categoría
-        loadSubCategory(selectedCategoryId);
+        loadSubCategory(selectedCategoryId); // Cargar las subcategorías correspondientes
     }
-})
+});
 
+// Validación y envío del formulario
 document.getElementById('modelForm').addEventListener('submit', function (event) {
     event.preventDefault(); // Previene el comportamiento predeterminado del formulario
 
@@ -85,11 +87,12 @@ document.getElementById('modelForm').addEventListener('submit', function (event)
     const description = document.getElementById('description').value.trim();
     const price = document.getElementById('price').value.trim();
     const category = document.getElementById('category').value;
+    const subcategory = document.getElementById('subcategory').value;
     const imageFile = document.getElementById('inputGroupFile02').files;
 
     let errors = [];
 
-    // Validación de campos
+    // Validaciones de los campos
     if (!title) {
         errors.push("El título es obligatorio.");
     }
@@ -105,26 +108,29 @@ document.getElementById('modelForm').addEventListener('submit', function (event)
     if (!subcategory) {
         errors.push("La subcategoría es obligatoria.");
     }
-    if (imageFile.length===0){
-        errors.push ("Agrega una imagen al producto.");
+    if (imageFile.length === 0) {
+        errors.push("Agrega una imagen al producto.");
     }
-     
 
     const alertDiv = document.getElementById('alert');
     if (errors.length > 0) {
-        alertDiv.innerHTML = errors.join('<br>'); // Muestra los errores en el div de alerta
-        alertDiv.classList.remove('d-none'); // Hace visible el div de alerta
+        alertDiv.innerHTML = errors.join('<br>'); // Mostrar los errores en el div de alerta
+        alertDiv.classList.remove('d-none'); // Hacer visible el div de alerta
     } else {
-        alertDiv.classList.add('d-none'); // Oculta el div de alerta si no hay errores
+        alertDiv.classList.add('d-none'); // Ocultar el div de alerta si no hay errores
 
-        // Creación del objeto JSON
+        // Crear el objeto JSON del modelo
         const model = {
             title,
             description,
             price: parseFloat(price),
-            category
+            category,
+            subcategory,
+            image: imageFile[0].name // Nombre del archivo de imagen
         };
 
-        console.log("Modelo creado:", JSON.stringify(model)); // Muestra el objeto JSON en la consola
+        console.log("Modelo creado:", JSON.stringify(model)); // Mostrar el objeto JSON en la consola
+        alert("Producto agregado correctamente.");
+        document.getElementById('modelForm').reset(); // Restablecer el formulario
     }
 });

@@ -7,7 +7,6 @@
     <title>Formulario de Creación de Modelo</title>
     <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="productos.css">
-
 </head>
 
 <body>
@@ -16,31 +15,31 @@
         <form id="modelForm">
             <div class="form-group">
                 <label for="title">Título</label>
-                <input type="text" class="form-control" id="title" placeholder="Título">
+                <input type="text" class="form-control" id="title" placeholder="Título" required>
             </div>
             <div class="form-group">
                 <label for="description">Descripción</label>
-                <textarea class="form-control" id="description" rows="3" placeholder="Descripción"></textarea>
+                <textarea class="form-control" id="description" rows="3" placeholder="Descripción" required></textarea>
             </div>
             <div class="form-group">
                 <label for="price">Precio</label>
-                <input type="number" class="form-control" id="price" placeholder="Precio">
+                <input type="number" class="form-control" id="price" placeholder="Precio" required>
             </div>
             <div class="form-group">
                 <label for="category">Categoría</label>
-                <select class="form-control" name="category" id="category">
+                <select class="form-control" name="category" id="category" required>
                     <option value="" disabled selected>Seleccione una categoría</option>
                 </select>
             </div>
             <div class="form-group">
                 <label for="subcategory">Subcategoría</label>
-                <select class="form-control" name="subcategory" id="subcategory">
+                <select class="form-control" name="subcategory" id="subcategory" required>
                     <option value="" disabled selected>Seleccione una subcategoría</option>
                 </select>
             </div>
             <div class="input-group mb-3">
                 <div class="custom-file">
-                    <input type="file" class="custom-file-input" id="inputGroupFile02">
+                    <input type="file" class="custom-file-input" id="inputGroupFile02" accept="image/*">
                     <label class="custom-file-label" for="inputGroupFile02"
                         aria-describedby="inputGroupFileAddon02">Agrega una imagen</label>
                 </div>

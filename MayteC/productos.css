@@ -24,6 +24,7 @@ body::before {
     left: 0;
     width: 100%;
     height: 100%;
+    background-color: black;
     background-image: url('../../Imagenes/fondo_formulario.png'); /* Ajusta la ruta si es necesario */
     background-size: cover;
     background-repeat: no-repeat;
