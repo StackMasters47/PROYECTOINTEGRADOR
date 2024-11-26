@@ -33,7 +33,7 @@ const categoria = [
     },
     {
         id: 3,
-        name: "Maquillaje",
+        name: "Belleza",
         subCategoria: [
             { id: 0, name: "Ojos" },
             { id: 1, name: "Labios" },

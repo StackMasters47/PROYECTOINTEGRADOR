@@ -2,14 +2,14 @@ const categoria = [
     { id: 0, name: "Cuidado Corporal", subCategoria: ["Exfoliantes", "Hidratantes", "Limpieza"] },
     { id: 1, name: "Cuidado Facial", subCategoria: ["Sérums", "Hidratantes", "Limpieza", "Protector Solar"] },
     { id: 2, name: "Cuidado Capilar", subCategoria: ["Shampoo", "Acondicionador", "Tratamientos"] },
-    { id: 3, name: "Maquillaje", subCategoria: ["Ojos", "Labios", "Rostro"] }
+    { id: 3, name: "Belleza", subCategoria: ["Ojos", "Labios", "Rostro"] }
 ];
 
 const productos = [
     { id: 1, titulo: "Shampoo Hidratante", marca: "Dove", desc: "Para cabello seco", precio: 120, cat: "Cuidado Capilar", subcat: "Shampoo" },
     { id: 2, titulo: "Crema Facial", marca: "Nivea", desc: "Hidratante facial", precio: 85, cat: "Cuidado Facial", subcat: "Hidratantes" },
     { id: 3, titulo: "Jabón Líquido", marca: "Palmolive", desc: "Aroma a lavanda", precio: 60, cat: "Cuidado Corporal", subcat: "Limpieza" },
-    { id: 4, titulo: "Perfume Floral", marca: "Chanel", desc: "Esencia floral", precio: 1500, cat: "Maquillaje", subcat: "Rostro" },
+    { id: 4, titulo: "Perfume Floral", marca: "Chanel", desc: "Esencia floral", precio: 1500, cat: "Belleza", subcat: "Rostro" },
     { id: 5, titulo: "Cepillo de Dientes", marca: "Oral-B", desc: "Cepillo suave", precio: 30, cat: "Cuidado Corporal", subcat: "Limpieza" },
     { id: 6, titulo: "Protector Solar", marca: "Eucerin", desc: "FPS 50", precio: 300, cat: "Cuidado Facial", subcat: "Protector Solar" },
     { id: 7, titulo: "Tónico Facial", marca: "La Roche-Posay", desc: "Purificante facial", precio: 200, cat: "Cuidado Facial", subcat: "Limpieza" },
