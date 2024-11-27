@@ -54,10 +54,10 @@ a{
     
     
   }
-  
-   .info,
-   .nosotros,
-   .navegacion {
+
+  .info,
+  .nosotros,
+  .navegacion {
     display: flex;
     flex-direction: column;
     gap: 2px;

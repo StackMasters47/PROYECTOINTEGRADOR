@@ -1,0 +1,120 @@
+
+header {
+  font-family: 'Overlock',sans-serif;
+}
+
+.image-container {
+  display:flexbox;
+  height: 5vh;
+  width: 100%;
+  background-image: url("../Imagenes/fondo.png");
+  max-height: 100%;
+  max-width: 4800px;
+  min-width: 180px;
+  min-height: 80px;
+  overflow: hidden;
+}
+
+.image-container img {
+  width: 100%;
+  object-fit: cover;
+}
+
+.container-logo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 5vw;
+  max-width: 4500px;
+  max-height: 100%;
+  width: 100%;
+  min-width: 180px;
+  min-height: 80px;
+  background-color: #246784;
+  overflow: hidden;
+}
+
+.container-logo img {
+  width: 15%;
+  height: 70%;
+  min-width:100px;
+  min-height: 80px;
+}
+
+.navbar {
+  margin-top: 3px;
+  display:inline-block;
+  width: 100%;
+  height: 50%;
+  min-width:100px;
+  min-height: 80px;
+  max-width: 6500px;
+  max-height: 1000px;
+  background-color: #000000;
+  justify-content: center;
+  align-items: center;
+  font-family: 'Overlock',sans-serif;
+  flex-wrap: wrap;
+}
+
+.nav-pills {
+  gap: 10px;
+  justify-content: center;
+}
+
+.dropdown-menu {
+  background-color: #000000;
+}
+
+.dropdown-item {
+  color: white;
+  background-color: #000000;
+}
+
+#botonp1 {
+  color: white;
+  border-width: 2px;
+  border-color:#98bf3e;
+  cursor: pointer;
+  font-size: 15px;
+}
+
+#botonp2 {
+  color: white;
+  border-width: 2px;
+  border-color:#9f2884;
+  cursor: pointer;
+  font-size: 15px;
+}
+
+#botonp3 {
+  color: white;
+  border-width: 2px;
+  border-color:#3dbfbb;
+  cursor: pointer;
+  font-size: 15px;
+}
+
+#botonp4 {
+  color: white;
+  border-width: 2px;
+  border-color:#f1645a;
+  cursor: pointer;
+  font-size: 15px;
+}
+
+#botonm{
+  color: white;
+  border-width: 2px;
+  border-color: #98bf3e;
+  cursor: pointer;
+  font-size: 15px;
+}
+/* Show the dropdown menu on hover */
+.dropdown:hover .dropdown-menu {
+  display: block;
+}
+
+.navbar button:hover {
+  background-color: #f6b94f;
+}
