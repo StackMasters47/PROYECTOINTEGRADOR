@@ -1,0 +1,165 @@
+html body {
+  background-color: #000;
+  align-items:first baseline;
+  padding-bottom: 0vw;
+  padding-top: 0%;
+}
+
+/*Contenedor principal dentro del footer*/
+.containerF {
+  position: relative;
+  display:flex;
+  padding: 4rem;
+  justify-content: space-between;
+  width: 100%;
+  min-height: 80px;
+  min-width: 100px;
+  max-height: 6000px;
+  max-width: 6500px;
+  height: 50px;
+  /* Espacio entre las columnas */
+  flex-wrap: wrap;
+  /* Ajuste automático en pantallas pequeñas */
+  padding: 0;
+  border: 0;
+  margin: 0;
+  border-top: 1px solid #ffffff;
+}
+
+.footer-column {
+  gap: 2vw;
+  width: 100%;
+  height: 100%;
+  flex: 1;
+  /* Distribución uniforme */
+  min-width: 80px;
+  /* Ancho mínimo para pantallas pequeñas */
+  flex-wrap:wrap;
+  border-top: 5px;
+}
+
+/* Títulos de cada columna */
+h3 {
+  font-size: 1.8em;
+  font-family: 'Overlock',sans-serif;
+  font-weight: bolder;
+  align-items: center;
+  margin-bottom: 20px;
+  text-align:center;
+  color: #ffffff;
+}
+.footer-column ul{
+  list-style: none;
+  align-items: center; /* Centrado vertical */
+  justify-content: center; 
+}
+
+.footer-column li{
+  text-align: center;
+  position: relative;
+  display: inline-table;
+  align-content: center;
+
+ 
+}
+
+/* Listas dentro de las columnas */
+.info a,
+.nosotros a,
+.categorias a{
+  text-size-adjust: 100%;
+  font-family:'Monserrat', sans-serif;
+  color: #ffffff;
+  font-size: 1.3rem;
+  text-decoration: none;
+  transform: translate(-50%, -50%);
+  text-align: center;
+
+}
+
+
+/* Estilos para el logotipo */
+.logo {
+  display: block;
+  align-items: center;
+  gap: 4px;
+}
+
+.logo img {
+  width: 100%;
+  height: 100%;
+}
+
+#pf {
+  margin-bottom: 8px;
+  text-align: center;
+  font-family: 'Monserrat',sans-serif;
+  font-size: 1.5em;
+  color: #ffffff;
+}
+
+/* Contenedor de redes sociales */
+.social-media-container {
+  display: flex;
+  gap: 5px;
+  justify-content: center;
+}
+
+/* Estilos para los iconos de redes sociales */
+.social-media {
+  cursor: pointer;
+  width: 35px;
+  height: 35px;
+  padding: 6px;
+  border-radius: 50%;
+  background-color: #191919;
+  transition: transform 1s linear;
+}
+
+/* Efecto hover para los iconos de redes sociales */
+.social-media:hover {
+  transform: rotateY(360deg);
+}
+
+/* Efecto y estilos para los elementos de la lista al pasar sobre ellos */
+.info ul li::after {
+  content: "";
+  display: block;
+  border-bottom: 2px solid #3dbfbb;
+  width:0%;
+  transform: scaleX(0);
+  transform-origin: right;
+  transition: transform 0.6s linear;
+  bottom:0;
+}
+
+.nosotros ul li::after {
+  content: "";
+  display: block;
+  border-bottom: 2px solid #98bf3e;
+  width:0%;
+  position: absolute;
+  transform: scaleX(0);
+  transform-origin: right;
+  transition: transform 0.6s linear;
+}
+
+.categorias ul li::after {
+  content: "";
+  display: block;
+  position: absolute;
+  border-bottom: 2px solid #f36b37;
+  width: 0%;
+  transform: scaleX(0);
+  transform-origin:center;
+  transition: transform 0.6s linear,width 0.6s linear;
+}
+
+.info ul li:hover::after,
+.nosotros ul li:hover::after,
+.categorias ul li:hover::after {
+  transform: scaleX(1);
+  transform-origin: center;
+  transition: transform 0.6s linear;
+  width: 100%;
+}
