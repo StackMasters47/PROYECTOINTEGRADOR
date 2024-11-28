@@ -56,12 +56,27 @@ body{
   visibility: visible;
 }
 
-
-
-
+.dropdown-menu{
+  background-color: rgba(0, 0, 0, 1);
+    
+}
+.dropdown-item{
+  color:rgb(255,255,255);
+}
 @media (max-width: 991px){
-  .sidebar{
+  .sidebar {
       background-color: rgba(255, 255, 255, 0.15);
       backdrop-filter: blur(10px);
+      
+  }
+  .dropdown-menu{
+    background-color: rgba(255, 255, 255, 0);
+      backdrop-filter: blur(1px);
   }
 }
+.nav-link.dropdown-toggle::after {
+  display: none;
+}
+/* .dropdown:hover .dropdown-menu {
+  display: block;
+} */
