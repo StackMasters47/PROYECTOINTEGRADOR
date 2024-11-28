@@ -1,10 +1,19 @@
-body {
-   background-color: black;
-   color: white;
-   font-family: 'Montserrat', sans-serif;
-   margin: 0;
-   padding: 0;
+@import url(/ASSETS/CSS/footer.css);
+
+#bodyFooter {
+   background-color: #000;
+   align-items:first baseline;
+   padding-bottom: 0vw;
+   padding-top: 0%;
 }
+
+#bodyContacto{
+   background:  url('/ASSETS/IMG/fondo.webp') rgba(6, 3, 3, 0.6) !important; 
+   background-blend-mode: multiply;
+   background-position: center;
+   background-size: cover;
+   background-repeat: repeat;
+} 
 
 header {
    font-family: 'Overlock';
@@ -104,9 +113,9 @@ header {
 
 h1,
 h5 {
-   font-family: 'Overlock', serif;
+   font-family: 'Overlock', serif !important;
    font-weight: 700;
-   font-size: 50px;
+   font-size: 50px !important;
    color: #98BF3E !important;
    text-align: center;
    margin: 20px 0;

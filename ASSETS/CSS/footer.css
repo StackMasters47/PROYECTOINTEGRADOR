@@ -1,9 +1,12 @@
-html body {
+footer {
   background-color: #000;
   align-items:first baseline;
   padding-bottom: 0vw;
   padding-top: 0%;
+  width: auto;
+  height: 100vh;
 }
+
 
 /*Contenedor principal dentro del footer*/
 .containerF {
