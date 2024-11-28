@@ -1,13 +1,8 @@
-@import url(/ASSETS/CSS/footer.css);
-
-#bodyFooter {
-   background-color: #000;
-   align-items:first baseline;
-   padding-bottom: 0vw;
-   padding-top: 0%;
+body::-webkit-scrollbar {
+   display: none;
 }
 
-#bodyContacto{
+body{
    background:  url('/ASSETS/IMG/fondo.webp') rgba(6, 3, 3, 0.6) !important; 
    background-blend-mode: multiply;
    background-position: center;
@@ -105,10 +100,6 @@ header {
 /* Show the dropdown menu on hover */
 .dropdown:hover .dropdown-menu {
    display: block;
-}
-
-.navbar button:hover {
-   background-color: #f6b94f;
 }
 
 h1,

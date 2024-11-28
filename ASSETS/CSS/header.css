@@ -13,8 +13,7 @@ body{
   background-position: center;
   background-size: cover; 
   background-repeat: no-repeat;
-  /* margin: 15px; */
-  /* border-radius: 25px; */
+  width: auto;
 }
 #logo{
   /* background-color: rgba(0, 0, 0, 0.5); */
