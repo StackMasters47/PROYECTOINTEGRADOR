@@ -1,0 +1,47 @@
+main {
+
+   min-height: 80vh;
+}
+
+.container{
+   background-color: #000;
+   opacity: 85%;
+
+}
+
+div.table-responsive.sm.md-lg-xl.table.tabla-productos{
+   background-color: #000 !important;
+}
+
+#cardProductos{
+   border-color: #9f2884;
+   border-width: 2px;
+}
+.card-body{
+   background-color: #9f2884;
+}
+
+.card-body h5{
+   color: aliceblue;
+}
+.card-body p{
+   color: aliceblue;
+}
+#botonAgregar{
+   background-color: #f6b94f;
+   border-color: #f6b94f;
+}
+#botonEliminar{
+   background-color: #98bf3e;
+   border-color: #98bf3e;
+   color: #000;
+}
+
+#botonComprar{
+   background-color: #f36b37;
+   border-color:#f36b37;
+}
+#vaciar-carrito{
+   background-color: #246784;
+   border-color: #246784;
+}

@@ -1,0 +1,226 @@
+html body {
+  background-color: #000;
+  min-height: 100rem;
+  height: fit-content;
+  overflow: visible;
+}
+
+/*Comienzan estilos de sección main*/
+
+html main {
+  color: white;
+  min-height:200%;
+  max-height: 6500px;
+  height: fit-content;
+  box-sizing: border-box;
+  font-style: normal;
+  font-family: 'Montserrat', sans-serif;
+  position: relative;
+  margin: 0;
+  border-bottom:5vw;
+  margin-bottom: 10vw;
+  overflow: visible;
+}
+
+.row ul {
+  list-style: none;
+
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "Overlock";
+  font-weight: 100%;
+  text-align: center;
+}
+
+h2 {
+  font-size: 3em;
+}
+
+h3 {
+  font-size: 2em;
+}
+
+p {
+  font-weight: 400;
+  font-size: 1em;
+  text-align: center;
+}
+
+/*Comienzan estilos para columna general (Encabezado, descripción, misión, visión, valores)*/
+.contenedorNosotros {
+  display: grid;
+  place-items: center;
+  width: 80%;
+  margin-top: 2%;
+  margin-left: 10%;
+  margin-right: 10%;
+  margin-bottom: 50px;
+}
+
+.row {
+  justify-content: center;
+}
+
+#nosotros,
+#mision,
+#vision {
+  width: 100%;
+}
+
+#valores {
+  width: 70%;
+}
+
+#mision,
+#vision,
+#valores {
+  background-color: black;
+  border-radius: 10px;
+  transition: background-color 0.3s ease;
+  margin: 8px;
+}
+
+#mision h3 {
+  border: 10px solid #3dbfbb;
+}
+
+#vision h3 {
+  border: 10px solid #98bf3e;
+}
+
+#valores h3 {
+  border: 10px solid #f0769f;
+}
+
+#mision h3:hover {
+  background-color: #3dbfbb;
+}
+
+#vision h3:hover {
+  background-color: #98bf3e;
+}
+
+#valores h3:hover {
+  background-color: #f0769f;
+}
+
+/*Terminan estilos para parte Acerca de nosotros: Encabezado, descripción, misión, visión, valores*/
+
+/*Aqui va lo de perfiles*/
+
+.containerc {
+  display:grid;
+  position: relative;
+  flex-wrap: wrap;
+  max-width: 100%;
+  max-height: 100rem;
+  min-width: 180px;
+  min-height: 180px;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 20px;
+  align-content: center;
+  margin-top: 2%;
+  margin-left: 10%;
+  margin-right: 10%;
+  margin-bottom:0;
+  padding: 0%;
+  border: 0;
+  overflow: visible;
+
+}
+
+.card {
+  perspective: 5000px;
+  width: 100rem;
+  height: 100rem;
+  max-width: 80%;
+  max-height: 100%;
+  background-color: #246784;
+  min-height:300px;
+  min-width: 280px;
+}
+
+.card-inner {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  transition: transform 0.6s;
+  transform-style: preserve-3d;
+
+}
+
+.card:hover .card-inner {
+  cursor: pointer;
+}
+
+.card.is-flipped .card-inner {
+  transform: rotateY(180deg);
+
+}
+
+.card-front,
+.card-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+}
+
+.card-front {
+  background-color: #000;
+}
+
+.card-front img {
+  width: 100%;
+  height: 90%;
+}
+
+.card-front h3 {
+  margin: 10px 0;
+  font-size: 1em;
+  position: relative;
+  font-family: 'Overlock';
+}
+
+.card-back {
+  display: flex;
+  text-align: left;
+  background-color: #000;
+  color: white;
+  transform: rotateY(180deg);
+  padding: 10px;
+  overflow-y: auto;
+  max-height: 100%;
+  justify-content: flex-start;
+  box-sizing: border-box;
+  font-family: 'Montserrat', sans-serif;
+}
+
+/* Estiliza la barra de scroll */
+.card-back::-webkit-scrollbar {
+  width: 8px;
+}
+
+.card-back::-webkit-scrollbar-thumb {
+  background: #98bf3e;
+  border-radius: 4px;
+}
+
+.card-back::-webkit-scrollbar-thumb:hover {
+  background: #dcdcdc;
+}
+
+.card-back::-webkit-scrollbar-track {
+  background: #9f2884;
+}
