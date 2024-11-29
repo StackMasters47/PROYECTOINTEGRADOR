@@ -8,6 +8,7 @@ body {
     justify-content: center;
     align-items: center;
     min-height: 100vh;
+    font-family: 'Montserrat', sans-serif
 }
 
 /* Contenedor del formulario de registro */
@@ -26,10 +27,12 @@ body {
     border: 2px solid #98BF3E;
     padding: 10px;
     border-radius: 5px;
+    font-family: 'Montserrat', sans-serif; /* Texto de los inputs */
     transition: all 0.3s ease-in-out;
 }
 
 .form-control::placeholder {
+    font-family: 'Montserrat', sans-serif;
     color: #ccc;
     opacity: 1;
 }
@@ -67,6 +70,7 @@ h1 {
     color: white;
     text-align: center;
     margin-bottom: 20px;
+    font-family: 'Overlock', sans-serif;
 }
 
 input:-webkit-autofill {
@@ -86,3 +90,16 @@ input:-internal-autofill-selected {
     appearance: menulist-button; /* Ajuste de compatibilidad */
 }
 
+@font-face {
+    font-family: 'Montserrat';
+    src: url('/ASSETS/FONTS/Montserrat/Montserrat-Regular.ttf') format('truetype'); 
+    font-weight: normal;
+    font-style: normal;
+  }
+  
+  @font-face {
+    font-family: 'Overlock';
+    src: url('/ASSETS/FONTS/Overlock/Overlock-Bold.ttf') format('truetype'); 
+    font-weight: 700;
+    font-style: normal; /* Si la fuente no es cursiva */
+  }
