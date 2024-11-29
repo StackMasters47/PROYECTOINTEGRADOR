@@ -1,6 +1,4 @@
 /*Estilos generales*/
-import
-
 * {
     color: white;
     font-family: 'Montserrat';
@@ -9,13 +7,8 @@ import
 }
 
 body {
-    margin: 0;
-    padding: 0;
     height: 100vh;
     width: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
     background: url("/ASSETS/IMG/fondo.webp") rgba(6, 3, 3, 0.8) !important;
     background-blend-mode: multiply;
     background-size: cover;
@@ -23,19 +16,28 @@ body {
     background-position: center;
 }
 
-h4 {
+main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+
+#reestablecerContraseña {
     font-family: "Overlock";
     font-weight: 800;
     text-align: center;
     font-size: 2em;
-    color: var(--color7);
+    color: #9f2884;
     margin-top: 5px;
     margin-bottom: 20px;
 }
 
 /*Estilos para formulario*/
-.container {
-    max-width: 400px;
+.reestablecerContraseña {
+    margin: 20px;
+    max-width: 400px !important;
     min-height: 400px;
     background-color: #222;
     border-radius: 10px;
@@ -55,8 +57,8 @@ h4 {
     border-radius: 10px;
 }
 
-.form-control {
-    background-color: black;
+.input {
+    background-color: black !important;
     color: white !important;
     padding: 10px;
     border-radius: 10px;
@@ -73,7 +75,7 @@ h4 {
     border: 3px solid #98BF3E;
 }
 
-.form-control:focus {
+.input:focus {
     background-color: black;
     color: white;
     outline: none;
@@ -88,13 +90,13 @@ h4 {
     margin-top: 15px;
 
     button {
-        border: 3px solid var(--color7);
+        border: 3px solid #9f2884;
         border-radius: 10px;
         background-color: transparent;
         transition: background-color 0.3s ease;
     }
 
     button:hover {
-        background-color: var(--color7);
+        background-color: #9f2884;
     }
 }

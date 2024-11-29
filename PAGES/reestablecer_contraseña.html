@@ -14,21 +14,21 @@
         href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@300..700&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Tajawal:wght@200;300;400;500;700;800;900&display=swap"
         rel="stylesheet">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
-    <link rel="stylesheet" href="recuperar_contraseña.css">
+    <link rel="stylesheet" href="/ASSETS/CSS/reestablecer_contraseña.css">
 </head>
 
 <body>
     <header></header>
     <main>
-        <div class="container" id="formIniciarSesion">
-            <h4>Reestablece tu contraseña</h4>
+        <div class="container reestablecerContraseña">
+            <h4 id="reestablecerContraseña">Reestablece tu contraseña</h4>
             <div class="col-12" id="mensaje">
                 <p>Te enviaremos un correo con un vínculo donde podrás reestablecer tu contraseña</p>
             </div>
             <form class="row g-3" id="iniciarSesion" novalidate>
                 <div class="col-12">
                     <label for="emailInput" class="form-label">Ingresa el correo electrónico vinculado a tu cuenta:</label>
-                    <input class="form-control" type="email" id="emailInput" placeholder="Ingresa tu correo electrónico" required>
+                    <input class="form-control input" type="email" id="emailInput" placeholder="Ingresa tu correo electrónico" required autofocus>
                     <div class="invalid-feedback">
                         Introduce un correo electrónico válido
                     </div>
@@ -42,13 +42,9 @@
             </form>
         </div>
     </main>
-<<<<<<< Updated upstream:Usuarios/Formulario_recuperacion_contraseña/recuperar_contraseña.html
-    <script src="../verificacion.js"></script>
-=======
     <footer></footer>
     <script src="/ASSETS/JS/scriptHF.js"></script>
-    <script src="../ASSETS/JS/verificacion.js"></script>
->>>>>>> Stashed changes:PAGES/recuperar_contraseña.html
+    <script src="/ASSETS/JS/verificacion.js"></script>
 </body>
 
 </html>

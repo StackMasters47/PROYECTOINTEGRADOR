@@ -1,4 +1,18 @@
 /*Estilos generales*/
+/*@font-face {
+    font-family: 'Montserrat';
+    src: url('/ASSETS/FONTS/Montserrat/Montserrat-Regular.ttf') format('truetype'); 
+    font-weight: normal;
+    font-style: normal;
+  }
+  
+  @font-face {
+    font-family: 'Overlock';
+    src: url('/ASSETS/FONTS/Overlock/Overlock-Bold.ttf') format('truetype'); 
+    font-weight: 700;
+    font-style: normal;
+  }*/
+
 * {
     color: white;
     font-family: 'Montserrat';
@@ -7,14 +21,8 @@
 }
 
 body {
-    margin: 0;
-    padding: 0;
     height: 100vh;
     width: 100%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
     background: url("/ASSETS/IMG/fondo.webp") rgba(6, 3, 3, 0.8) !important;
     background-blend-mode: multiply;
     background-size: cover;
@@ -22,19 +30,27 @@ body {
     background-position: center;
 }
 
+main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
 /*Estilos para formulario*/
 #iniciarSesionEncabezado {
     font-family: "Overlock";
     font-weight: 800;
     text-align: center;
-    font-size: 2.5em !important;
-    color: #3DBFBB !important;
+    font-size: 2.5em;
+    color: #3DBFBB;
     margin-top: 5px;
     margin-bottom: 20px;
 }
 
-.container {
-    max-width: 400px;
+.formIniciarSesion {
+    margin: 20px;
+    max-width: 400px !important;
     min-height: 400px;
     background-color: #222;
     border-radius: 10px;
@@ -46,7 +62,7 @@ body {
 }
 
 .col-12 {
-    margin: 5px 0 5px;
+    margin: 5px 0 5px !important;
 
     a {
         display: flex;
@@ -62,17 +78,17 @@ body {
     }
 }
 
-.form-control {
-    background-color: black;
+.input {
+    background-color: black !important;
     color: white !important;
     padding: 10px;
     border-radius: 10px;
     height: 45px;
 }
 
-.form-control::placeholder {
+.input::placeholder {
     color: #ccc !important;
-    opacity: 1;
+    opacity: 1 !important;
  }
 
 #emailInput {
@@ -83,16 +99,17 @@ body {
     border: 3px solid #F0769F;
 }
 
-.form-control:focus {
-    background-color: black;
-    color: white;
-    outline: none;
+.input:focus {
+    background-color: black !important;
+    color: white !important;
+    outline: none !important;
  }
 
 #button {
     text-align: center;
 
     button {
+        margin: 0;
         border: 3px solid #3DC1B4;
         border-radius: 10px;
         background-color: transparent;
