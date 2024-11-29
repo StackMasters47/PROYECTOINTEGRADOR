@@ -1,61 +1,49 @@
-body::-webkit-scrollbar {
-   display: none;
-}
-
-body{
-   background:  url('/ASSETS/IMG/fondo.webp') rgba(6, 3, 3, 0.6) !important; 
-   background-blend-mode: multiply;
-   background-position: center;
-   background-size: cover;
-   background-repeat: repeat;
-} 
-
-header {
+body {
+   font-family: 'Overlock', sans-serif;
+   background-color: #000000;
+   color:#ffffff;
+   justify-content: center;
+ }
+.header {
+   width: 100%;
+   height: 15vw;
    font-family: 'Overlock';
 }
 
-.image-container {
-   display: flexbox;
-   height: 10vh;
+.image-containerH {
+   display: flex;
+   height: 5vw;
    width: 100%;
-   max-height: 100%;
-   max-width: 1800px;
+   background-image:url("../Imagenes/fondo.png");
+   background-color: #000000;
+   background-size: cover;
    overflow: hidden;
 }
 
-.image-container img {
-   width: 100%;
-   object-fit: cover;
-}
-
-.container-logo {
+.container-logoH {
    display: flex;
    justify-content: center;
    align-items: center;
-   height: 15vh;
-   max-width: 1500px;
-   max-height: 100%;
    background-color: #246784;
    overflow: hidden;
 }
 
-.container-logo img {
-   width: 18vw;
-   height: 8vw;
+.container-logoH img {
+   width: 12vw;
+   height: 5vw;
 }
 
-.container-fluid {
+.container-nav {
    display: flex;
    background-color: #000000;
    justify-content: center;
    align-items: center;
-   font-family: overlock;
+   font-family: 'Overlock';
+   padding-bottom: 2vw;
 }
-
 .nav-pills {
    gap: 10px;
 }
-
 .dropdown-menu {
    background-color: #000000;
 }
@@ -97,153 +85,62 @@ header {
    font-size: 15px;
 }
 
+#botonm {
+   color: white;
+   border-width: 2px;
+   border-color: #F6B94F;
+   cursor: pointer;
+   font-size: 15px;
+}
+
 /* Show the dropdown menu on hover */
 .dropdown:hover .dropdown-menu {
    display: block;
 }
 
-h1,
-h5 {
-   font-family: 'Overlock', serif !important;
-   font-weight: 700;
-   font-size: 50px !important;
-   color: #98BF3E !important;
-   text-align: center;
-   margin: 20px 0;
+.navbar button:hover {
+   background-color: #f6b94f;
 }
 
-#mainContainer {
-   display: flex;
-   justify-content: space-between;
-   align-items: stretch;
-   padding: 20px;
-   margin: 40px auto;
-   max-width: 1800px;
-   gap: 20px;
 
-}
-
-#contactanosDatos,
-#formularioDatos {
-   background-color: #222;
-   border-radius: 10px;
-   padding: 20px;
-   width: 48%;
-   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
-   min-height: 400px
-}
-
-#contactanosDatos h5,
-#contactanosDatos p {
-   display: inline;
-}
-
-#contactanosDatos h5 {
-   font-family: 'Overlock', serif;
-   color: white;
-   margin-right: 5px;
-}
-
-#contactanosDatos p {
-   font-family: 'Montserrat', sans-serif;
-   font-size: 27px;
-   color: white;
-}
-
-p,
-label,
-input,
-textarea,
-button {
-   font-family: 'Montserrat', sans-serif;
-   color: white;
-}
-
-.form-control {
-   background-color: black !important;
-   color: white !important;
-   border: 2px solid green;
-   padding: 10px;
-   border-radius: 5px;
-}
-
-.form-control::placeholder {
-   color: #ccc !important;
-   opacity: 1;
-}
-
-.form-control:focus {
-   background-color: black;
-   color: white;
-   outline: none;
-   border-color: #98BF3E;
-}
-
-.form-label {
-   color: rgb(253, 252, 252);
-}
-
-#contactanosDatos {
-   display: flex;
-   flex-direction: column;
-   align-items: center;
-}
-
-#contactanosDatos iframe {
-   margin-top: 10px;
-}
-
-@media (max-width: 768px) {
-   #mainContainer {
-      flex-direction: column;
-      align-items: center;
-   }
-
-   #contactanosDatos,
-   #formularioDatos {
-      width: 100%;
-      margin-bottom: 20px;
-   }
-
-   h1 {
-      font-size: 30px;
-   }
-}
-
+/* Estilos footer*/
 footer {
+   background-color: #000000;
    display: flex;
    align-items: center;
    width: 100%;
    border-top: 2px solid #fff;
 
-
 }
 
+/*Contenedor principal dentro del footer*/
 .containerF {
    padding: 4rem;
    display: flex;
    flex-wrap: wrap;
    width: 100%;
    gap: 3rem;
-
-
 }
 
-.descripcion {
+/*estilos para la seccion descripción*/
+.descripcionF {
    align-items: center;
+   color: #ffffff;
    display: flex;
    flex-direction: column;
    gap: 8px;
    width: 25%;
 }
 
-.link-container {
+/* Contenedor de enlaces dentro del footer */
+.link-containerF {
    width: 70%;
    display: flex;
    gap: 2rem;
 
 }
 
+/* Estilos comunes para las secciones de información, nosotros y navegación */
 .info,
 .nosotros,
 .navegacion {
@@ -253,6 +150,7 @@ footer {
    width: 30%;
 }
 
+/* Estilos para el logotipo */
 .logo {
    display: flex;
    align-items: center;
@@ -267,15 +165,15 @@ footer {
 .profile p {
    font-weight: 400;
    margin-bottom: 8px;
-
 }
 
+/* Contenedor de redes sociales */
 .social-media-container {
    display: flex;
    gap: 8px;
-
 }
 
+/* Estilos para los iconos de redes sociales */
 .social-media {
    cursor: pointer;
    width: 35px;
@@ -287,20 +185,13 @@ footer {
    text-align: center;
 }
 
+/* Efecto hover para los iconos de redes sociales */
 .social-media:hover {
    transform: rotateY(360deg);
 }
 
-.info h1 {
-   font-size: 24px;
-   font-weight: bold;
-   color: #fff;
-   height: 50px;
-   text-align: center;
-
-
-}
-
+/* Estilos para los encabezados de las secciones de información, nosotros y navegación */
+.info h1,
 .nosotros h1,
 .navegacion h1 {
    font-size: 24px;
@@ -308,9 +199,9 @@ footer {
    color: #fff;
    height: 50px;
    text-align: center;
-
 }
 
+/* Estilos para las listas de las secciones de información, nosotros y navegación */
 .info ul,
 .nosotros ul,
 .navegacion ul {
@@ -327,6 +218,7 @@ footer {
    cursor: pointer;
 }
 
+/* Efecto y estilos para los elementos de la lista al pasar sobre ellos */
 .info ul li::after {
    content: "";
    display: block;
@@ -338,7 +230,7 @@ footer {
    margin-top: 4px;
 }
 
-.link-container .nosotros ul li::after {
+.link-containerF .nosotros ul li::after {
    content: "";
    display: flex;
    border-bottom: 3px solid #98bf3e;
@@ -347,8 +239,6 @@ footer {
    transform-origin: right;
    transition: transform 0.6s linear;
    margin-top: 4px;
-
-
 }
 
 .navegacion ul li::after {
@@ -371,10 +261,12 @@ footer {
 
 }
 
+/* Estilos para los enlaces dentro de los elementos de la lista */
 .info ul li a,
 .nosotros ul li a,
 .navegacion ul li a {
    color: #fff;
+   text-decoration: none
 }
 
 @media screen and (max-width: 1536px) {
@@ -382,6 +274,9 @@ footer {
       gap: 2rem;
    }
 
+   footer .container .link-container {
+      gap: 2rem;
+   }
 }
 
 @media screen and (max-width: 1024px) {
