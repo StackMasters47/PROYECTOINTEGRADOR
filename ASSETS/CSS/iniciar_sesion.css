@@ -44,14 +44,13 @@ main {
     text-align: center;
     font-size: 2.5em;
     color: #3DBFBB;
-    margin-top: 5px;
-    margin-bottom: 20px;
+    margin-bottom: 15px;
 }
 
 .formIniciarSesion {
     margin: 20px;
     max-width: 400px !important;
-    min-height: 400px;
+    min-height: 350px;
     background-color: #222;
     border-radius: 10px;
     padding: 20px;
@@ -112,12 +111,13 @@ main {
         margin: 0;
         border: 3px solid #3DC1B4;
         border-radius: 10px;
-        background-color: transparent;
-        transition: background-color 0.3s ease;
+        background-color: #3DC1B4;
+        transition: border background-color 0.3s ease;
     }
 
     button:hover {
-        background-color: #3DC1B4;
+        border: 3px solid #288a80;
+        background-color: #288a80;
     }
 }
 

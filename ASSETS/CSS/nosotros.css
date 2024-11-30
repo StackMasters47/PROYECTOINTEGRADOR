@@ -1,13 +1,30 @@
-html body {
+/*html body {
   background-color: #000;
   min-height: 100rem;
   height: fit-content;
   overflow: visible;
+}*/
+
+* {
+  color: white;
+  font-family: 'Montserrat';
+  font-weight: 400;
+  font-style: normal;
+}
+
+body {
+  height: 100vh;
+  width: 100%;
+  background: url("/ASSETS/IMG/fondo.webp") rgba(6, 3, 3, 0.6) !important;
+  background-blend-mode: multiply;
+  background-size: cover;
+  background-repeat: repeat;
+  background-position: center;
 }
 
 /*Comienzan estilos de sección main*/
 
-html main {
+/*html main {
   color: white;
   min-height:200%;
   max-height: 6500px;
@@ -21,39 +38,28 @@ html main {
   margin-bottom: 10vw;
   overflow: visible;
 }
-
+  
 .row ul {
   list-style: none;
-
 }
+*/
 
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-  font-family: "Overlock";
-  font-weight: 100%;
+#acercaNosotros, #mvv {
+  font-family: "Overlock" ;
+  font-weight: 800;
   text-align: center;
 }
 
-h2 {
+#acercaNosotros {
   font-size: 3em;
 }
 
-h3 {
+#mvv {
   font-size: 2em;
 }
 
-p {
-  font-weight: 400;
-  font-size: 1em;
-  text-align: center;
-}
-
 /*Comienzan estilos para columna general (Encabezado, descripción, misión, visión, valores)*/
-.contenedorNosotros {
+/*.contenedorNosotros {
   display: grid;
   place-items: center;
   width: 80%;
@@ -61,33 +67,15 @@ p {
   margin-left: 10%;
   margin-right: 10%;
   margin-bottom: 50px;
-}
+}*/
 
-.row {
-  justify-content: center;
-}
-
-#nosotros,
-#mision,
-#vision {
-  width: 100%;
-}
-
-#valores {
-  width: 70%;
-}
-
-#mision,
-#vision,
-#valores {
+.descripcionNosotros {
+  flex-direction: column;
   background-color: black;
-  border-radius: 10px;
-  transition: background-color 0.3s ease;
-  margin: 8px;
 }
 
 #mision h3 {
-  border: 10px solid #3dbfbb;
+  border: 3px solid #3dbfbb;
 }
 
 #vision h3 {
