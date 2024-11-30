@@ -1,4 +1,4 @@
-@font-face {
+/*@font-face {
   font-family: 'Montserrat';
   src: url('/ASSETS/FONTS/Montserrat/Montserrat-Regular.ttf') format('truetype'); 
   font-weight: normal;
@@ -10,134 +10,154 @@
   src: url('/ASSETS/FONTS/Overlock/Overlock-Bold.ttf') format('truetype'); 
   font-weight: 700;
   font-style: normal;
+}*/
+
+main {
+  font-family: "Montserrat";
+  font-weight: 400;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 }
-main{
-  background: rgba(6, 3, 3, 0.6);
-}
 
 
-.row ul {
-  list-style: none;
-
-}
-
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
+#acercaNosotros, #mv, #v, #stackMasters {
   font-family: "Overlock";
-  font-weight: 100%;
+  font-weight: 800;
   text-align: center;
   color: #ffffff;
 }
 
-h2 {
+#acercaNosotros, #stackMasters {
   font-size: 3em;
+  color: #3DBFBB;
 }
 
-h3 {
+#mv, #v {
   font-size: 2em;
+}
+
+#parrafoNosotros {
+  font-size: 1.25em;
 }
 
 p {
   font-weight: 400;
-  font-size: 1em;
+  font-size: 1.1em;
   text-align: center;
 }
 
 /*Comienzan estilos para columna general (Encabezado, descripción, misión, visión, valores)*/
-.contenedorNosotros {
-  display: grid;
-  place-items: center;
-  width: 80%;
-  margin-top: 2%;
-  margin-left: 10%;
-  margin-right: 10%;
-  margin-bottom: 50px;
-  background-color: #000;
-}
 
-.row {
+.descripcionMVV, .integrantes {
+  margin: 2% 0 2% !important;
+  padding: 0 !important;
+  display: flex;
+  flex-direction: column;
   justify-content: center;
-}
-
-#nosotros,
-#mision,
-#vision {
-  width: 100%;
-  color: #ffffff;
-}
-
-#valores {
-  width: 70%;
-  color: #ffffff;
-}
-
-#mision,
-#vision,
-#valores {
-  background-color: black;
+  align-items: center;
+  width: 80% !important;
+  background-color: #111 !important;
   border-radius: 10px;
+}
+
+.row ul {
+  list-style: none;
+} 
+
+.descripcionmvv {
+  margin: 0 !important;
+}
+
+#acercaNosotros, #stackMasters{
+  margin: 3% 0 0;
+  padding: 0;
+}
+
+#mv {
+  margin: 3% 0 3%;
+  padding: 0;
+}
+
+#v {
+  margin: 1% 0 0;
+  padding: 0;
+}
+
+#parrafoNosotros, #parrafo {
+  margin: 2% 0 2%;
+  padding: 0 3% 0;
+}
+
+.mision, .vision, .valores {
+  border-radius: 10px;
+  background-color: transparent;
+}
+
+.mision, .vision {
+  margin: 0 2.5% 2%;
+}
+
+.valores {
+  margin: 1% 3% 3% !important;
+}
+
+.mision {
+  border: 5px solid #246784;
   transition: background-color 0.3s ease;
-  margin: 8px;
 }
 
-#mision h3 {
-  border: 10px solid #3dbfbb;
+.vision {
+  border: 5px solid #f36b37;
+  transition: background-color 0.3s ease;
 }
 
-#vision h3 {
-  border: 10px solid #98bf3e;
+.valores {
+  border: 5px solid #9f2884;
+  transition: background-color 0.3s ease;
 }
 
-#valores h3 {
-  border: 10px solid #f0769f;
+.mision:hover {
+  background-color: #246784;
 }
 
-#mision h3:hover {
-  background-color: #3dbfbb;
+.vision:hover {
+  background-color: #f36b37;
 }
 
-#vision h3:hover {
-  background-color: #98bf3e;
-}
-
-#valores h3:hover {
-  background-color: #f0769f;
+.valores:hover {
+  background-color: #9f2884;
 }
 
 /*Terminan estilos para parte Acerca de nosotros: Encabezado, descripción, misión, visión, valores*/
 
 /*Aqui va lo de perfiles*/
 
-.containerc {
-  display: grid;
+.cartas {
+  display: grid !important;
   position: relative;
-  flex-wrap: wrap;
   max-width: 100%;
   max-height: 100rem;
   min-width: 80px;
   min-height: 80px;
-  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
-  gap: 20px;
-  align-content: center;
-  margin-top: 2%;
-  margin-left: 10%;
-  margin-right: 10%;
-  margin-bottom: 0;
-  padding: 0%;
+  grid-template-columns: repeat(auto-fit, minmax(270px, 1fr));
+  gap: 25px;
+  margin: 3% 8% 5% !important;
+  padding: 0;
   border: 0;
-  overflow: visible;
-  background-color: #000;
+  overflow: auto;
 }
 
 .card {
   perspective: 3000px;
+  perspective: 3000px;
   background-color: #246784;
   min-height:280px;
   min-width:20px;
+  flex-wrap: wrap;
+  padding: 0 !important;
 }
 
 .card-inner {
@@ -185,6 +205,7 @@ p {
   font-size: 1em;
   position: relative;
   font-family: 'Overlock';
+  color: #ffffff;
   color: #ffffff;
 }
 
