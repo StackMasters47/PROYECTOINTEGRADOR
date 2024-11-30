@@ -1,3 +1,4 @@
+@import "/ASSETS/CSS/COLORES.css";
 footer {
 	background: var(--colorblack);
 	padding: 86px 0;
@@ -78,9 +79,12 @@ footer {
 		margin-bottom: 50px;
 	}
 }
-
 @media (min-width: 768px) and (max-width: 991px) {
 	.single-box {
 		margin-bottom: 50px;
 	}
+<<<<<<< HEAD
 }
+=======
+}
+>>>>>>> 3678ed72dacb3062adc59c4be21d38e2e83e289c
