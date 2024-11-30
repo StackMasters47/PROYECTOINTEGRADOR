@@ -22,10 +22,12 @@ main {
   justify-content: center;
 }
 
+
 #acercaNosotros, #mv, #v, #stackMasters {
   font-family: "Overlock";
   font-weight: 800;
   text-align: center;
+  color: #ffffff;
 }
 
 #acercaNosotros, #stackMasters {
@@ -95,7 +97,7 @@ p {
 }
 
 .mision, .vision {
-  margin: 0 3% 2%;
+  margin: 0 2.5% 2%;
 }
 
 .valores {
@@ -140,7 +142,7 @@ p {
   max-height: 100rem;
   min-width: 80px;
   min-height: 80px;
-  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(270px, 1fr));
   gap: 25px;
   margin: 3% 8% 5% !important;
   padding: 0;
@@ -149,6 +151,7 @@ p {
 }
 
 .card {
+  perspective: 3000px;
   perspective: 3000px;
   background-color: #246784;
   min-height:280px;
@@ -202,6 +205,7 @@ p {
   font-size: 1em;
   position: relative;
   font-family: 'Overlock';
+  color: #ffffff;
   color: #ffffff;
 }
 
