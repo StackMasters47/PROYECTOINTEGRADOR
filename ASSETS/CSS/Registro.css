@@ -1,88 +1,158 @@
+/*Estilos generales*/
+@font-face {
+    font-family: 'Montserrat';
+    src: url('/ASSETS/FONTS/Montserrat/Montserrat-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Overlock';
+    src: url('/ASSETS/FONTS/Overlock/Overlock-Bold.ttf') format('truetype');
+    font-weight: 700;
+    font-style: normal;
+}
+
 body {
-    background-color: black;
-    color: white;
-    font-family: 'Montserrat', sans-serif;
-    margin: 0;
-    padding: 0;
+    height: 100vh;
+    width: 100%;
+}
+
+main {
     display: flex;
-    justify-content: center;
+    flex-direction: column;
     align-items: center;
-    min-height: 100vh;
-}
-
-/* Contenedor del formulario de registro */
-.container {
-    max-width: 400px; /* Ancho limitado para un diseño compacto */
-    padding: 30px;
-    background-color: rgba(255, 255, 255, 0.15);
-    border-radius: 10px;
-    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.5); /* Sombra elegante */
-}
-
-/* Inputs y textos del formulario */
-.form-control {
-    background-color: black;
+    justify-content: center;
+    background: url("/ASSETS/IMG/fondo.webp") rgba(6, 3, 3, 0.8) !important;
+    background-blend-mode: multiply;
+    background-size: cover;
+    background-repeat: repeat;
+    background-position: center;
     color: white;
-    border: 2px solid #98BF3E;
-    padding: 10px;
-    border-radius: 5px;
-    transition: all 0.3s ease-in-out;
+    font-family: 'Montserrat';
+    font-weight: 400;
+    font-style: normal;
 }
 
-.form-control::placeholder {
-    color: #ccc;
-    opacity: 1;
-}
-
-.form-control:focus {
-    background-color: black;
-    color: white;
-    outline: none;
-    border-color: #3DC1B4; /* Color de borde al enfocarse */
-    box-shadow: 0px 0px 8px #3DC1B4;
-}
-
-.form-label {
-    font-size: 1rem;
-    color: #f1f1f1;
-}
-
-/* Botón de registro */
-button#Registrarse {
-    background-color: #3DC1B4;
-    border: none;
-    padding: 10px 20px;
-    font-size: 1rem;
-    border-radius: 5px;
-    cursor: pointer;
-    transition: background-color 0.3s ease-in-out;
-}
-
-button#Registrarse:hover {
-    background-color: #2ba599;
-}
-
-/* Título */
-h1 {
-    color: white;
+/*Estilos para formulario*/
+#registroEncabezado {
+    font-family: "Overlock";
+    font-weight: 800;
     text-align: center;
-    margin-bottom: 20px;
+    font-size: 2.5em;
+    color: #3DBFBB;
+    margin-bottom: 15px;
 }
 
+.formRegistro {
+    margin: 20px;
+    max-width: 400px !important;
+    min-height: 350px;
+    background-color: #222;
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.col-12 {
+    margin: 5px 0 5px !important;
+
+    a {
+        display: flex;
+        justify-content: center;
+        color: white;
+        font-size: 0.75em;
+        text-decoration: none;
+        transition: text-decoration 0.3 ease;
+    }
+
+    a:hover {
+        text-decoration: underline;
+    }
+}
+
+.input {
+    background-color: black !important;
+    color: white !important;
+    padding: 10px;
+    border-radius: 10px;
+    height: 45px;
+}
+
+.input::placeholder {
+    color: #ccc !important;
+    opacity: 1 !important;
+ }
+
+#nombre {
+    border: 3px solid #9f2884;
+}
+
+#telefono {
+    border: 3px solid #f36b37;
+}
+
+#email {
+    border: 3px solid #F6B94F;
+}
+
+#password1 {
+    border: 3px solid #98bf3E;
+}
+
+#password2 {
+    border: 3px solid #246784;
+}
+
+.input:focus {
+    background-color: black !important;
+    color: white !important;
+    outline: none !important;
+ }
+
+#button {
+    text-align: center;
+
+    button {
+        margin: 0;
+        border: 3px solid #3DC1B4;
+        border-radius: 10px;
+        background-color: #3DC1B4;
+        transition: border background-color 0.3s ease;
+    }
+
+    button:hover {
+        border: 3px solid #288a80;
+        background-color: #288a80;
+    }
+}
+
+.text-danger {
+    font-family: 'Montserrat';
+    font-weight: 400;
+    font-size: 0.75em;
+    text-align: center;
+}
+
+
+/*
 input:-webkit-autofill {
-    background-color: black !important; /* Fondo negro */
-    color: white !important; /* Texto blanco */
-    -webkit-text-fill-color: white !important; /* Color del texto para autofill */
-    border: 3px solid #98BF3E; /* Mantener el estilo del borde */
-    transition: background-color 5000s ease-in-out 0s; /* Previene el fondo blanco */
+    background-color: black !important; / Fondo negro /
+    color: white !important; / Texto blanco /
+    -webkit-text-fill-color: white !important; / Color del texto para autofill /
+    border: 3px solid #98BF3E; /Mantener el estilo del borde /
+    transition: background-color 5000s ease-in-out 0s; / Previene el fondo blanco /
 }
 
 input:-webkit-autofill:focus {
-    background-color: black !important; /* Fondo negro al enfocar */
-    -webkit-text-fill-color: white !important; /* Texto blanco al enfocar */
+    background-color: black !important; / Fondo negro al enfocar /
+    -webkit-text-fill-color: white !important; / Texto blanco al enfocar /
 }
 
 input:-internal-autofill-selected {
-    appearance: menulist-button; /* Ajuste de compatibilidad */
+    appearance: menulist-button; / Ajuste de compatibilidad /
 }
-
+}*/
