@@ -1,0 +1,82 @@
+body{
+    background:  url('/ASSETS/IMG/fondo.webp') rgba(6, 3, 3, 0.6); 
+    background-blend-mode: multiply;
+    background-position: center;
+    background-size: cover;
+    background-repeat: repeat;
+}
+
+.navbar{
+  /* background:  rgba(0, 0, 0, 1); */
+  background-color: rgb(7,4,5);
+  background-blend-mode: multiply;
+  background-position: center;
+  background-size: cover; 
+  background-repeat: no-repeat;
+  width: auto;
+}
+#logo{
+  /* background-color: rgba(0, 0, 0, 0.5); */
+  width: 8rem;  /* Ajusta este valor según lo que necesites */
+  height: auto;
+  /* margin-left: 20%; */
+}
+
+#carrito{
+  width: 1.7rem;  /* Ajusta este valor según lo que necesites */
+  height: auto;
+  filter: invert(1);
+}
+
+.nav-link{
+  color: #c8c8c8;
+  position: relative;
+}
+
+.nav-link:hover, .nav-link.active{
+  color: #ffffff;
+}
+
+.nav-link::before {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 0;
+  height: 2px;
+  background-color: #98bf3e;
+  visibility: hidden;
+  transition: 0.2s ease-in-out;
+}
+
+.nav-link:hover::before, 
+.nav-link.active::before {
+  width: 100%;
+  visibility: visible;
+}
+
+.dropdown-menu{
+  background-color: rgba(0, 0, 0, 1);
+    
+}
+.dropdown-item{
+  color:rgb(255,255,255);
+}
+@media (max-width: 991px){
+  .sidebar {
+      background-color: rgba(255, 255, 255, 0.15);
+      backdrop-filter: blur(10px);
+      
+  }
+  .dropdown-menu{
+    background-color: rgba(255, 255, 255, 0);
+      backdrop-filter: blur(1px);
+  }
+}
+.nav-link.dropdown-toggle::after {
+  display: none;
+}
+/* .dropdown:hover .dropdown-menu {
+  display: block;
+} */
