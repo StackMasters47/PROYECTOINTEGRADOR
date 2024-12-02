@@ -7,7 +7,7 @@ async function cargarComponente(url, selector) {
     const contenido = await response.text(); // Obtiene el contenido como texto
     document.querySelector(selector).innerHTML = contenido; // Inserta el contenido en el DOM
   } catch (error) {
-    console.error(error,"Erro del fetch"); // Muestra el error en la consola
+    console.error('Error:',error); // Muestra el error en la consola
   }
 }
 
@@ -15,5 +15,5 @@ async function cargarComponente(url, selector) {
 document.addEventListener('DOMContentLoaded', () => {
   cargarComponente('/COMPONENTS/header.html', 'header');
   cargarComponente('/COMPONENTS/footer.html', 'footer');
-  cargarComponente('/COMPONENTS/headerBO.html', 'headerBO');
-});
+ cargarComponente('/COMPONENTS/headerBO.html', 'headerBO');
+})

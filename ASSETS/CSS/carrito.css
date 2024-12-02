@@ -23,8 +23,23 @@ main {
 
 }
 
-div.table-responsive.sm.md-lg-xl.table.tabla-productos{
-   background-color: #000 !important;
+#tabla-productos{
+   background-color: #000;
+   color: #ffffff !important;
+   font-family: 'Montserrat' !important;
+
+}
+#tabla-productos th{
+   color: #ffffff !important;
+   font-family: 'Montserrat' !important;
+}
+#tabla-productos td {
+   color:#ffffff !important;
+   font-family: 'Montserrat' !important;
+}
+
+.table{
+   color: #ffffff !important;
 }
 
 #cardProductos{
@@ -37,25 +52,31 @@ div.table-responsive.sm.md-lg-xl.table.tabla-productos{
 
 .card-body h5{
    color: aliceblue;
+   font-family: 'Montserrat' !important;
 }
 .card-body p{
    color: aliceblue;
+   font-family: 'Montserrat' !important;
 }
 #botonAgregar{
    background-color: #f6b94f;
    border-color: #f6b94f;
+   font-family: 'Montserrat' !important;
 }
 #botonEliminar{
    background-color: #98bf3e;
    border-color: #98bf3e;
    color: #000;
+   font-family: 'Montserrat' !important;
 }
 
 #botonComprar{
    background-color: #f36b37;
    border-color:#f36b37;
+   font-family: 'Montserrat' !important;
 }
 #vaciar-carrito{
    background-color: #246784;
    border-color: #246784;
+   font-family: 'Montserrat' !important;
 }
