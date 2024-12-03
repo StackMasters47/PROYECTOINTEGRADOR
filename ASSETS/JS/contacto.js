@@ -27,15 +27,7 @@ document.getElementById("Enviar").addEventListener("click", function (event) {
         apellido.classList.remove("is-invalid");
         apellido.classList.add('is-valid');
     }
-<<<<<<< HEAD
-<<<<<<< HEAD:Pagina de contacto fusion/fusion.js
-    if(telefono.value === "" || !regexTelefono.test(telefono.value){
-=======
-    if(telefono.value === "" || !regexTelefono.test(telefono.value)){
->>>>>>> afb6340f20beaedc39ba5d517704023a2d2ad3b5:ASSETS/JS/contacto.js
-=======
     if (telefono.value === "" || !regexTelefono.test(telefono.value)) {
->>>>>>> 3678ed72dacb3062adc59c4be21d38e2e83e289c
         telefono.classList.add('is-invalid');
         valido = false;
     } else {
