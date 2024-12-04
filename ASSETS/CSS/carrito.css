@@ -1,0 +1,82 @@
+@font-face {
+   font-family: 'Montserrat';
+   src: url('/ASSETS/FONTS/Montserrat/Montserrat-Regular.ttf') format('truetype'); 
+   font-weight: normal;
+   font-style: normal;
+ }
+ 
+ @font-face {
+   font-family: 'Overlock';
+   src: url('/ASSETS/FONTS/Overlock/Overlock-Bold.ttf') format('truetype'); 
+   font-weight: 700;
+   font-style: normal;
+ }
+main {
+
+   min-height: 80vh;
+   background: rgba(6, 3, 3, 0.6);
+}
+
+.container{
+   background-color: #000;
+   opacity: 85%;
+
+}
+
+#tabla-productos{
+   background-color: #000;
+   color: #ffffff !important;
+   font-family: 'Montserrat' !important;
+
+}
+#tabla-productos th{
+   color: #ffffff !important;
+   font-family: 'Montserrat' !important;
+}
+#tabla-productos td {
+   color:#ffffff !important;
+   font-family: 'Montserrat' !important;
+}
+
+.table{
+   color: #ffffff !important;
+}
+
+#cardProductos{
+   border-color: #9f2884;
+   border-width: 2px;
+}
+.card-body{
+   background-color: #9f2884;
+}
+
+.card-body h5{
+   color: aliceblue;
+   font-family: 'Montserrat' !important;
+}
+.card-body p{
+   color: aliceblue;
+   font-family: 'Montserrat' !important;
+}
+#botonAgregar{
+   background-color: #f6b94f;
+   border-color: #f6b94f;
+   font-family: 'Montserrat' !important;
+}
+#botonEliminar{
+   background-color: #98bf3e;
+   border-color: #98bf3e;
+   color: #000;
+   font-family: 'Montserrat' !important;
+}
+
+#botonComprar{
+   background-color: #f36b37;
+   border-color:#f36b37;
+   font-family: 'Montserrat' !important;
+}
+#vaciar-carrito{
+   background-color: #246784;
+   border-color: #246784;
+   font-family: 'Montserrat' !important;
+}

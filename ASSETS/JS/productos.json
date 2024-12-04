@@ -1,0 +1,62 @@
+[
+   {
+      "id": 1,
+      "titulo": "Shampoo Hidratante",
+      "marca": "Dove",
+      "precio": 120
+   },
+   {
+      "id": 2,
+      "titulo": "Crema Facial",
+      "marca": "Nivea",
+      "precio": 85
+   },
+   {
+      "id": 3,
+      "titulo": "Jabón Líquido",
+      "marca": "Palmolive",
+      "precio": 60
+   },
+   {
+      "id": 4,
+      "titulo": "Perfume Floral",
+      "marca": "Chanel",
+      "precio": 1500
+   },
+   {
+      "id": 5,
+      "titulo": "Cepillo de Dientes",
+      "marca": "Oral-B",
+      "precio": 30
+   },
+   {
+      "id": 6,
+      "titulo": "Protector Solar",
+      "marca": "Eucerin",
+      "precio": 300
+   },
+   {
+      "id": 7,
+      "titulo": "Tónico Facial",
+      "marca": "La Roche-Posay",
+      "precio": 200
+   },
+   {
+      "id": 8,
+      "titulo": "Mascarilla Facial",
+      "marca": "L'Oréal",
+      "precio": 110
+   },
+   {
+      "id": 9,
+      "titulo": "Acondicionador",
+      "marca": "Pantene",
+      "precio": 95
+   },
+   {
+      "id": 10,
+      "titulo": "Gel Antibacterial",
+      "marca": "Purell",
+      "precio": 50
+   }
+]
