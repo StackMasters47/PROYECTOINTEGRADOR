@@ -1,11 +1,24 @@
 @import "COLORES.css";
 
-/* Estilos para el carrusel principal */
-#carouselExampleFade {
-    margin-top: 50px;
-    padding: 50px;
+@font-face {
+	font-family: 'Montserrat';
+	src: url('/ASSETS/FONTS/Montserrat/Montserrat-Regular.ttf') format('truetype'); 
+	font-weight: normal;
+	font-style: normal;
+  }
+  
+  @font-face {
+	font-family: 'Overlock';
+	src: url('/ASSETS/FONTS/Overlock/Overlock-Bold.ttf') format('truetype'); 
+	font-weight: 700;
+	font-style: normal;
+  }
+  
 
-}
+ html main{
+    background:rgba(6, 3, 3, 0.6);
+ }
+/* Estilos para el carrusel principal */
 
 .carousel-item img {
     border-radius: 10px;
@@ -18,7 +31,6 @@
     background-color: black;
     padding: 20px;
     border-radius: 10px;
-    /* max-width: 1122px;*/
     margin: 0 auto;
 }
 
@@ -77,6 +89,7 @@
     color: var(--color8);
     text-align: center;
     font-size: 3rem;
+    font-family: 'Overlock';
 }
 
 .hm-grid-category .grid-item img {
@@ -107,16 +120,10 @@
 .containermt-5 p {
     text-align: center;
     color: var(--color8);
+    font-family: 'Overlock';
 }
 
-.reviews-stars {
-    color: gold;
-    /* Color dorado para estrellas */
-    margin-bottom: 10px;
-    /* Espacio inferior */
-    font-size: 24px;
-    /* Tamaño de fuente */
-}
+
 
 .containermt-5 h1 {
     color: var(--color8)
@@ -129,6 +136,7 @@
     font-size: 50px;
     background-color: var(--colorblack);
     padding: 20px;
+    font-family: 'Overlock';
 
 
 }
@@ -217,7 +225,7 @@
     margin: 0;
     margin-bottom: 10px;
     color: var(--colorwhite);
-    font-family: 'Bebas Neue', sans-serif;
+    font-family:'Overlock';
 }
 
 .rating {
