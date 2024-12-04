@@ -1,0 +1,88 @@
+@font-face {
+   font-family: 'Montserrat';
+   src: url('/ASSETS/FONTS/Montserrat/Montserrat-Regular.ttf') format('truetype'); 
+   font-weight: normal;
+   font-style: normal;
+ }
+ 
+ @font-face {
+   font-family: 'Overlock';
+   src: url('/ASSETS/FONTS/Overlock/Overlock-Bold.ttf') format('truetype'); 
+   font-weight: 700;
+   font-style: normal;
+ }
+
+
+html main{
+   background:rgba(6, 3, 3, 0.6);
+}
+#tituloCuidadoCo{
+      background-color: #98bf3e !important;
+      width: 60%;
+      color: #000000;
+      text-align: center;
+      padding-top:10px;
+      margin-top: 20px;
+      padding-left: 0%;
+      padding-right: 0%;
+      padding-bottom: 5px;
+      margin-bottom: 5px;
+      font-family: 'Overlock';
+   }
+   
+   #tituloCuidadoCa{
+      background-color:#9f2884 !important;
+      width: 60%;
+      color: #000000;
+      text-align: center;
+      padding-top:10px;
+      margin-top: 20px;
+      padding-left: 0%;
+      padding-right: 0%;
+      padding-bottom: 5px;
+      margin-bottom: 5px;
+      font-family: 'Overlock';
+
+   }
+
+   #tituloCuidadoFa{
+      background-color:#3dbfbb !important;
+      width: 60%;
+      color: #000000;
+      text-align: center;
+      padding-top:10px;
+      margin-top: 20px;
+      padding-left: 0%;
+      padding-right: 0%;
+      padding-bottom: 5px;
+      margin-bottom: 5px;
+      font-family: 'Overlock';
+
+   }
+
+   #tituloBelleza{
+      background-color:#f1645a !important;
+      width: 60%;
+      color: #000000;
+      text-align: center;
+      padding-top:10px;
+      margin-top: 20px;
+      padding-left: 0%;
+      padding-right: 0%;
+      padding-bottom: 5px;
+      margin-bottom: 5px;
+      font-family: 'Overlock';
+
+   }
+
+
+.container{
+   width: 60%;
+}
+
+.card-body{
+   background-color: black;
+}
+
+
+

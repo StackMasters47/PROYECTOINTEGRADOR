@@ -1,31 +1,26 @@
-body{
-   background:  url('/ASSETS/IMG/fondo.webp') rgba(6, 3, 3, 0.6) !important; 
-   background-blend-mode: multiply;
-   background-position: center;
-   background-size: cover;
-   background-repeat: repeat;
+
+body {
+   background-color: black;
+   color: white;
+   font-family: 'Montserrat', sans-serif;
+   margin: 0;
+   padding: 0;
 }
 
-body::-webkit-scrollbar {
-   display: none;
-}
 
-h1{
+h1 {
    font-family: 'Overlock', serif;
    font-weight: 700;
-   font-size: 3rem !important;
-   color: #98BF3E !important;
+   font-size: 3rem;
+   color: #98BF3E;
    text-align: center;
-   margin-top: 50px !important;
 } 
-
 h5 {
-   font-family: 'Overlock', serif !important;
+   font-family: 'Overlock', serif;
    font-weight: 700;
-   font-size: 2rem !important;
-   color: #98BF3E !important;
+   font-size: 1.5rem;
+   color: #98BF3E;
    text-align: center;
-   margin: 20px 0;
 }
 
 #mainContainer {
@@ -33,24 +28,22 @@ h5 {
    justify-content: space-between;
    align-items: stretch;
    padding: 20px;
-   /* margin: 40px auto; */
-   max-width: 1800px;
-   gap: 20px;
-
+   /* margin: 40px auto;  */
+   max-width: 1800px; 
+   gap: 20px; 
+   
 }
 
-#contactanosDatos,
-#formularioDatos {
-   background-color: #222;
+#contactanosDatos, #formularioDatos {
+   background-color: #222; 
    border-radius: 10px;
    padding: 20px;
-   width: 48%;
+   width: 48%; 
    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
    min-height: 400px
 }
 
-#contactanosDatos h5,
-#contactanosDatos p {
+#contactanosDatos h5, #contactanosDatos p {
    display: inline;
 }
 
@@ -62,7 +55,7 @@ h5 {
 
 #contactanosDatos p {
    font-family: 'Montserrat', sans-serif;
-   font-size: 1.5rem;
+   font-size: 1.15rem;
    color: white;
 }
 
@@ -72,23 +65,23 @@ p, label, input, textarea, button {
 }
 
 .form-control {
-   background-color: black !important;
-   color: white !important;
+   background-color: black;
+   color: white;
    border: 2px solid green;
    padding: 10px;
    border-radius: 5px;
 }
 
 .form-control::placeholder {
-   color: #ccc !important;
-   opacity: 1;
+   color: #ccc; 
+   opacity: 1; 
 }
 
 .form-control:focus {
-   background-color: black;
-   color: white;
-   outline: none;
-   border-color: #98BF3E;
+   background-color: black; 
+   color: white; 
+   outline: none; 
+   border-color: #98BF3E; 
 }
 
 .form-label {
@@ -97,41 +90,36 @@ p, label, input, textarea, button {
 
 #contactanosDatos {
    display: flex;
-   flex-direction: column;
-   align-items: center;
+   flex-direction: column; 
+   align-items: center; 
 }
 
 #contactanosDatos iframe {
-   margin-top: 10px;
+   margin-top: 10px; 
    height: auto;
    aspect-ratio: 1 / 1;
-   border-radius: 15px;
-   margin-bottom: 10px;
 }
 
 @media (max-width: 768px) {
    #mainContainer {
-      flex-direction: column;
+      flex-direction: column; 
       align-items: center;
    }
 
-   #contactanosDatos,
-   #formularioDatos {
-      width: 100%;
-      margin-bottom: 20px;
+   #contactanosDatos, #formularioDatos {
+      width: 100%; 
+      margin-bottom: 20px; 
    }
 
    h1 {
-      font-size: 30px;
+      font-size: 30px; 
    }
-
    #contactanosDatos iframe {
       margin-top: 10px; 
       height: 90%;
       width: 90%;
    }
 }
-
 #alertaFormulario {
    position: fixed;
    top: 5%;
