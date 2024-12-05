@@ -77,6 +77,41 @@ body{
 .nav-link.dropdown-toggle::after {
   display: none;
 }
+
+#cuidadoCorporal:hover{
+  background-color: #98bf3e;
+
+}
+#cuidadoCorporal a:active{
+  background-color: #98bf3e;
+}
 /* .dropdown:hover .dropdown-menu {
   display: block;
 } */
+
+
+#cuidadoCapilar:hover{
+  background-color: #9f2884;
+
+}
+#cuidadoCapilar a:active{
+  background-color: #9f2884;
+}
+
+
+#cuidadoFacial:hover{
+  background-color: #3dbfbb;
+
+}
+#cuidadoFacial a:active{
+  background-color: #3dbfbb;
+}
+
+
+#Belleza:hover{
+  background-color: #f1645a;
+
+}
+#Belleza a:active{
+  background-color: #f1645a;
+}
