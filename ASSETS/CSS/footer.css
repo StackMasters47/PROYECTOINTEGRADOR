@@ -1,27 +1,47 @@
 @import "/ASSETS/CSS/COLORES.css";
+
+@font-face {
+	font-family: 'Montserrat';
+	src: url('/ASSETS/FONTS/Montserrat/Montserrat-Regular.ttf') format('truetype'); 
+	font-weight: normal;
+	font-style: normal;
+  }
+  
+  @font-face {
+	font-family: 'Overlock';
+	src: url('/ASSETS/FONTS/Overlock/Overlock-Bold.ttf') format('truetype'); 
+	font-weight: 700;
+	font-style: normal;
+  }
+  *{
+	font-family: Overlock;
+  }
 footer {
 	background: var(--colorblack);
 	padding: 86px 0;
     box-sizing: border-box;
+	
 }
 .single-content {
 	text-align: center;
 	padding: 115px 0;
 }
 .single-box img{
-    width: 80%;
+    width: 100%;
+	align-items: center;
 }
 .single-box p {
 	color: var(--colorwhite);
 	line-height: 1.9;
-    text-align: left;
-    font-size: 12px;
+    text-align: center;
+    font-size: 15px;
 
 }
 .single-box h3 {
 	font-size: 15px;
 	font-weight: 700;
-	color: var(--color2);
+	color: var(--color8);
+	text-align: center;
 }
 .single-box .card-area i {
 	color: var(--colorwhite);
@@ -39,18 +59,22 @@ footer {
 	color: var(--colorwhite);
 	line-height: 2.5;
 	font-weight: 100;
+	font-size: 15px;
 }
 .single-box h2 {
-	color: var(--color2);
-	font-size: 20px;
+	color: var(--color8);
+	font-size: 15px;
 	font-weight: 700;
+	align-items: center;
+	text-align: center;
 }
 #basic-addon2 {
-	background: var(--color2);
+	background: var(--color8);
 	color: var(--colorwhite);
+	align-items: center;
 }
 .socials i {
-	font-size: 18px;
+	font-size: 20px;
 	margin-right: 15px;
 }
 
@@ -58,10 +82,9 @@ footer {
 .single-box ul li a::after{
     content: "";
     display: block;
-    border-bottom: 2px solid var(--color2);
+    border-bottom: 2px solid var(--color8);
     width: 100%;
     transform: scaleX(0);
-   
     transition: transform 0.6s linear;
     margin-top: 4px;
     
@@ -72,6 +95,10 @@ footer {
   transform-origin: center;
   transition: transform 0.6s linear;
  
+}
+.card-area{
+align-items: center;
+text-align: center;
 }
 
 @media (max-width: 767px) {
