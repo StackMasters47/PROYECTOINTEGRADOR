@@ -1,0 +1,131 @@
+
+body {
+   background-color: black;
+   color: white;
+   font-family: 'Montserrat', sans-serif;
+   margin: 0;
+   padding: 0;
+}
+
+
+h1 {
+   font-family: 'Overlock', serif;
+   font-weight: 700;
+   font-size: 3rem;
+   color: #98BF3E;
+   text-align: center;
+} 
+h5 {
+   font-family: 'Overlock', serif;
+   font-weight: 700;
+   font-size: 1.5rem;
+   color: #98BF3E;
+   text-align: center;
+}
+
+#mainContainer {
+   display: flex;
+   justify-content: space-between;
+   align-items: stretch;
+   padding: 20px;
+   /* margin: 40px auto;  */
+   max-width: 1800px; 
+   gap: 20px; 
+   
+}
+
+#contactanosDatos, #formularioDatos {
+   background-color: #222; 
+   border-radius: 10px;
+   padding: 20px;
+   width: 48%; 
+   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+   min-height: 400px
+}
+
+#contactanosDatos h5, #contactanosDatos p {
+   display: inline;
+}
+
+#contactanosDatos h5 {
+   font-family: 'Overlock', serif;
+   color: white;
+   margin-right: 5px;
+}
+
+#contactanosDatos p {
+   font-family: 'Montserrat', sans-serif;
+   font-size: 1.15rem;
+   color: white;
+}
+
+p, label, input, textarea, button {
+   font-family: 'Montserrat', sans-serif;
+   color: white;
+}
+
+.form-control {
+   background-color: black;
+   color: white;
+   border: 2px solid green;
+   padding: 10px;
+   border-radius: 5px;
+}
+
+.form-control::placeholder {
+   color: #ccc; 
+   opacity: 1; 
+}
+
+.form-control:focus {
+   background-color: black; 
+   color: white; 
+   outline: none; 
+   border-color: #98BF3E; 
+}
+
+.form-label {
+   color: rgb(253, 252, 252);
+}
+
+#contactanosDatos {
+   display: flex;
+   flex-direction: column; 
+   align-items: center; 
+}
+
+#contactanosDatos iframe {
+   margin-top: 10px; 
+   height: auto;
+   aspect-ratio: 1 / 1;
+}
+
+@media (max-width: 768px) {
+   #mainContainer {
+      flex-direction: column; 
+      align-items: center;
+   }
+
+   #contactanosDatos, #formularioDatos {
+      width: 100%; 
+      margin-bottom: 20px; 
+   }
+
+   h1 {
+      font-size: 30px; 
+   }
+   #contactanosDatos iframe {
+      margin-top: 10px; 
+      height: 90%;
+      width: 90%;
+   }
+}
+#alertaFormulario {
+   position: fixed;
+   top: 5%;
+   left: 50%;
+   transform: translateX(-50%); 
+   width: auto;
+   max-width: 90%;
+   text-align: center;   
+}
