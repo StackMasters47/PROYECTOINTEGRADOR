@@ -17,7 +17,7 @@ body{
 }
 #logo{
   /* background-color: rgba(0, 0, 0, 0.5); */
-  width: 8rem;  /* Ajusta este valor según lo que necesites */
+  width: 12rem;  /* Ajusta este valor según lo que necesites */
   height: auto;
   /* margin-left: 20%; */
 }
@@ -45,7 +45,7 @@ body{
   transform: translateX(-50%);
   width: 0;
   height: 2px;
-  background-color: #98bf3e;
+  background-color: var(--color8);
   visibility: hidden;
   transition: 0.2s ease-in-out;
 }
@@ -54,6 +54,7 @@ body{
 .nav-link.active::before {
   width: 100%;
   visibility: visible;
+  
 }
 
 .dropdown-menu{
