@@ -75,7 +75,15 @@ html main{
 
    }
 
+.container a{
+   
+   text-decoration: none;
+   color: #ffffff;
+}
 
+.container a:hover{
+   color: #000000;
+}
 .container{
    width: 60%;
 }
@@ -84,5 +92,35 @@ html main{
    background-color: black;
 }
 
+.card-body #botonComprarcuCo{
+   border-color: #98bf3e !important;
+}
 
+.card-body #botonComprarcuCo:hover{
+   background-color: #98bf3e;
+}
+
+.card-body #botonComprarCapilar{
+   border-color: #9f2884 !important;
+}
+
+.card-body #botonComprarCapilar:hover{
+   background-color: #9f2884;
+}
+
+.card-body #botonComprarFa{
+   border-color: #3dbfbb !important;
+}
+
+.card-body #botonComprarFa:hover{
+   background-color: #3dbfbb;
+}
+
+.card-body #botonComprarBe{
+   border-color: #f1645a !important;
+}
+
+.card-body #botonComprarBe:hover{
+   background-color: #f1645a;
+}
 

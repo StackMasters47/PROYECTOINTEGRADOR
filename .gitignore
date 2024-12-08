@@ -1,6 +1,0 @@
-#Ignorar la carpeta de vscode
-.vscode/
-
-# Ignorar logs y cachés
-*.log
-.cache/

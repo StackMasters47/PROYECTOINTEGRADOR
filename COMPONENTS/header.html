@@ -8,6 +8,7 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
     <link rel="stylesheet" href="/ASSETS/CSS/header.css">
+    <link rel="icon" href="/ASSETS/IMG/imgLogo/fondoPajaro.png" type="image/x-icon"> <!--Agrego esta etiqueta para que salga el favicon-->
 </head>
 
 <body class="vh-100 overflow-hidden">
@@ -40,41 +41,46 @@
                             <a class="nav-link active" aria-current="page" href="/index.html">Inicio</a>
                         </li>
                         <li class="nav-item dropdown">
-                            <a class="nav-link dropdown-toggle" data-bs-auto-close="outside" href="#" data-bs-toggle="dropdown">
+                            <a  class="nav-link dropdown-toggle" data-bs-auto-close="outside" href="/PAGES/paginaProductos.html" data-bs-toggle="dropdown">
                                 Productos 
                             </a>
 
                             <ul class="dropdown-menu">
                                 <li class="dropend">
-                                    <a class="dropdown-item dropdown-toggle" data-bs-toggle="dropdown">Cuidado corporal</a>
+                                    <a class="dropdown-item" href="/PAGES/paginaProductos.html">Todo</a>
+                                </li>
+                                <li class="dropend" id="cuidadoCorporal">
+                                    <a href="/PAGES/paginaCuidadoCapilar.html" class="dropdown-item dropdown" data-bs-toggle="dropdown">Cuidado corporal</a>
                                     <ul class="dropdown-menu">
-                                        <li><a href="" class="dropdown-item">Sc1</a></li>
-                                        <li><a href="" class="dropdown-item">Sc2</a></li>
-                                        <li><a href="" class="dropdown-item">Sc3</a></li>
+                                        <li><a href="/PAGES/paginaCuidadoCorporal.html#tituloCremas" class="dropdown-item">Hidratación</a></li>
+                                        <li><a href="/PAGES/paginaCuidadoCorporal.html#tituloExfoliante" class="dropdown-item">Exfoliantes</a></li>
+                                        <li><a href="/PAGES/paginaCuidadoCorporal.html#tituloJabones" class="dropdown-item">Limpieza</a></li>
                                     </ul>
                                 </li>
-                                <li class="dropend">
-                                    <a class="dropdown-item dropdown-toggle" data-bs-toggle="dropdown">Cuidado capilar</a>
+                                <li class="dropend" id="cuidadoCapilar">
+                                    <a href="/PAGES/paginaCuidadoCapilar.html" class="dropdown-item dropdown" data-bs-toggle="dropdown">Cuidado capilar</a>
                                     <ul class="dropdown-menu">
-                                        <li><a href="" class="dropdown-item">Sc1</a></li>
-                                        <li><a href="" class="dropdown-item">Sc2</a></li>
-                                        <li><a href="" class="dropdown-item">Sc3</a></li>
+                                        <li><a href="/PAGES/paginaCuidadoCapilar.html#tituloShampoo" class="dropdown-item">Shampoo</a></li>
+                                        <li><a href="/PAGES/paginaCuidadoCapilar.html#tituloAcondicionador" class="dropdown-item">Acondicionador</a></li>
+                                        <li><a href="/PAGES/paginaCuidadoCapilar.html#tituloTratamiento" class="dropdown-item">Tratamientos</a></li>
                                     </ul>
                                 </li>
-                                <li class="dropend">
-                                    <a class="dropdown-item dropdown-toggle" data-bs-toggle="dropdown">Cuidado facial</a>
+                                <li class="dropend" id="cuidadoFacial">
+                                    <a href="/PAGES/paginaCuidadoFacial.html" class="dropdown-item dropdown" data-bs-toggle="dropdown">Cuidado facial</a>
                                     <ul class="dropdown-menu">
-                                        <li><a href="" class="dropdown-item">Sc1</a></li>
-                                        <li><a href="" class="dropdown-item">Sc2</a></li>
-                                        <li><a href="" class="dropdown-item">Sc3</a></li>
+                                        <li><a href="/PAGES/paginaCuidadoFacial.html#tituloSuero" class="dropdown-item">Sueros faciales</a></li>
+                                        <li><a href="/PAGES/paginaCuidadoFacial.html#tituloHidratacion" class="dropdown-item">Hidratación</a></li>
+                                        <li><a href="/PAGES/paginaCuidadoFacial.html#tituloLimpieza" class="dropdown-item">Limpieza</a></li>
+                                        <li><a href="/PAGES/paginaCuidadoFacial.html#tituloBloqueador" class="dropdown-item">Bloqueadores solares</a></li>
+
                                     </ul>
                                 </li>
-                                <li class="dropend">
-                                    <a class="dropdown-item dropdown-toggle" data-bs-toggle="dropdown">Cuidado belleza</a>
+                                <li class="dropend" id="Belleza">
+                                    <a href="/PAGES/paginaBelleza.html" class="dropdown-item dropdown" data-bs-toggle="dropdown">Belleza</a>
                                     <ul class="dropdown-menu">
-                                        <li><a href="" class="dropdown-item">Sc1</a></li>
-                                        <li><a href="" class="dropdown-item">Sc2</a></li>
-                                        <li><a href="" class="dropdown-item">Sc3</a></li>
+                                        <li><a href="/PAGES/paginaBelleza.html#tituloOjos" class="dropdown-item">Ojos</a></li>
+                                        <li><a href="/PAGES/paginaBelleza.html#tituloLabios" class="dropdown-item">Labios</a></li>
+                                        <li><a href="/PAGES/paginaBelleza.html#tituloRostro" class="dropdown-item">Rostro</a></li>
                                     </ul>
                                 </li>
                             </ul>
@@ -93,7 +99,7 @@
                     </ul>
                     <div class="d-flex flex-column flex-lg-row align-items-center gap-3">
                         <a href="/PAGES/iniciar_sesion.html" class="text-white">Ingresa  </a> <!--Formulario de iniciar sesion-->
-                        <a href="/PAGES/registro.html" class="text-white text-decoration-none px-3 py-1 rounded-4" style="background-color: #f1645a">Registrate</a><!--Formulario de registro-->
+                        <a href="/PAGES/registro.html" class="text-white text-decoration-none px-3 py-1 rounded-4" style="background-color: var(--color8)">Registrate</a><!--Formulario de registro-->
                     </div>
                 </div>
             </div>

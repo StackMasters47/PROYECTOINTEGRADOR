@@ -15,5 +15,5 @@ async function cargarComponente(url, selector) {
 document.addEventListener('DOMContentLoaded', () => {
   cargarComponente('/COMPONENTS/header.html', 'header');
   cargarComponente('/COMPONENTS/footer.html', 'footer');
- cargarComponente('/COMPONENTS/headerBO.html', 'headerBO');
-})
+  // cargarComponente('/COMPONENTS/headerBO.html', '#headerBO');
+});
