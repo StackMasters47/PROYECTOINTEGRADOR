@@ -10,7 +10,7 @@ body::-webkit-scrollbar {
    display: none;
 }
 
-h1{
+h2 {
    font-family: 'Overlock', serif;
    font-weight: 700;
    font-size: 3rem !important;
