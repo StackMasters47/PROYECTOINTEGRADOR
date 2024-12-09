@@ -1,0 +1,129 @@
+/* Fondo y estilos globales */
+/*Estilos generales*/
+/* Fuente personalizada */
+@font-face {
+    font-family: 'Montserrat';
+    src: url('/ASSETS/FONTS/Montserrat/Montserrat-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Overlock';
+    src: url('/ASSETS/FONTS/Overlock/Overlock-Bold.ttf') format('truetype');
+    font-weight: 700;
+    font-style: normal;
+}
+*{
+    margin: 0;
+    padding: 0;
+    box-shadow: border-box;
+}
+body {
+    background: url('/ASSETS/IMG/fondo.webp') rgba(6, 3, 3, 0.6) !important;
+    background-blend-mode: multiply;
+    background-position: center;
+    background-size: cover;
+    background-repeat:no-repeat;
+    color: white;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    font-family: 'Montserrat', sans-serif;
+}
+
+/* Contenedor principal del formulario */
+.container {
+    max-width: 900px;
+    width: 100%;
+    padding: 30px;
+    background-color: rgb(51,51,51) !important;
+    border-radius: 10px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.5);
+}
+
+/* Estilos del título */
+h1 {
+    color: white;
+    text-align: center;
+    font-family: 'Overlock', sans-serif;
+    margin-bottom: 20px;
+}
+
+/* Estilos de las etiquetas */
+.form-label {
+    font-size: 1rem;
+    color: #f1f1f1;
+}
+
+/* Selectores del formulario */
+.form-select {
+    background-color: black;
+    color: white;
+    border: 2px solid #98BF3E;
+    padding: 8px 12px !important;
+    border-radius: 5px;
+    font-family: 'Montserrat', sans-serif;
+    transition: all 0.3s ease-in-out;
+    width: 100% !important;
+    max-width: 100%;
+    box-sizing: border-box;
+}
+
+.form-select:focus {
+    outline: none;
+    border-color: #3DC1B4;
+    box-shadow: 0px 0px 8px #3DC1B4;
+}
+
+/* Botón de envío */
+button#btnAgregar {
+    background-color: #3DC1B4;
+    border: none;
+    padding: 10px 20px;
+    font-size: 1rem;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: background-color 0.3s ease-in-out;
+}
+
+button#btnAgregar:hover {
+    background-color: #2ba599;
+}
+.btn-primary {
+    background-color:#3DC1B4;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 10px;
+    font-size: 1rem;
+}
+.btn-secondary {
+    background-color:#3DC1B4;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 10px;
+    font-size: 1rem;
+}
+/* Mensajes de alerta */
+.alert {
+    font-family: 'Montserrat', sans-serif;
+    text-align: center;
+}
+/* Media Queries para vistas móviles */
+@media (max-width: 768px) {
+    .container {
+        padding: 10px; /* Reduce el padding en dispositivos pequeños */
+    }
+
+    .form-select {
+        font-size: 0.9rem; /* Ajusta el tamaño del texto en móviles */
+        padding: 8px; /* Reduce el padding interno */
+    }
+
+    h1 {
+        font-size: 1.5rem; /* Reduce el tamaño del título */
+    }
+}

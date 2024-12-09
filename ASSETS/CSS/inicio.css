@@ -152,10 +152,7 @@
     background-color: var(--colorblack);
     padding: 20px;
     font-family: 'Overlock';
-
-
 }
-
 .wrapper {
     display: flex;
     flex-wrap: wrap;
@@ -264,5 +261,71 @@
 @media (max-width: 576px) {
     .product-area {
         width: 100%;
+    }
+}
+
+/*formularios*/
+.card-group {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 25px; /* Espacio entre las tarjetas */
+    justify-content: center;
+    margin-top: 30px;
+}
+
+.card {
+    background-color: rgb(51,51,51) !important;/* Fondo oscuro consistente con el contenedor */
+    border-radius: 10px;
+    padding: 30px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.5);
+    max-width: 300px;
+    /*width: 100%;*/
+    text-align: center;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    width: 80%;
+    margin: 5% auto;
+}
+.card-title {
+    color: #ffffff; /* Texto blanco */
+    font-size: 1.2rem;
+    margin-bottom: 15px;
+    font-family: 'Overlock', sans-serif;
+}
+
+/* Texto dentro de las Cards */
+.card-text {
+    color: #f1f1f1; /* Color de texto ligeramente gris */
+    font-size: 1rem;
+    margin-bottom: 15px;
+    font-family: 'Montserrat', sans-serif;
+}
+
+/* Botón dentro de las Cards */
+.card .btn-primary {
+    background-color: #3DC1B4;
+    border: none;
+    padding: 10px 20px;
+    font-size: 1rem;
+    border-radius: 5px;
+    text-decoration: none;
+    color: #ffffff;
+    transition: background-color 0.3s ease-in-out;
+}
+
+.card .btn-primary:hover {
+    background-color: #2ba599; /* Color más oscuro al pasar el mouse */
+}
+
+/* Responsividad para las Cards */
+@media (max-width: 768px) {
+    .card-group {
+        flex-direction: column; /* Las cards se apilan verticalmente */
+        align-items: center;
+    }
+
+    .card {
+        max-width: 90%; /* Reducir el tamaño en pantallas pequeñas */
     }
 }
