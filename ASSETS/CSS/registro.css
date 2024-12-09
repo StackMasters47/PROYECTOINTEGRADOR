@@ -166,3 +166,4 @@ input:-webkit-autofill:focus {
 input:-internal-autofill-selected {
     appearance: menulist-button; /* Ajuste de compatibilidad */
 }
+
