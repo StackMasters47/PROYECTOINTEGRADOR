@@ -18,12 +18,21 @@ body {
     width: 100%;
 }
 
+body::-webkit-scrollbar {
+    display: none;
+}
+
+* {
+    font-family: "Montserrat" !important;
+    font-weight: 400;
+}
+
 main {
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    background: url("/ASSETS/IMG/fondo.webp") rgba(6, 3, 3, 0.8) !important;
+    background: url("/ASSETS/IMG/fondo.webp") rgba(6, 3, 3, 0.6) !important;
     background-blend-mode: multiply;
     background-size: cover;
     background-repeat: repeat;
@@ -36,11 +45,12 @@ main {
 
 /*Estilos para formulario*/
 #registroEncabezado {
-    font-family: "Overlock";
+    font-family: "Overlock" !important;
     font-weight: 800;
     text-align: center;
-    font-size: 2.5em;
+    font-size: 2.3em;
     color: #3DBFBB;
+    margin-top: 5px;
     margin-bottom: 15px;
 }
 
@@ -50,7 +60,7 @@ main {
     min-height: 350px;
     background-color: #222;
     border-radius: 10px;
-    padding: 20px;
+    padding: 10px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
     flex-direction: column;
     align-items: center;
@@ -79,39 +89,43 @@ main {
     color: white !important;
     padding: 10px;
     border-radius: 10px;
-    height: 45px;
+    height: 35px;
 }
 
 .input::placeholder {
     color: #ccc !important;
     opacity: 1 !important;
- }
+}
+
+label {
+    margin-bottom: 0.2rem !important;
+}
 
 #nombre {
-    border: 3px solid #9f2884;
+    border: 2px solid #9f2884;
 }
 
 #telefono {
-    border: 3px solid #f36b37;
+    border: 2px solid #f36b37;
 }
 
 #email {
-    border: 3px solid #F6B94F;
+    border: 2px solid #F6B94F;
 }
 
 #password1 {
-    border: 3px solid #98bf3E;
+    border: 2px solid #98bf3E;
 }
 
 #password2 {
-    border: 3px solid #246784;
+    border: 2px solid #246784;
 }
 
 .input:focus {
     background-color: black !important;
     color: white !important;
     outline: none !important;
- }
+}
 
 #button {
     text-align: center;
@@ -137,22 +151,19 @@ main {
     text-align: center;
 }
 
-
-/*
 input:-webkit-autofill {
-    background-color: black !important; / Fondo negro /
-    color: white !important; / Texto blanco /
-    -webkit-text-fill-color: white !important; / Color del texto para autofill /
-    border: 3px solid #98BF3E; /Mantener el estilo del borde /
-    transition: background-color 5000s ease-in-out 0s; / Previene el fondo blanco /
+    background-color: black !important; /* Fondo negro */
+    color: white !important; /* Texto blanco */
+    -webkit-text-fill-color: white !important; /* Color del texto para autofill */
+    transition: background-color 5000s ease-in-out 0s; /* Previene el fondo blanco */
 }
 
 input:-webkit-autofill:focus {
-    background-color: black !important; / Fondo negro al enfocar /
-    -webkit-text-fill-color: white !important; / Texto blanco al enfocar /
+    background-color: black !important; /* Fondo negro al enfocar */
+    -webkit-text-fill-color: white !important; /* Texto blanco al enfocar */
 }
 
 input:-internal-autofill-selected {
-    appearance: menulist-button; / Ajuste de compatibilidad /
+    appearance: menulist-button; /* Ajuste de compatibilidad */
 }
-}*/
+
