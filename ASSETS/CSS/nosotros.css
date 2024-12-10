@@ -12,19 +12,31 @@
   font-style: normal;
 }
 
-main {
-  font-family: "Montserrat";
+body::-webkit-scrollbar {
+  display: none;
+}
+
+* {
+  font-family: "Montserrat" !important;
   font-weight: 400;
+}
+
+main {
   color: white;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  background: url("/ASSETS/IMG/fondo.webp") rgba(6, 3, 3, 0.6) !important;
+  background-blend-mode: multiply;
+  background-size: cover;
+  background-repeat: repeat;
+  background-position: center;
 }
 
 
 #acercaNosotros, #mv, #v, #stackMasters {
-  font-family: "Overlock";
+  font-family: "Overlock" !important;
   font-weight: 800;
   text-align: center;
   color: #ffffff;
@@ -38,6 +50,11 @@ main {
 
 #mv, #v {
   font-size: 2em;
+}
+
+#parrafoNosotros, #parrafo {
+  font-family: "Montserrat";
+  font-weight: 400;
 }
 
 #parrafoNosotros {
