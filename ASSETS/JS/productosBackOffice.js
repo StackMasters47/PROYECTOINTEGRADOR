@@ -1,70 +1,27 @@
-const categoria = [
-    { id: 0, name: "Cuidado Corporal", subCategoria: ["Exfoliantes", "Hidratantes", "Limpieza"] },
-    { id: 1, name: "Cuidado Facial", subCategoria: ["Sérums", "Hidratantes", "Limpieza", "Protector Solar"] },
-    { id: 2, name: "Cuidado Capilar", subCategoria: ["Shampoo", "Acondicionador", "Tratamientos"] },
-    { id: 3, name: "Belleza", subCategoria: ["Ojos", "Labios", "Rostro"] }
-];
+const subcategorias = {
+    CuidadoCorporal:["Exfoliantes", "Hidratantes", "Limpieza"],
+    CuidadoFacial: ["Sérums", "Hidratantes", "Limpieza", "Protector Solar"],
+    CuidadoCapilar: ["Shampoo", "Acondicionador", "Tratamientos"],
+    Belleza:["Ojos", "Labios", "Rostro"]
+}
 
 const productos = [
-    { id: 1, titulo: "Shampoo Hidratante", marca: "Dove", desc: "Para cabello seco", precio: 120, cat: "Cuidado Capilar", subcat: "Shampoo" },
-    { id: 2, titulo: "Crema Facial", marca: "Nivea", desc: "Hidratante facial", precio: 85, cat: "Cuidado Facial", subcat: "Hidratantes" },
-    { id: 3, titulo: "Jabón Líquido", marca: "Palmolive", desc: "Aroma a lavanda", precio: 60, cat: "Cuidado Corporal", subcat: "Limpieza" },
-    { id: 4, titulo: "Perfume Floral", marca: "Chanel", desc: "Esencia floral", precio: 1500, cat: "Belleza", subcat: "Rostro" },
-    { id: 5, titulo: "Cepillo de Dientes", marca: "Oral-B", desc: "Cepillo suave", precio: 30, cat: "Cuidado Corporal", subcat: "Limpieza" },
-    { id: 6, titulo: "Protector Solar", marca: "Eucerin", desc: "FPS 50", precio: 300, cat: "Cuidado Facial", subcat: "Protector Solar" },
-    { id: 7, titulo: "Tónico Facial", marca: "La Roche-Posay", desc: "Purificante facial", precio: 200, cat: "Cuidado Facial", subcat: "Limpieza" },
-    { id: 8, titulo: "Mascarilla Facial", marca: "L'Oréal", desc: "De arcilla", precio: 110, cat: "Cuidado Facial", subcat: "Hidratantes" },
-    { id: 9, titulo: "Acondicionador", marca: "Pantene", desc: "Para cabello rizado", precio: 95, cat: "Cuidado Capilar", subcat: "Acondicionador" },
-    { id: 10, titulo: "Gel Antibacterial", marca: "Purell", desc: "Con aloe vera", precio: 50, cat: "Cuidado Corporal", subcat: "Limpieza" }
+    { id: 1, titulo: "Shampoo Hidratante", marca: "Dove", desc: "Para cabello seco", precio: 120, cat: "Cuidado Capilar", subcat: "Shampoo", rutaimg: "/ASSETS/IMG/productos/shampooCafe.jpg"},
+    { id: 2, titulo: "Crema Facial", marca: "Nivea", desc: "Hidratante facial", precio: 85, cat: "Cuidado Facial", subcat: "Hidratantes", rutaimg: "/ASSETS/IMG/productos/cremaFacialG.jpg" },
+    { id: 3, titulo: "Jabón en barra", marca: "Palmolive", desc: "Aroma a lavanda", precio: 60, cat: "Cuidado Corporal", subcat: "Limpieza", rutaimg: "/ASSETS/IMG/productos/jabonCorporalBarra.jpg"},
+    { id: 4, titulo: "Exfoliante corporal", marca: "Chanel", desc: "Esencia floral", precio: 1500, cat: "Belleza", subcat: "Rostro", rutaimg: "/ASSETS/IMG/productos/exfolianteCorporalRosa.jpg"},
+    { id: 5, titulo: "Labial Rosa", marca: "Oraos", desc: "Labial color rosa", precio: 130, cat: "Belleza", subcat: "Labios", rutaimg: "/ASSETS/IMG/productos/labialRosa.jpg"},
+    { id: 6, titulo: "Protector Solar", marca: "Eucerin", desc: "FPS 50", precio: 300, cat: "Cuidado Facial", subcat: "Protector Solar", rutaimg: "/ASSETS/IMG/productos/BloqueadorSolarPielSeca.jpg"},
+    { id: 7, titulo: "Tónico Facial", marca: "La Roche-Posay", desc: "Purificante facial", precio: 200, cat: "Cuidado Facial", subcat: "Limpieza", rutaimg: "/ASSETS/IMG/productos/sueroFacialRosa.jpg"},
+    { id: 8, titulo: "Mascarilla Facial", marca: "L'Oréal", desc: "De arcilla", precio: 110, cat: "Cuidado Facial", subcat: "Hidratantes", rutaimg: "/ASSETS/IMG/productos/máscaraNegra.jpg"},
+    { id: 9, titulo: "Acondicionador", marca: "Pantene", desc: "Para cabello rizado", precio: 95, cat: "Cuidado Capilar", subcat: "Acondicionador", rutaimg: "/ASSETS/IMG/productos/acondicionadorVerde.jpg"},
+    { id: 10, titulo: "Bloqueador", marca: "Purell", desc: "Con aloe vera", precio: 50, cat: "Cuidado Facial", subcat: "Protector Solar", rutaimg: "/ASSETS/IMG/productos/bloqueadorSolar.jpg"}
 ];
 
 selectedId="";
 
 document.addEventListener("DOMContentLoaded",()=>{
-    //Trae elementos categoria y subcategorias
-    let selectCategory = document.getElementById("category");
-    let selectSubCategory = document.getElementById("subcategory");
-    // document.getElementById('visualizarProductos').style.display = 'none'
-    
-    // Cargar las opciones de categorías en el primer select
-    const loadCategory = () => {
-        categoria.map(item => {
-            selectCategory.innerHTML += `<option value="${item.name}">${item.name}</option>`;
-        });
-    };
-
-    loadCategory();
-
-    // Filtra resultado segun la categoria que se seleccione
-    const loadSubCategory = (categoriaName) => {
-        let options = `<option value="">Selecciona una subcategoría</option>`;
-    
-        // Encuentra la categoría usando el nombre
-        const category = categoria.find(c => c.name === categoriaName);
-    
-        if (category) {
-            // Para cada subcategoría, agregarla como una opción
-            category.subCategoria.map(subcat => {
-                options += `<option value="${subcat}">${subcat}</option>`; // Usar el nombre de la subcategoría como valor y texto
-            });
-        }
-    
-        selectSubCategory.innerHTML = options;
-    };
-    
-    // Evento para cuando se selecciona una categoría
-    selectCategory.addEventListener("change", function (e) {
-        const selectedCategoryName = e.target.value; // Usar el nombre de la categoría seleccionado
-    
-        // Si no se selecciona ninguna categoría, restablece el select de subcategorías
-        if (!selectedCategoryName) {
-            selectSubCategory.innerHTML = `<option value="">Selecciona una subcategoría</option>`;
-        } else {
-            // Cargar las subcategorías correspondientes a la categoría seleccionada
-            loadSubCategory(selectedCategoryName);
-        }
-    });
-    
+    document.getElementById('category').addEventListener('change', actualizarSubcategorias);    
     document.getElementById('modelForm').addEventListener('submit', function (event) {
         event.preventDefault(); // Previene el comportamiento predeterminado del formulario
         const title = document.getElementById('title').value.trim();
@@ -106,14 +63,14 @@ document.addEventListener("DOMContentLoaded",()=>{
 
 
         const alertDiv = document.getElementById('alert');
-        if (errors.length > 0) {
+        if (errors.length > 0 && accion !== "eliminar") {
             alertDiv.innerHTML = errors.join('<br>'); // Muestra los errores en el div de alerta
             alertDiv.classList.remove('d-none'); // Hace visible el div de alerta
         } else {
             alertDiv.classList.add('d-none'); // Oculta el div de alerta si no hay errores
                 if (accion === 'agregar') {
                     const botonVisualizar = document.getElementById('btnVisualizar');
-                    addProduct(productos.length+1,title,description,price,category,subcategory)
+                    addProduct(productos.length+1,title,description,price,category,subcategory,"/ASSETS/IMG/productos/shampooCafe.jpg")
                     renderProductos();
                     // if(botonVisualizar.getAttribute('aria-pressed') === 'true'){
                     //     botonVisualizar.click();
@@ -161,7 +118,7 @@ function renderProductos(){
                             <p class="mb-1 text-center">${producto.id}</p>
                     </div>
                     <div class="img-fluid col-lg-1 text-center">
-                        <img src="img1.jpeg" class="img-thumbnail" style="width: 50px; height: 50px;" alt="Producto">
+                        <img src="${producto.rutaimg}" class="img-thumbnail" style="width: 50px; height: 50px;" alt="Producto">
                     </div>
                     <div class="col-lg-3">
                         <h5 class="mb-1 text-center">${producto.titulo}</h5>
@@ -198,19 +155,50 @@ function rellenarForm(){
     document.getElementById('title').value=productos[selectedId].titulo;
     document.getElementById('description').value=productos[selectedId].desc;
     document.getElementById('price').value=productos[selectedId].precio;
-    document.getElementById('category').value=productos[selectedId].cat;
-    document.getElementById('subcategory').value=productos[selectedId].subcat;
+    document.getElementById('category').value=productos[selectedId].cat.replace(/\s+/g, '');
+    
+    actualizarSubcategorias();
+    
+    // Luego asignar la subcategoría seleccionada, ya que las opciones deben estar cargadas en el select
+    const subcategoryValue = productos[selectedId].subcat.toLowerCase();
+    const subcategorySelect = document.getElementById('subcategory');
+    
+    // Verificar si el valor de subcategoría existe en las opciones
+    const option = Array.from(subcategorySelect.options).find(option => option.value === subcategoryValue);
+    if (option) {
+        subcategorySelect.value = subcategoryValue;
+    }
+
 }
 
+function actualizarSubcategorias() {
+    const category = document.getElementById('category').value;
+    const subcategorySelect = document.getElementById('subcategory');
+    // Limpiar las opciones anteriores de subcategoría
+    subcategorySelect.innerHTML = '<option value="" disabled selected>Seleccione una subcategoría</option>';
+    
+    if (subcategorias[category]) {
+        subcategorias[category].forEach(subcategoria => {
+            const option = document.createElement('option');
+            option.value = subcategoria.toLowerCase();
+            option.textContent = subcategoria;
+            subcategorySelect.appendChild(option);
+        });
+    }
+}
+
+
 // Función para agregar un producto a la lista
-function addProduct(id,titulo, descripcion, precio,cat,subcat) {
+function addProduct(id,titulo, descripcion, precio,cat,subcat,rutaimg) {
     const producto = {
         id,
         titulo,
         descripcion,
         precio,
-        cat,
-        subcat
+        // Agregar un espacio antes de cada letra mayúscula en cat (excepto la primera)
+        cat:cat.replace(/([a-z])([A-Z])/g, '$1 $2'),
+        subcat,
+        rutaimg
     };
     productos.push(producto);
     // console.log(`Producto agregado: ${JSON.stringify(productos)}`);
@@ -235,7 +223,7 @@ function modificarProducto(id,titulo,descripcion,precio,cat,subcat){
         descripcion,
         precio,
         cat,
-        subcat
+        subcat,
     };
     const index = productos.findIndex(producto=> producto.id ===id);
 

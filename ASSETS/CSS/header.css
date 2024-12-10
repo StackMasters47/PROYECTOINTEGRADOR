@@ -22,7 +22,7 @@ body{
   /* margin-left: 20%; */
 }
 
-#carrito{
+.carrito{
   width: 1.7rem;  /* Ajusta este valor según lo que necesites */
   height: auto;
   filter: invert(1);

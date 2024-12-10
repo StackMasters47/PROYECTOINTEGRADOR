@@ -42,10 +42,15 @@
                 <label for="price">Precio</label>
                 <input type="number" class="form-control" id="price" placeholder="Precio">
             </div>
+            <!-- Modificando -->
             <div class="form-group">
                 <label for="category">Categoría</label>
                 <select class="form-control" name="category" id="category">
                     <option value="" disabled selected>Seleccione una categoría</option>
+                    <option value="CuidadoCorporal">Cuidado Corporal</option>
+                    <option value="CuidadoFacial">Cuidado Facial</option>
+                    <option value="CuidadoCapilar">Cuidado Capilar</option>
+                    <option value="Belleza">Belleza</option>
                 </select>
             </div>
             <div class="form-group">
@@ -62,6 +67,7 @@
                         <label class="custom-file-label" for="imageInput">Seleccione una imagen</label>
                     </div> 
                 </div>
+                
             </div>
             <div class="d-flex align-items-center justify-content-between">
                 <button id="btnAgregar" value="agregar" type="submit" class="btn btn-success">Agregar</button>
@@ -115,16 +121,19 @@
                 // Ejecutar acción según la opción seleccionada
                 switch (action) {
                     case 'añadir':
+                        habilitarInputs(false);
                         document.getElementById("btnAgregar").style.display="block";
                         document.getElementById("btnModificar").style.display="none";
                         document.getElementById("btnEliminar").style.display="none";
                         break;
                     case 'modificar':
+                        habilitarInputs(false);
                         document.getElementById("btnAgregar").style.display="none";
                         document.getElementById("btnModificar").style.display="block";
                         document.getElementById("btnEliminar").style.display="none";
                         break;
                     case 'eliminar':
+                        habilitarInputs(true);
                         document.getElementById("btnAgregar").style.display="none";
                         document.getElementById("btnModificar").style.display="none";
                         document.getElementById("btnEliminar").style.display="block";
@@ -139,6 +148,15 @@
             const fileName = e.target.files[0] ? e.target.files[0].name : "Seleccionar archivo";
             e.target.nextElementSibling.textContent = fileName;
         });
+
+        function habilitarInputs(condicion) {
+            const inputs = document.querySelectorAll('#modelForm input, #modelForm textarea, #modelForm select');
+            
+            // Deshabilitar o habilitar todos los inputs
+            inputs.forEach(input => {
+                input.disabled = condicion;
+            });
+        }
     </script>
 </body>
 
