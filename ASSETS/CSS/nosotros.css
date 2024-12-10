@@ -134,28 +134,16 @@ p {
 /*Terminan estilos para parte Acerca de nosotros: Encabezado, descripción, misión, visión, valores*/
 
 /*Aqui va lo de perfiles*/
-
-.cartas {
-  display: grid !important;
-  position: relative;
-  max-width: 100%;
-  max-height: 100rem;
-  min-width: 80px;
-  min-height: 80px;
-  grid-template-columns: repeat(auto-fit, minmax(270px, 1fr));
-  gap: 25px;
-  margin: 3% 8% 5% !important;
-  padding: 0;
-  border: 0;
-  overflow: auto;
+.container_integrantes{
+  min-width:max-content;
+  min-height:max-content;
 }
-
 .card {
   perspective: 3000px;
   perspective: 3000px;
   background-color: #246784;
-  min-height:380px;
-  min-width:20px;
+  min-height: fit-content;
+  min-width:fit-content;
   flex-wrap: wrap;
   padding: 0 !important;
 }
@@ -166,7 +154,8 @@ p {
   position: relative;
   transition: transform 0.6s;
   transform-style: preserve-3d;
-
+  min-height:580px;
+  min-width:30px;
 }
 
 .card:hover .card-inner {
@@ -239,4 +228,8 @@ p {
 
 .card-back::-webkit-scrollbar-track {
   background: #9f2884;
+}
+
+.container_integrantes::-webkit-scrollbar{
+  display: none;
 }

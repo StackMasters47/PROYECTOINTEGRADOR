@@ -15,13 +15,31 @@
 
 html main{
    background:rgba(6, 3, 3, 0.6);
+   padding-top: 0%;
+}
+
+main #container-productos{
+width: 80%;
+flex-wrap: wrap;
+margin-top: 30px;
+text-align: center;
+}
+
+main #container-productos h5{
+   color: #ffffff;
+}
+
+main #container-productos p{
+   color: #ffffff;
 }
 #tituloCuidadoCo{
       background-color: #98bf3e !important;
-      width: 60%;
+      width: 100%;
+      min-width:100%;
+      max-width: 100%;
       color: #000000;
       text-align: center;
-      padding-top:10px;
+      padding-top: 10px;
       margin-top: 20px;
       padding-left: 0%;
       padding-right: 0%;
@@ -32,10 +50,12 @@ html main{
    
    #tituloCuidadoCa{
       background-color:#9f2884 !important;
-      width: 60%;
+      width: 100%;
+      min-width: 100%;
+      max-width: 100%;
       color: #000000;
       text-align: center;
-      padding-top:10px;
+      padding-top: 10px;
       margin-top: 20px;
       padding-left: 0%;
       padding-right: 0%;
@@ -47,7 +67,9 @@ html main{
 
    #tituloCuidadoFa{
       background-color:#3dbfbb !important;
-      width: 60%;
+      width: 100%;
+      min-width: 100%;
+      max-width: 100%;
       color: #000000;
       text-align: center;
       padding-top:10px;
@@ -62,7 +84,9 @@ html main{
 
    #tituloBelleza{
       background-color:#f1645a !important;
-      width: 60%;
+      width: 100%;
+      min-width: 100%;
+      max-width: 100%;
       color: #000000;
       text-align: center;
       padding-top:10px;
@@ -75,17 +99,47 @@ html main{
 
    }
 
-.container a{
+main .container a{
    
    text-decoration: none;
    color: #ffffff;
 }
 
-.container a:hover{
+main .container a:hover{
    color: #000000;
 }
-.container{
-   width: 60%;
+
+main .container{
+   width: 100%;
+}
+
+main .row{
+   background-color: #000000;
+}
+
+main #carrousel-container{
+   width: 80%;
+   max-width: 80%;
+   min-width:80%;
+}
+
+
+#carouselExampleAutoplayingBe{
+   width: 100%;
+}
+#carouselExampleAutoplayingFa{
+   width: 100%;
+}
+
+#carouselExampleAutoplayingCa{
+   width: 100%;
+}
+#carouselExampleAutoplaying{
+   width: 100%;
+}
+
+main .card{
+   background-color: #000000;
 }
 
 .card-body{
