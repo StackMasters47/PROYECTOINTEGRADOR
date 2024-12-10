@@ -1,13 +1,13 @@
-document.getElementById("Registrarse").addEventListener("click", function (event) {
+const registro = document.querySelector('#registro');
+registro.addEventListener("submit", function (event) {
     event.preventDefault();
 
     // Inputs del formulario
-    const nombreInput = document.getElementById("nombreInput");
-    const telefonoInput = document.getElementById("telefonoInput");
-    const emailInput = document.getElementById("inputEmail4");
-    const usuarioInput = document.getElementById("usuarioInput");
-    const pass1Input = document.getElementById("passInput1");
-    const pass2Input = document.getElementById("passInput2");
+    const nombre = document.getElementById("nombre");
+    const telefono = document.getElementById("telefono");
+    const email = document.getElementById("email");
+    const password1 = document.getElementById("password1");
+    const password2 = document.getElementById("password2");
     const termsCheckbox = document.getElementById("gridCheck");
     const alertContainer = document.getElementById("alertContainer");
 
@@ -34,62 +34,52 @@ document.getElementById("Registrarse").addEventListener("click", function (event
     alertContainer.innerHTML = "";
 
     // Validación de Nombre Completo
-    if (nombreInput.value.trim() === "") {
-        nombreInput.classList.add("is-invalid");
+    if (nombre.value.trim() === "") {
+        nombre.classList.add("is-invalid");
         valido = false;
-        
+
     } else {
-        nombreInput.classList.remove("is-invalid");
-        nombreInput.classList.add("is-valid");
+        nombre.classList.remove("is-invalid");
+        nombre.classList.add("is-valid");
     }
 
     // Validación de Teléfono
-    if (telefonoInput.value === "" || !telefonoRegex.test(telefonoInput.value)) {
-        telefonoInput.classList.add("is-invalid");
+    if (telefono.value === "" || !telefonoRegex.test(telefono.value)) {
+        telefono.classList.add("is-invalid");
         valido = false;
-        
-    } else {    
-        telefonoInput.classList.remove("is-invalid");
-        telefonoInput.classList.add("is-valid");
+
+    } else {
+        telefono.classList.remove("is-invalid");
+        telefono.classList.add("is-valid");
     }
 
     // Validación de Email
-    if (emailInput.value === "" || !emailRegex.test(emailInput.value)) {
-        emailInput.classList.add("is-invalid");
+    if (email.value === "" || !emailRegex.test(email.value)) {
+        email.classList.add("is-invalid");
         valido = false;
-        
-    } else {
-        emailInput.classList.remove("is-invalid");
-        emailInput.classList.add("is-valid");
-    }
 
-    // Validación de Nombre de Usuario
-    if (usuarioInput.value.trim() === "") {
-        usuarioInput.classList.add("is-invalid");
-        valido = false;
-       
     } else {
-        usuarioInput.classList.remove("is-invalid");
-        usuarioInput.classList.add("is-valid");
+        email.classList.remove("is-invalid");
+        email.classList.add("is-valid");
     }
 
     // Validación de Contraseñas
-    if (pass1Input.value.length < 8) {
-        pass1Input.classList.add("is-invalid");
+    if (password1.value.length < 8) {
+        password1.classList.add("is-invalid");
         valido = false;
-      
+
     } else {
-        pass1Input.classList.remove("is-invalid");
-        pass1Input.classList.add("is-valid");
+        password1.classList.remove("is-invalid");
+        password1.classList.add("is-valid");
     }
 
-    if (pass2Input.value !== pass1Input.value || pass2Input.value === "") {
-        pass2Input.classList.add("is-invalid");
+    if (password2.value !== password1.value || password2.value === "") {
+        password2.classList.add("is-invalid");
         valido = false;
-        
+
     } else {
-        pass2Input.classList.remove("is-invalid");
-        pass2Input.classList.add("is-valid");
+        password2.classList.remove("is-invalid");
+        password2.classList.add("is-valid");
     }
 
     // Validación de Checkbox (Términos y condiciones)
@@ -104,20 +94,24 @@ document.getElementById("Registrarse").addEventListener("click", function (event
 
     // Mensaje final si todo es válido
     if (valido) {
-        const usuario = {
-            nombreCompleto: nombreInput.value.trim(),
-            telefono: telefonoInput.value.trim(),
-            email: emailInput.value.trim(),
-            nombreUsuario: usuarioInput.value.trim(),
-            contraseña: pass1Input.value.trim()
-        };
+        const Users = JSON.parse(localStorage.getItem('users')) || []; // Para obtener los datos de local storage, y convertirlos de formato JSON a un array de objetos; si no hay datos en local storage, devuelve un array vacio
+        const isUserRegistered = Users.find(user => user.email === email.value.trim()); //para consultar si el email proporcionado por el ususario existe dentro de Users
 
-        const jsonUsuario = JSON.stringify(usuario);
-        
-        // Guardar en Local Storage
-        localStorage.setItem("usuario", jsonUsuario);
-        console.log("Datos del usuario guardados en Local Storage:", jsonUsuario);
+        if (isUserRegistered) { //si se cumple la condición anterior, devulve una alerta de que ya hay una cuenta vinculada con ese correo
+            return alert('El correo electrónico ya tiene una cuenta vinculada');
+        } else {
+            Users.push({ //Añadir objeto con datos del usuario
+                nombre: nombre.value.trim(),
+                telefono: telefono.value.trim(),
+                email: email.value.trim(),
+                password: password1.value.trim()
+            });
 
-        showAlert("Formulario enviado con éxito. Datos almacenados localmente.", "success");
+            localStorage.setItem('users', JSON.stringify(Users)); //Guardar los datos en local storage
+            console.log("Datos del usuario guardados en Local Storage:", Users);
+            alert('Su cuenta ha sido creada exitosamente');
+            window.location.href = '/PAGES/iniciar_sesion.html';
+
+        }
     }
 });
