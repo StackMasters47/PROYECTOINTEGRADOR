@@ -13,23 +13,17 @@
  }
 
 
-html main{
-   background:rgba(6, 3, 3, 0.6);
+ body {
+   background:  url('/ASSETS/IMG/fondo.webp') rgba(6, 3, 3, 0.6)!important; 
+}
+main{
+   margin-top: 20px;
 }
 
-main .container{
-   background-color: #9f2884;
-   color: #ffffff;
-   text-align: center;
-   font-family: 'Overlock';
-   font-size:xx-large;
-   margin-top: 30px;
-   margin-bottom: 30px;
-   padding: 20px;
-
-}
 main .card{
-   border-color:black;
+
+   height: 100%;
+   border-color: black;
 
 }
 
@@ -38,21 +32,29 @@ main .card{
    color: #ffffff !important;
    font-family: 'Montserrat' !important;
    text-align: center;
+   justify-content: space-between;
+   
 }
 
-h5 .card-title{
+h6 .card-title{
    color: #ffffff !important;
-   font-family: 'Montserrat' !important;
-   font-size: xx-large !important;
+   font-family: 'Overlock' !important;
+   font-size: medium !important;
 }
 
 .card-text{
    color: #ffffff;
    font-family: 'Montserrat';
    text-align: center;
+   font-size: small;
 }
 .row{
    width: 80%;
+   min-width:80%;
+   max-width: 80%;
+   opacity: 85%;
+   margin-top: 20px;
+   margin-bottom: 10px;
 }
 
 #botonComprarCuCo{

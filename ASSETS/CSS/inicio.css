@@ -19,25 +19,20 @@
     background:rgba(6, 3, 3, 0.6);
  }*/
 
- body{
+body{
     background:  url('/ASSETS/IMG/fondo.webp') rgba(6, 3, 3, 0.6) !important; 
     background-blend-mode: multiply;
     background-position: center;
     background-size: cover;
     background-repeat: repeat;
- }
- 
- 
+}
+
 
 
 
 
 
 /* Estilos para el carrusel principal */
-
-.carousel-item img {
-    border-radius: 10px;
-}
 
 
 /*categorias*/
