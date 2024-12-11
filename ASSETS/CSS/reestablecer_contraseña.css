@@ -1,0 +1,121 @@
+/*Estilos generales*/
+@font-face {
+    font-family: 'Montserrat';
+    src: url('/ASSETS/FONTS/Montserrat/Montserrat-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Overlock';
+    src: url('/ASSETS/FONTS/Overlock/Overlock-Bold.ttf') format('truetype');
+    font-weight: 700;
+    font-style: normal;
+}
+
+body {
+    height: 100vh;
+    width: 100%;
+}
+
+body::-webkit-scrollbar {
+    display: none;
+}
+
+* {
+    font-family: "Montserrat" !important;
+    font-weight: 400;
+    color: white;
+}
+
+main {
+    height: 90vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background: url("/ASSETS/IMG/fondo.webp") rgba(6, 3, 3, 0.6) !important;
+    background-blend-mode: multiply;
+    background-size: cover;
+    background-repeat: repeat;
+    background-position: center;
+}
+
+
+#reestablecerContraseña {
+    font-family: "Overlock" !important;
+    font-weight: 800;
+    text-align: center;
+    font-size: 2em;
+    color: #9f2884;
+    margin-top: 5px;
+    margin-bottom: 20px;
+}
+
+/*Estilos para formulario*/
+.reestablecerContraseña {
+    margin: 20px;
+    max-width: 400px !important;
+    min-height: 300px;
+    background-color: #222;
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.col-12 {
+    margin: 5px 0 5px;
+}
+
+#mensaje {
+    background-color: #333;
+    border-radius: 10px;
+}
+
+.input {
+    background-color: black !important;
+    color: white !important;
+    padding: 10px;
+    border-radius: 10px;
+    height: 45px;
+}
+
+.form-control::placeholder {
+    color: #ccc !important;
+    font-size: 1em;
+    opacity: 1;
+}
+
+#emailInput {
+    border: 3px solid #98BF3E;
+}
+
+.input:focus {
+    background-color: black;
+    color: white;
+    outline: none;
+}
+
+.form-label {
+    font-size: 1em;
+}
+
+#button {
+    text-align: center;
+    margin-top: 15px;
+
+    button {
+        border: 3px solid #9f2884;
+        border-radius: 10px;
+        background-color: #9f2884;
+        transition: border background-color 0.3s ease;
+    }
+
+    button:hover {
+        border: 3px solid #741a5f;
+        background-color: #741a5f;
+    }
+}

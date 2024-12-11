@@ -1,28 +1,53 @@
-const usuarioPrueba = {
-  email: "testuser@gmail.com",
-  password: "12345"
-};
+const iniciarSesion = document.querySelector('#iniciarSesion') //para seleccionar el elemento con id específico, en este caso, el form con id "registro"
+iniciarSesion.addEventListener("submit", (event) => { //para atender el evento "submit" y ejecutar una función 
+    event.preventDefault(); //previene la recarga automática de la página
 
-const usuarioPrueba2 = {
-  email: "testuser2@gmail.com",
-  password: "54321"
-}
+    //Obtener datos del usuario a traves de las entradas con los ids especificados
+    const email = document.querySelector("#email");
+    const password = document.querySelector("#password1");
+    //const alertContainer = document.getElementById("alertContainer");
 
-localStorage.setItem("usuario", JSON.stringify(usuarioPrueba));
-localStorage.setItem("usuario2", JSON.stringify(usuarioPrueba2));
+    let valido = true;
 
-function validateUser(event) {
-  event.preventDefault();
+    if (email.value.trim() === "") {
+        email.classList.add("is-invalid");
+        valido = false;
+    } else {
+        email.classList.remove("is-invalid");
+        email.classList.add("is-valid");
+    }
 
-  const userEmail = document.getElementById("userEmail").value.trim();
-  const password = document.getElementById("password").value.trim();
-  
-  const storedUser1 = JSON.parse(localStorage.getItem("usuario"));
-  const storedUser2 = JSON.parse(localStorage.getItem("usuario2"));
+    if (password.value.trim() === "") {
+        password.classList.add("is-invalid");
+        valido = false;
+    } else {
+        password.classList.remove("is-invalid");
+        password.classList.add("is-valid");
+    }
 
-  if ((storedUser1 && userEmail === storedUser1.email && password === storedUser1.password) || (storedUser2 && userEmail === storedUser2.email && password === storedUser2.password)) { 
-    window.location.href = "../index.html"; 
-  } else { 
-    document.getElementById("errorMessage").textContent = "Nombre de usuario o contraseña inválidos"; 
-  }
+    if(valido) {
+        // Para obtener los datos de local storage, y convertirlos de formato JSON a un array de objetos; si no hay datos en local storage, devuelve un array vacio
+        const Users = JSON.parse(localStorage.getItem('users')) || [];
+        // Para validar datos: comparar los datos obtenidos de local storage con los datos ingresados por el usuario; ambos condiciones deben cumplirse para continuar
+        const validUser = Users.find(user => user.email === email.value.trim() && user.password === password.value.trim());
+
+        //Si el usuario no es valido, retorna una alerta con este mensaje
+        if (!validUser && (email.value.trim() !== adminUser.correo || password.value.trim() !== adminUser.contraseña)) {
+            return alert('Usuario y/o contraseña incorrectos');
+        }
+
+        if(email.value===adminUser.correo && password.value===adminUser.contraseña){
+            window.location.href = '/PAGES/backOffice/formProducts.html'; 
+        }else{
+            //Si los datos son validos, retorna una alerta con el mensaje y redirige a la página de inicio
+            alert(`Bienvenido ${validUser.nombre}`);
+            localStorage.setItem('login_success', JSON.stringify(validUser));
+            window.location.href = '/index.html'; 
+        }
+    }
+});
+
+const adminUser ={
+    correo: "StackMaster",
+    contraseña: "Password"
 }

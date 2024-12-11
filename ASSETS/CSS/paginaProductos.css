@@ -1,0 +1,189 @@
+@font-face {
+   font-family: 'Montserrat';
+   src: url('/ASSETS/FONTS/Montserrat/Montserrat-Regular.ttf') format('truetype'); 
+   font-weight: normal;
+   font-style: normal;
+ }
+ 
+ @font-face {
+   font-family: 'Overlock';
+   src: url('/ASSETS/FONTS/Overlock/Overlock-Bold.ttf') format('truetype'); 
+   font-weight: 700;
+   font-style: normal;
+ }
+
+
+html main{
+   background:rgba(6, 3, 3, 0.6);
+   padding-top: 0%;
+}
+
+main #container-productos{
+width: 80%;
+flex-wrap: wrap;
+margin-top: 30px;
+text-align: center;
+}
+
+main #container-productos h5{
+   color: #ffffff;
+   font-family: 'Overlock';
+}
+
+main #container-productos p{
+   color: #ffffff;
+   font-family: 'Montserrat';
+}
+
+main #titulocategorias{
+   text-align: center;
+   color: #ffffff;
+   font-family: 'Overlock';
+}
+
+#tituloCuidadoCo{
+      background-color: #98bf3e !important;
+      width: 100%;
+      min-width:100%;
+      max-width: 100%;
+      color: #000000;
+      text-align: center;
+      padding-top: 10px;
+      margin-top: 20px;
+      padding-left: 0%;
+      padding-right: 0%;
+      padding-bottom: 5px;
+      margin-bottom: 5px;
+      font-family: 'Overlock';
+   }
+   
+   #tituloCuidadoCa{
+      background-color:#9f2884 !important;
+      width: 100%;
+      min-width: 100%;
+      max-width: 100%;
+      color: #000000;
+      text-align: center;
+      padding-top: 10px;
+      margin-top: 20px;
+      padding-left: 0%;
+      padding-right: 0%;
+      padding-bottom: 5px;
+      margin-bottom: 5px;
+      font-family: 'Overlock';
+
+   }
+
+   #tituloCuidadoFa{
+      background-color:#3dbfbb !important;
+      width: 100%;
+      min-width: 100%;
+      max-width: 100%;
+      color: #000000;
+      text-align: center;
+      padding-top:10px;
+      margin-top: 20px;
+      padding-left: 0%;
+      padding-right: 0%;
+      padding-bottom: 5px;
+      margin-bottom: 5px;
+      font-family: 'Overlock';
+
+   }
+
+   #tituloBelleza{
+      background-color:#f1645a !important;
+      width: 100%;
+      min-width: 100%;
+      max-width: 100%;
+      color: #000000;
+      text-align: center;
+      padding-top:10px;
+      margin-top: 20px;
+      padding-left: 0%;
+      padding-right: 0%;
+      padding-bottom: 5px;
+      margin-bottom: 5px;
+      font-family: 'Overlock';
+
+   }
+
+main .container a{
+   
+   text-decoration: none;
+   color: #ffffff;
+}
+
+main .container a:hover{
+   color: #000000;
+}
+
+main .container{
+   width: 100%;
+}
+
+main .row{
+   background-color: #000000;
+}
+
+main #carrousel-container{
+   width: 80%;
+   max-width: 80%;
+   min-width:80%;
+}
+
+
+#carouselExampleAutoplayingBe{
+   width: 100%;
+}
+#carouselExampleAutoplayingFa{
+   width: 100%;
+}
+
+#carouselExampleAutoplayingCa{
+   width: 100%;
+}
+#carouselExampleAutoplaying{
+   width: 100%;
+}
+
+main .card{
+   background-color: #000000;
+}
+
+.card-body{
+   background-color: black;
+}
+
+.card-body #botonComprarcuCo{
+   border-color: #98bf3e !important;
+}
+
+.card-body #botonComprarcuCo:hover{
+   background-color: #98bf3e;
+}
+
+.card-body #botonComprarCapilar{
+   border-color: #9f2884 !important;
+}
+
+.card-body #botonComprarCapilar:hover{
+   background-color: #9f2884;
+}
+
+.card-body #botonComprarFa{
+   border-color: #3dbfbb !important;
+}
+
+.card-body #botonComprarFa:hover{
+   background-color: #3dbfbb;
+}
+
+.card-body #botonComprarBe{
+   border-color: #f1645a !important;
+}
+
+.card-body #botonComprarBe:hover{
+   background-color: #f1645a;
+}
+

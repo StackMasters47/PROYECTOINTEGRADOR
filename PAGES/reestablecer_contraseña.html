@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reestablece tu contraseña</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/ASSETS/CSS/reestablecer_contraseña.css">
+    <link rel="icon" href="/ASSETS/IMG/imgLogo/fondoPajaro.png" type="image/x-icon"> <!--Agrego esta etiqueta para que salga el favicon-->
+</head>
+
+<body>
+    <header></header>
+    <main>
+        <div class="container reestablecerContraseña">
+            <h4 id="reestablecerContraseña">Reestablece tu contraseña</h4>
+            <div class="col-12" id="mensaje">
+                <p>Te enviaremos un correo con un vínculo donde podrás reestablecer tu contraseña</p>
+            </div>
+            <form class="row g-3" id="iniciarSesion" novalidate>
+                <div class="col-12">
+                    <label for="emailInput" class="form-label">Ingresa el correo electrónico vinculado a tu cuenta:</label>
+                    <input class="form-control input" type="email" id="emailInput" placeholder="Ingresa tu correo electrónico" required autofocus>
+                    <div class="invalid-feedback">
+                        Introduce un correo electrónico válido
+                    </div>
+                    <div class="col-12" id="button">
+                        <button type="submit" class="btn btn-primary" id="recuperar">Reestablecer contraseña</button>
+                    </div>
+                </div>
+
+
+
+            </form>
+        </div>
+    </main>
+    <footer></footer>
+    <script src="/ASSETS/JS/scriptHF.js"></script>
+    <script src="/ASSETS/JS/verificacion.js"></script>
+</body>
+
+</html>

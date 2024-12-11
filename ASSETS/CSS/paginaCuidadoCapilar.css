@@ -1,0 +1,68 @@
+@font-face {
+   font-family: 'Montserrat';
+   src: url('/ASSETS/FONTS/Montserrat/Montserrat-Regular.ttf') format('truetype'); 
+   font-weight: normal;
+   font-style: normal;
+ }
+ 
+ @font-face {
+   font-family: 'Overlock';
+   src: url('/ASSETS/FONTS/Overlock/Overlock-Bold.ttf') format('truetype'); 
+   font-weight: 700;
+   font-style: normal;
+ }
+
+
+ body {
+   background:  url('/ASSETS/IMG/fondo.webp') rgba(6, 3, 3, 0.6)!important; 
+}
+main{
+   margin-top: 20px;
+}
+
+main .card{
+
+   height: 100%;
+   border-color: black;
+
+}
+
+.card-body{
+   background-color: black;
+   color: #ffffff !important;
+   font-family: 'Montserrat' !important;
+   text-align: center;
+   justify-content: space-between;
+   
+}
+
+h6 .card-title{
+   color: #ffffff !important;
+   font-family: 'Overlock' !important;
+   font-size: medium !important;
+}
+
+.card-text{
+   color: #ffffff;
+   font-family: 'Montserrat';
+   text-align: center;
+   font-size: small;
+}
+.row{
+   width: 80%;
+   min-width:80%;
+   max-width: 80%;
+   opacity: 85%;
+   margin-top: 20px;
+   margin-bottom: 10px;
+}
+
+#botonComprarCuCo{
+   border-color: #9f2884;
+   border-width: 5px;
+   border-radius: 10%;
+   color: #ffffff;
+}
+#botonComprarCuCo:hover{
+   background-color: #9f2884;
+}
