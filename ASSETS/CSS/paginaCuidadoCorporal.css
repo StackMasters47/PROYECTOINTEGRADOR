@@ -17,8 +17,9 @@ body {
 }
 
 main .card {
-   border-color: #ffffff;
+
    height: 100%;
+   border-color: black;
 }
 
 main .card-body {

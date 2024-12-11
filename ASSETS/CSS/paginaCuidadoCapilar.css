@@ -21,9 +21,9 @@ main{
 }
 
 main .card{
-   border-color:#ffffff;
-   background-color: black;
+
    height: 100%;
+   border-color: black;
 
 }
 

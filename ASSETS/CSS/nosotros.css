@@ -45,6 +45,7 @@ main {
 #acercaNosotros, #stackMasters {
   font-size: 3em;
   color: #3DBFBB;
+ 
 }
 
 #mv, #v {
@@ -151,8 +152,17 @@ p {
 /*Terminan estilos para parte Acerca de nosotros: Encabezado, descripción, misión, visión, valores*/
 
 /*Aqui va lo de perfiles*/
+
+main #tituloEquipo{
+  text-align: center;
+  color: #3DBFBB;
+  font-family: 'Overlock';
+  background-color: #000;
+  width: 70%;
+  margin-bottom: 10px;
+}
 .container_integrantes{
-  min-width:max-content;
+  min-width:70%;
   min-height:max-content;
 }
 .card {
