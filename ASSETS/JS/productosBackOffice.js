@@ -143,7 +143,7 @@ function renderProductos(){
         boton.addEventListener('click', function () {
             const productoId = this.getAttribute('data-id'); // Obtener el ID
             selectedId=productoId-1;
-            console.log(selectedId);
+            // console.log(selectedId);
             rellenarForm(selectedId);
             // Desplazar la ventana hacia arriba
             window.scrollTo({ top: 0, behavior: 'smooth' });
@@ -189,11 +189,11 @@ function actualizarSubcategorias() {
 
 
 // Función para agregar un producto a la lista
-function addProduct(id,titulo, descripcion, precio,cat,subcat,rutaimg) {
+function addProduct(id,titulo, desc, precio,cat,subcat,rutaimg) {
     const producto = {
         id,
         titulo,
-        descripcion,
+        desc,
         precio,
         // Agregar un espacio antes de cada letra mayúscula en cat (excepto la primera)
         cat:cat.replace(/([a-z])([A-Z])/g, '$1 $2'),
@@ -205,7 +205,7 @@ function addProduct(id,titulo, descripcion, precio,cat,subcat,rutaimg) {
 }
 
 function eliminarProducto(id){
-    console.log("Funcion eliminar")
+    
     const productosActualizados = productos.filter(producto => producto.id !==id);
 
     productosActualizados.forEach((producto,index)=>{
@@ -230,7 +230,7 @@ function modificarProducto(id,titulo,descripcion,precio,cat,subcat){
     if (index !==-1){
         productos[index]={...productos[index],...producto};
     }else{
-        console.log("No se encontró el producot.")
+        console.log("No se encontró el producto.")
     }
 }
 
