@@ -1,8 +1,8 @@
 const subcategorias = {
-    CuidadoCorporal:["Exfoliantes", "Hidratantes", "Limpieza"],
-    CuidadoFacial: ["Sérums", "Hidratantes", "Limpieza", "Protector Solar"],
-    CuidadoCapilar: ["Shampoo", "Acondicionador", "Tratamientos"],
-    Belleza:["Ojos", "Labios", "Rostro"]
+    "Cuidado Corporal":["Exfoliantes", "Hidratantes", "Limpieza"],
+    "Cuidado Facial": ["Sérums", "Hidratantes", "Limpieza", "Protector Solar"],
+    "Cuidado Capilar": ["Shampoo", "Acondicionador", "Tratamientos"],
+    "Belleza":["Ojos", "Labios", "Rostro"]
 }
 
 const productos = [
@@ -155,7 +155,7 @@ function rellenarForm(){
     document.getElementById('title').value=productos[selectedId].titulo;
     document.getElementById('description').value=productos[selectedId].desc;
     document.getElementById('price').value=productos[selectedId].precio;
-    document.getElementById('category').value=productos[selectedId].cat.replace(/\s+/g, '');
+    document.getElementById('category').value=productos[selectedId].cat;
     
     actualizarSubcategorias();
     
@@ -195,9 +195,8 @@ function addProduct(id,titulo, desc, precio,cat,subcat,rutaimg) {
         titulo,
         desc,
         precio,
-        // Agregar un espacio antes de cada letra mayúscula en cat (excepto la primera)
-        cat:cat.replace(/([a-z])([A-Z])/g, '$1 $2'),
-        subcat,
+        cat,
+        subcat: subcat.charAt(0).toUpperCase() + subcat.slice(1).toLowerCase(),
         rutaimg
     };
     productos.push(producto);
@@ -223,7 +222,7 @@ function modificarProducto(id,titulo,descripcion,precio,cat,subcat){
         descripcion,
         precio,
         cat,
-        subcat,
+        subcat: subcat.charAt(0).toUpperCase() + subcat.slice(1).toLowerCase(),
     };
     const index = productos.findIndex(producto=> producto.id ===id);
 
