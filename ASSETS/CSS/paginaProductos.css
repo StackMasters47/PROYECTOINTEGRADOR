@@ -27,11 +27,20 @@ text-align: center;
 
 main #container-productos h5{
    color: #ffffff;
+   font-family: 'Overlock';
 }
 
 main #container-productos p{
    color: #ffffff;
+   font-family: 'Montserrat';
 }
+
+main #titulocategorias{
+   text-align: center;
+   color: #ffffff;
+   font-family: 'Overlock';
+}
+
 #tituloCuidadoCo{
       background-color: #98bf3e !important;
       width: 100%;
