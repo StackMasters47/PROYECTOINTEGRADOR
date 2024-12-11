@@ -10,7 +10,12 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="/ASSETS/CSS/footer.css">
     <link rel="icon" href="/ASSETS/IMG/imgLogo/fondoPajaro.png" type="image/x-icon"> <!--Agrego esta etiqueta para que salga el favicon-->
-    
+    <script type="text/javascript"
+  src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+
+<script type="text/javascript">
+  emailjs.init('Psm2YGmZjcvgWMnjt')
+</script>
 </head>
 <body>
     
@@ -69,10 +74,15 @@
                          <h2>Newsletter</h2>
                         <p>Sé parte de nuestra comunidad exclusiva. Suscríbete a nuestro boletín y recibe las mejores ofertas, noticias y eventos antes que nadie.
                         </p>
-                        <div class="input-group mb-3">
-                            <input type="text" class="form-control" placeholder="Introduce tu correo" aria-label="Enter your Email ..." aria-describedby="basic-addon2">
-                            <span class="input-group-text" id="basic-addon2"><i class="fa fa-long-arrow-right"></i></span>
-                        </div>
+                       <form id="form">
+                            <div class="field">
+                              <!--<label for="email_id">email_id</label>-->
+                              <input type="text" name="email_id" id="email_id" placeholder="Introduce tu correo" aria-label="Enter your Email ..." aria-describedby="basic-addon2">
+                            </div>
+                          
+                            <input type="submit" id="button" value="Suscribirme" >
+                          </form>
+                          
                         <h2>Siguenos</h2>
                         <p class="socials">
                             <i class="fa fa-facebook"></i>
@@ -89,7 +99,7 @@
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
 
-    
+    <script src="/ASSETS/JS/newsletter.js"></script>
 </body>
 </html>
 
