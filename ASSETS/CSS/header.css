@@ -29,6 +29,7 @@ body{
 }
 
 .nav-link{
+  font-family: "Montserrat";
   color: #c8c8c8;
   position: relative;
 }
