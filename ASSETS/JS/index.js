@@ -1,9 +1,5 @@
-function flipCard(card) {
-  card.classList.toggle('is-flipped');
-}
 let navLinks = document.querySelectorAll('.nav-link');
 const currentUrl = window.location.href;
-
 // Función asíncrona para esperar a que navLinks tenga datos
 async function paginaActiva() {
     if (navLinks.length > 0) {
@@ -14,10 +10,10 @@ async function paginaActiva() {
         navLinks = document.querySelectorAll('.nav-link');
         if (navLinks.length > 0) {
             clearInterval(intervalId);
-            // console.log('navLinks tiene datos:', navLinks);
+            console.log('navLinks tiene datos:', navLinks);
             navLinks.forEach(link => {
                 // console.log(link.href)
-                if (link.href.includes("nosotros.html")) {
+                if (link.href.includes("index.html")) {
                     
                     link.classList.add('active');
                 } else {
