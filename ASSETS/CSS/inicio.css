@@ -15,9 +15,6 @@
   }
   
 
- /*html main{
-    background:rgba(6, 3, 3, 0.6);
- }*/
 
 body{
     background:  url('/ASSETS/IMG/fondo.webp') rgba(6, 3, 3, 0.6) !important; 
@@ -29,85 +26,67 @@ body{
 
 
 
+/*Versión 2 categorias*/
 
+.team-area {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	color: var(--color12);
+    padding: 10px;
+    
+}
+.box {
+	position: relative;
+	margin: 20px;
+	overflow: hidden;
+	border-radius: 12px;
+	box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+	max-width: 400px;
+	transition: transform 0.3s ease;
+}
+.box img {
+	width: 100%;
+	display: block;
+	border-radius: 10px;
+	transition: transform 0.5s ease;
+}
+.box:hover {
+	transform: scale(1.05);
+}
+.box figcaption {
+	position: absolute;
+	width: 100%;
+	bottom: 0;
+	padding: 20px;
+	text-align: center;
+	background: rgba(0, 0, 0, 40%);
+	transform: translateY(100%);
+	transition: transform 0.5s ease;
+	border-radius: 100px 100px 0 0;
 
-
-/* Estilos para el carrusel principal */
-
-
-/*categorias*/
-.hm-page-block {
-    /*background: rgba(0, 0, 0, 40%);*/
-    background-color: black;
-    padding: 20px;
-    border-radius: 10px;
-    margin: 0 auto;
+}
+.box:hover figcaption {
+	transform: translateY(0);
+}
+.box h2 {
+	font-size: 30px;
+	text-transform: uppercase;
+	letter-spacing: 1px;
+	font-family: 'overlock';
+	margin: 0;
 }
 
-.hm-grid-category,
-.grid-product {
-    display: grid;
-    grid-template-columns: repeat(4, calc(25% - 2rem*3/4));
-    row-gap: 3rem;
-    column-gap: 2rem;
-    max-width: 1122px;
-
+@media(max-width: 800px) {
+	.team-area {
+		flex-direction: column;
+	}
 }
-
-.hm-grid-category .grid-item {
-    position: relative;
-    border-radius: 5px;
-    overflow: hidden;
-    max-height: 460px;
-
-
+@media(max-width: 600px) {
+	.box h2 {
+		font-size: 20px;
+	}
 }
-
-.hm-grid-category .grid-item img,
-.grid-product .product-item .p-portada img {
-    transition: all .3s ease-in;
-}
-
-.hm-grid-category .grid-item img:hover,
-.grid-product .product-item .p-portada img:hover {
-    transform: scale(1.07);
-}
-
-.hm-grid-category .grid-item:hover .c-info {
-    transform: translateY(0%);
-}
-
-.hm-grid-category .grid-item .c-info {
-    position: absolute;
-    width: 100%;
-    bottom: 0;
-    left: 0;
-    color: var(--colorwhite);
-    padding: 20px;
-    background: rgba(0, 0, 0, 40%);
-    transform: translateY(100%);
-    transition: all .3s ease-in;
-}
-
-.hm-grid-category .grid-item .c-info h3 {
-    font-size: 16px;
-    font-weight: 400;
-    text-align: center;
-}
-
-.header-title h1 {
-    color: var(--color8);
-    text-align: center;
-    font-size: 3rem;
-    font-family: 'Overlock';
-}
-
-.hm-grid-category .grid-item img {
-    width: 100%;
-    height: 100%;
-}
-
-
 
 
 /*carrusel  reseñas*/
