@@ -66,6 +66,10 @@ body{
 	border-radius: 100px 100px 0 0;
 
 }
+.box figcaption a{
+    text-decoration: none;
+    color:var(--colorwhite);
+}
 .box:hover figcaption {
 	transform: translateY(0);
 }
@@ -77,16 +81,7 @@ body{
 	margin: 0;
 }
 
-@media(max-width: 800px) {
-	.team-area {
-		flex-direction: column;
-	}
-}
-@media(max-width: 600px) {
-	.box h2 {
-		font-size: 20px;
-	}
-}
+
 
 
 /*carrusel  reseñas*/
@@ -243,4 +238,15 @@ body{
     .product-area {
         width: 100%;
     }
+}
+
+@media(max-width: 800px) {
+	.team-area {
+		flex-direction: column;
+	}
+}
+@media(max-width: 600px) {
+	.box h2 {
+		font-size: 20px;
+	}
 }
