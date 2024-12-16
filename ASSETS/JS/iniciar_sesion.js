@@ -1,4 +1,4 @@
-const iniciarSesion = document.querySelector('#iniciarSesion') //para seleccionar el elemento con id específico, en este caso, el form con id "registro"
+const iniciarSesion = document.querySelector('#iniciarSesion') //para seleccionar el elemento con id específico, en este caso, el form con id "iniciarSesion"
 iniciarSesion.addEventListener("submit", (event) => { //para atender el evento "submit" y ejecutar una función 
     event.preventDefault(); //previene la recarga automática de la página
 
