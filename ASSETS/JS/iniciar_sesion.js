@@ -33,14 +33,14 @@ iniciarSesion.addEventListener("submit", (event) => { //para atender el evento "
 
         //Si el usuario no es valido, retorna una alerta con este mensaje
         if (!usuarioValido && (email.value.trim() !== adminUser.correo || password.value.trim() !== adminUser.contraseña)) {
-            return alert('Usuario y/o contraseña incorrectos');
+            return alert('Correo electrónico y/o contraseña incorrectos');
         }
 
         if(email.value===adminUser.correo && password.value===adminUser.contraseña){
             window.location.href = '/PAGES/backOffice/formProducts.html'; 
         } else {
             //Si los datos son validos, retorna una alerta con el mensaje y redirige a la página de inicio
-            alert(`Bienvenido ${usuarioValido.nombre}`);
+            alert(`¡Bienvenid@, ${usuarioValido.nombre}!`);
             localStorage.setItem('login_success', JSON.stringify(usuarioValido));
             window.location.href = '/index.html'; 
         }
