@@ -1,0 +1,129 @@
+@import "COLORES.css";
+
+@font-face {
+	font-family: 'Montserrat';
+	src: url('/ASSETS/FONTS/Montserrat/Montserrat-Regular.ttf') format('truetype'); 
+	font-weight: normal;
+	font-style: normal;
+  }
+  
+  @font-face {
+	font-family: 'Overlock';
+	src: url('/ASSETS/FONTS/Overlock/Overlock-Bold.ttf') format('truetype'); 
+	font-weight: 700;
+	font-style: normal;
+  }
+  
+
+
+body{
+    background:  url('/ASSETS/IMG/fondo.webp') rgba(6, 3, 3, 0.6) !important; 
+    background-blend-mode: multiply;
+    background-position: center;
+    background-size: cover;
+    background-repeat: repeat;
+}
+
+.parent-container {
+    display: flex;
+    justify-content: center; 
+  
+   
+  }
+        .containerP {
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+            padding: 20px;
+            background-color: var(--colorblack);
+            margin: 20px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            max-width: 1400px;
+        }
+        .image-section, .details-section {
+            flex: 1 1 100%;
+            margin: 10px;
+        }
+        .product-image {
+            width: 100%;
+            border-radius: 10px;
+        }
+        .product-title {
+            font-size: 30px;
+            font-weight: bold;
+            margin-bottom: 10px;
+            color: var(--color3);
+            text-align: center;
+        }
+        .price {
+            font-size: 20px;
+            color: var(--color12);
+            margin: 10px 0;
+            text-align: center;
+        }
+      
+        .free-shipping {
+            color: var(--color3);
+            font-weight: bold;
+            margin: 10px 0;
+            text-align: center;
+        }
+        .payment-options {
+            margin-top: 10px;
+            font-size: 14px;
+            color: var(--color12);
+            text-align: center;
+        }
+        
+       
+        .add-to-cart {
+            background-color: var(--color3);
+            color: white;
+            padding: 10px;
+            text-align: center;
+            margin-top: 20px;
+            cursor: pointer;
+            border-radius: 5px;
+            align-items: center;
+        }
+        .add-to-cart:hover {
+            background-color:var(--color8);
+        }
+        .description {
+            margin-top: 20px;
+            font-size: 14px;
+            line-height: 1.6;
+            color: var(--color12);
+            text-align: center;
+            align-items: center;
+        }
+        .details-section{
+            align-items: center;
+
+            
+        }
+
+       
+        /*Reseñas*/
+       
+        .review {
+            background-color: black;
+            max-width: 100%;
+            padding: 20px;
+            margin: 20px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            color:var(--color12);
+            font-family: 'Montserrat';
+        }
+
+        @media (min-width: 600px) {
+            .review {
+            max-width: 1400px;
+            }
+        }
+
+        @media (min-width: 600px) {
+            .image-section, .details-section {
+                flex: 1;
+            }
+        }
