@@ -1,0 +1,67 @@
+@font-face {
+    font-family: 'Montserrat';
+    src: url('/ASSETS/FONTS/Montserrat/Montserrat-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Overlock';
+    src: url('/ASSETS/FONTS/Overlock/Overlock-Bold.ttf') format('truetype');
+    font-weight: 700;
+    font-style: normal;
+}
+
+body::-webkit-scrollbar {
+    display: none;
+}
+
+* {
+    font-family: "Montserrat" !important;
+    font-weight: 400;
+}
+
+#miCuenta, #carrito, #pedidos, #direcciones {
+    font-family: "Overlock" !important;
+}
+
+#miCuenta {
+    font-size: 3em;
+}
+
+#carrito, #pedidos, #direcciones {
+    font-size: 2.2em;
+}
+
+main {
+    color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background: url("/ASSETS/IMG/fondo.webp") rgba(6, 3, 3, 0.6) !important;
+    background-blend-mode: multiply;
+    background-size: cover;
+    background-repeat: repeat;
+    background-position: center;
+}
+
+.cuenta {
+    display: flex;
+    flex-direction: column;
+    min-height: 90vh;
+    width: 80% !important;
+    background-color: #111;
+    border-radius: 10px;
+    padding: 2% 3% 2% !important;
+    margin: 2% 0 2% !important;
+}
+
+.miCuenta {
+    margin-bottom: 5% !important;
+}
+
+.cpd {
+    display: flex;
+}
+
