@@ -1,0 +1,137 @@
+@font-face {
+    font-family: 'Montserrat';
+    src: url('/ASSETS/FONTS/Montserrat/Montserrat-Regular.ttf') format('truetype'); 
+    font-weight: normal;
+    font-style: normal;
+  }
+  
+  @font-face {
+    font-family: 'Overlock';
+    src: url('/ASSETS/FONTS/Overlock/Overlock-Bold.ttf') format('truetype'); 
+    font-weight: 700;
+    font-style: normal;
+  }
+  
+  body {
+    background: rgba(6, 3, 3, 0.6);
+    color: #ffffff;
+    font-family: 'Montserrat';
+  }
+  
+  .container {
+    width: 80%;
+  }
+  
+  .productImgReferences {
+    width: 100%;
+    height: auto;
+    border: 2px solid #ddd;
+    border-radius: 10px;
+  }
+  
+  h1, h4, h5 {
+    font-family: 'Overlock';
+    text-transform: uppercase;
+    color: #ffffff;
+  }
+  
+  h1 {
+    font-size: 2rem;
+  }
+  
+  h4.text-primary {
+    color: #98bf3e !important;
+    font-size: 1.5rem;
+  }
+  
+  .rating-stars {
+    color: gold;
+    font-size: 1.2rem;
+  }
+  
+  p {
+    font-family: 'Montserrat';
+    color: #ffffff;
+  }
+  
+  button {
+    font-family: 'Overlock';
+    text-transform: uppercase;
+  }
+  
+  .btn-success {
+    background-color: #98bf3e;
+    border-color: #98bf3e;
+  }
+  
+  .btn-success:hover {
+    background-color: #86ac36;
+    border-color: #86ac36;
+  }
+  
+  .btn-dark {
+    background-color: #9f2884;
+    border-color: #9f2884;
+    color: #ffffff;
+  }
+  
+  .btn-dark:hover {
+    background-color: #871f6c;
+    border-color: #871f6c;
+  }
+  
+  #reviews {
+    margin-top: 20px;
+  }
+  
+  .border {
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    background-color: #1e1e1e;
+  }
+  
+  .review-box {
+    background-color: #333333;
+    padding: 20px;
+    border: 1px solid #444444;
+    border-radius: 5px;
+  }
+  
+  .review-box h5 {
+    color: #98bf3e;
+  }
+  
+  .form-label {
+    font-family: 'Montserrat';
+    color: #ffffff;
+  }
+  
+  .form-control, .form-select {
+    background-color: #222222;
+    color: #ffffff;
+    border: 1px solid #444444;
+    border-radius: 5px;
+  }
+  
+  textarea.form-control {
+    resize: none;
+  }
+  
+  .form-control::placeholder {
+    color: #aaaaaa;
+  }
+  
+  .form-select option {
+    background-color: #333333;
+    color: #ffffff;
+  }
+  
+  .btn-primary {
+    background-color: #f1645a;
+    border-color: #f1645a;
+  }
+  
+  .btn-primary:hover {
+    background-color: #d25349;
+    border-color: #d25349;
+  }  
