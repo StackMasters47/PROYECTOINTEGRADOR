@@ -1,0 +1,86 @@
+@font-face {
+   font-family: 'Montserrat';
+   src: url('/ASSETS/FONTS/Montserrat/Montserrat-Regular.ttf') format('truetype'); 
+   font-weight: normal;
+   font-style: normal;
+ }
+ 
+
+body{
+   background:  url('/ASSETS/IMG/fondo.webp') rgba(6, 3, 3, 0.6) !important; 
+   background-blend-mode: multiply;
+   background-position: center;
+   background-size: cover;
+   background-repeat: repeat;
+}
+
+#contenedor-confirmacion{
+   background-color: #000000;
+   align-items: center;
+   text-align: center;
+   color: #ffffff;
+   font-family: 'Montserrat',sans-serif !important;
+   margin-top: 20px;
+}
+.container{
+   align-items: center;
+   align-content: center;
+}
+
+.table th, td{
+   color: #ffffff !important;
+   border-color: #98bf3e !important;
+}
+
+#tabla-carrito{
+   border-color: #98bf3e !important;
+
+}
+
+#contenedor-pago{
+   background-color: #000000;
+   margin-top: 20px;
+   color: #ffffff !important;
+   text-align: center;
+   margin-bottom: 10px;
+}
+
+#inputNombre{
+   border-color: #f0769f;
+   border-width: 5px;
+   background-color: darkgray;
+}
+
+#inputApellido{
+   border-color: #3dbfbb;
+   border-width: 5px;
+   background-color: darkgray;
+}
+
+#inputPago{
+   border-color: #f1645a;
+   border-width: 5px;
+   background-color: darkgray;
+}
+
+#inputTelefono{
+   border-color: #9f2884;
+   border-width: 5px;
+   background-color: darkgray;
+}
+
+#inputDireccion{
+   border-color: #f6b94f;
+   border-width: 5px;
+   background-color: darkgray;
+}
+
+#botonPagar{
+   border-color: #246784;
+   border-width: 5px;
+   color: #ffffff;
+}
+
+#botonPagar:hover{
+   background-color: #246784;
+}
