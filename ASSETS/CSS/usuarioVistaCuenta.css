@@ -21,16 +21,23 @@ body::-webkit-scrollbar {
     font-weight: 400;
 }
 
-#miCuenta, #carrito, #pedidos, #direcciones {
+#miCuenta,
+#carrito,
+#pedidos,
+#direcciones {
     font-family: "Overlock" !important;
 }
 
 #miCuenta {
     font-size: 3em;
+    color: #9f2884;
 }
 
-#carrito, #pedidos, #direcciones {
+#carrito,
+#pedidos,
+#direcciones {
     font-size: 2.2em;
+    color: #c0219b;
 }
 
 main {
@@ -65,3 +72,50 @@ main {
     display: flex;
 }
 
+#cerrarSesion {
+    text-align: center;
+    color: white;
+    margin: 0;
+    width: 140px;
+    height: 40px;
+    border: 3px solid #F1645A;
+    border-radius: 10px;
+    background-color: #F1645A;
+    transition: border background-color 0.3s ease;
+}
+
+#cerrarSesion:hover {
+    border: 3px solid #f54539;
+    background-color: #f54539;
+}
+
+.agregaDireccion {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+    width: 160px;
+    height: 40px;
+    border: 3px solid #F1645A;
+    border-radius: 10px;
+    background-color: #F1645A;
+    transition: border background-color 0.3s ease;
+
+    a {
+        text-decoration: none;
+        color: white;
+    }
+
+    a:hover,
+    a:visited,
+    a:active,
+    a:focus {
+        color: white;
+        text-decoration: none;
+    }
+}
+
+.agregaDireccion:hover {
+    border: 3px solid #f54539;
+    background-color: #f54539;
+}
