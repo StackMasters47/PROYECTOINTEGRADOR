@@ -11,71 +11,82 @@
    font-weight: 700;
    font-style: normal;
  }
-main {
-
-   min-height: 80vh;
-   background: rgba(6, 3, 3, 0.6);
+ 
+ body {
+   background:  url('/ASSETS/IMG/fondo.webp') rgba(6, 3, 3, 0.6)!important; 
 }
 
-.container{
+main{
+   margin-bottom: 20px;
+   margin-top: 20px;
+}
+main .container{
    background-color: #000;
-   opacity: 85%;
-
+   display:grid;
+   justify-content: center;
+   color: #ffffff;
+   font-family: 'Overlock';
+   text-align: center;
+   width: 70%;
 }
 
-#tabla-productos{
+main #tabla-productos{
    background-color: #000;
    color: #ffffff !important;
    font-family: 'Montserrat' !important;
+   justify-content: center;
+   border-width: 2px;
+   width: 100%;
+   border-color: #ffffff;
+   border-style: double;
+
 
 }
-#tabla-productos th{
+main #tabla-productos th{
    color: #ffffff !important;
    font-family: 'Montserrat' !important;
 }
-#tabla-productos td {
+main #tabla-productos td {
    color:#ffffff !important;
    font-family: 'Montserrat' !important;
 }
 
-.table{
+main .table{
    color: #ffffff !important;
 }
 
-#cardProductos{
-   border-color: #9f2884;
-   border-width: 2px;
-}
-.card-body{
-   background-color: #9f2884;
-}
 
-.card-body h5{
-   color: aliceblue;
-   font-family: 'Montserrat' !important;
-}
-.card-body p{
-   color: aliceblue;
-   font-family: 'Montserrat' !important;
-}
-#botonAgregar{
+main .increase{
    background-color: #f6b94f;
    border-color: #f6b94f;
    font-family: 'Montserrat' !important;
 }
-#botonEliminar{
+
+main #clear-cart{
+   width: 30%;
    background-color: #98bf3e;
    border-color: #98bf3e;
    color: #000;
    font-family: 'Montserrat' !important;
+   margin-bottom: 2px;
 }
 
-#botonComprar{
+main #comprar{
+   width: 30%;
+   background-color:#9f2884;
+   color: #000;
+   border-color: #9f2884;
+   font-family: 'Montserrat';
+
+}
+
+main .decrease{
    background-color: #f36b37;
    border-color:#f36b37;
    font-family: 'Montserrat' !important;
 }
-#vaciar-carrito{
+
+main .remove{
    background-color: #246784;
    border-color: #246784;
    font-family: 'Montserrat' !important;
