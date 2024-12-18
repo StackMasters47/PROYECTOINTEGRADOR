@@ -103,6 +103,51 @@ body{
             
         }
 
+
+
+
+.review-box {
+    padding: 20px;
+    background-color: #f9f9f9;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    width: 50%;
+    margin: 0 auto;
+}
+
+.form-label {
+    font-weight: bold;
+}
+
+.form-control {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.form-select {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.btn-primary {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.btn-primary:disabled {
+    background-color: #ccc;
+    cursor: not-allowed;
+}
+
        
         /*Reseñas*/
        
@@ -116,6 +161,275 @@ body{
             font-family: 'Montserrat';
         }
 
+/*fORM RESEÑA*/
+
+.formR {
+   background-color: #000;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    max-width: 1400px;
+}
+form, p {
+    padding: 0;
+    margin: 0;
+    outline: none;
+    font-family: Roboto, Arial, sans-serif;
+    font-size: 14px;
+    color: var(--color12);
+    line-height: 13px;
+    border-radius: 10px;
+    
+  }
+  
+  #h1 {
+    font-size: 24px;
+    font-weight: 400;
+    text-align: center;
+    color: var(--color8);
+    font-family: 'Overloock';
+  }
+  
+  #h4 {
+    margin: 20px 0 2px;
+    color: var(--color8);
+  }
+  
+  .testbox {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: inherit;
+    padding: 80px;
+    max-width: 800px;
+  }
+  
+  form {
+    width: 100%;
+    padding: 20px;
+    background: var(--colorblack);
+    box-shadow: 0 2px 5px var(--color8);
+    
+  }
+  
+  .input {
+    width: calc(100% - 10px);
+    padding: 5px;
+    border: 1px solid #000;
+    border-radius: 3px;
+    vertical-align: middle;
+    background-color: var(--color12);
+  }
+  
+  .input:hover, textarea:hover {
+    outline: none;
+    border: 1px solid var(--color12);
+  }
+  
+  
+  textarea {
+    width: calc(100% - 6px);
+    background: #F7F7F7;
+    border-radius: 5px;
+  }
+  
+  .btn-block {
+    margin-top: 20px;
+    text-align: center;
+  }
+  
+  button {
+    width: 150px;
+    padding: 10px;
+    border: none;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    border-radius: 5px;
+    background-color: #F3D153;
+    font-size: 16px;
+    color: #000;
+    cursor: pointer;
+  }
+  
+  button:hover {
+    opacity: .9;
+  }
+
+.rating > label {
+    margin-right: 4px;
+  }
+  
+  .rating:not(:checked) > input {
+    display: none;
+  }
+  
+  .rating:not(:checked) > label {
+    float: right;
+    cursor: pointer;
+    font-size: 30px;
+  }
+  
+  .rating:not(:checked) > label > svg {
+    fill: #666;
+    transition: fill 0.3s ease;
+  }
+  
+  .rating > input:checked ~ label > svg {
+    fill: var(--color5);
+  }
+  
+  .rating:not(:checked) > label:hover ~ label > svg,
+  .rating:not(:checked) > label:hover > svg {
+    fill: var(--color5);
+  }
+  
+  #star1:hover ~ label > svg,
+  #star1:hover > svg {
+    fill: var(--color1) !important;
+  }
+  
+  #star2:hover ~ label > svg,
+  #star2:hover > svg {
+    fill: var(--color2) !important;
+  }
+  
+  #star3:hover ~ label > svg,
+  #star3:hover > svg {
+    fill: var(--color3) !important;
+  }
+  
+  #star4:hover ~ label > svg,
+  #star4:hover > svg {
+    fill: var(--color6) !important;
+  }
+  
+  #star5:hover ~ label > svg,
+  #star5:hover > svg {
+    fill: var(--color5) !important;
+  }
+  
+  #star1:checked ~ label > svg {
+    fill: var(--color1);
+  }
+  
+  #star2:checked ~ label > svg {
+    fill: var(--color2);
+  }
+  
+  #star3:checked ~ label > svg {
+    fill: var(--color3);
+  }
+  
+  #star4:checked ~ label > svg {
+    fill: var(--color6);
+  }
+  
+  #star5:checked ~ label > svg {
+    fill: var(--color5);
+  }
+
+
+  .rainbow-hover {
+    font-size: 16px;
+    font-weight: 700;
+    color: #ff7576;
+    background-color: #2B3044;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    padding: 12px 24px;
+    position: relative;
+    line-height: 24px;
+    border-radius: 9px;
+    box-shadow: 0px 1px 2px #2B3044,
+      0px 4px 16px #2B3044;
+    transform-style: preserve-3d;
+    transform: scale(var(--s, 1)) perspective(600px)
+      rotateX(var(--rx, 0deg)) rotateY(var(--ry, 0deg));
+    perspective: 600px;
+    transition: transform 0.1s;
+  }
+  
+  .sp {
+    background: linear-gradient(
+        90deg,
+        #9f2884,
+        #3DBFBB,
+        #98bf3E,
+        #F6B94F,
+        #f36b37
+      );
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    text-fill-color: transparent;
+    display: block;
+  }
+  
+  .rainbow-hover:active {
+    transition: 0.3s;
+    transform: scale(0.93);
+  }
+  
+  body {
+	margin: 0; 
+	padding: 0;
+	background: #08091d; 
+}
+h2 {
+	font-family: 'Bebas Neue', cursive;
+	color: #fff;
+	text-align: center;
+	margin: 40px 0 -50px;
+	padding-bottom: 20px;
+	background-image: url(img/border.png);
+	background-repeat: no-repeat;
+	background-position: center bottom;
+}
+.carousel{
+    height: 600px; 
+    perspective: 200px;
+}
+.carousel .carousel-item{
+	width: 640px;
+	height: 400px;
+}
+.card {
+	box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+	max-width: 500px;
+	margin: auto;
+	text-align: center;
+	border-radius: 10px;
+	height: 450px;
+  }
+.img-area{
+	border-radius: 10px 10px 0 0;
+	height: 200px;
+	background-size: cover;
+	background-position: center center;
+}
+h4 {
+	font-size: 35px;
+	line-height: 1.5;
+	margin: 15px 0;
+	font-family: 'Bebas Neue', cursive;
+}
+.card p{
+	font-size: 17px;
+}
+
+.container {
+  padding: 2px 16px;
+}
+
+
+  
+  @media (min-width: 568px) {
+    th, td {
+      word-break: keep-all;
+    }
+  }
 
 
         
