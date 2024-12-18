@@ -18,7 +18,7 @@ document.addEventListener('DOMContentLoaded', () => {
             return;
         }
 
-     
+        
         const rating = reviewForm.querySelector('input[name="rate"]:checked');
         const comment = reviewForm.querySelector('textarea').value.trim();
 
@@ -33,6 +33,6 @@ document.addEventListener('DOMContentLoaded', () => {
         }
 
         alert('¡Reseña enviada con éxito!');
-        reviewForm.submit(); // Envía el formulario si todos los campos están completos y el usuario ha iniciado sesión
+        reviewForm.submit(); 
     });
 });
