@@ -1,0 +1,83 @@
+@font-face {
+   font-family: 'Montserrat';
+   src: url('/ASSETS/FONTS/Montserrat/Montserrat-Regular.ttf') format('truetype'); 
+   font-weight: normal;
+   font-style: normal;
+ }
+ 
+
+body{
+   background:  url('/ASSETS/IMG/fondo.webp') rgba(6, 3, 3, 0.6) !important; 
+   background-blend-mode: multiply;
+   background-position: center;
+   background-size: cover;
+   background-repeat: repeat;
+}
+
+main{
+   height: max-content;
+}
+
+#contenedor_formulario{
+   background-color: #000 !important;
+   height: 100%;
+   margin-top: 20px;
+   max-height: 100%;
+   color: #ffffff;
+   font-family: 'Montserrat',sans-serif !important;
+   margin-bottom: 20px;
+}
+
+#inputNombre{
+   border-color:#98bf3e;
+   border-width: 5px;
+   background-color: darkgrey;
+}
+
+#inputCalle{
+   border-color: #9f2884;
+   border-width: 5px;
+   background-color: darkgray;
+}
+
+#inputTelefono{
+   border-color: #f6b94f;
+   border-width: 5px;
+   background-color: darkgray;
+}
+
+#inputColonia{
+   border-color: #246784;
+   border-width: 5px;
+   background-color: darkgray;
+}
+
+#inputMunicipio{
+   border-color: #f0769f;
+   border-width: 5px;
+   background-color: darkgray;
+}
+
+#inputEstado{
+   border-color: #f1645a;
+   border-width: 5px;
+   background-color: darkgray;
+}
+
+#inputCp{
+   border-color: #3dbfbb;
+   border-width: 5px;
+   background-color: darkgray;
+}
+
+#botonAgregar{
+   border-color: #f36b37;
+   border-width: 5px;
+   color: #ffffff;
+   margin-top: 15px;
+   margin-bottom: 10px;
+}
+
+#botonAgregar:hover{
+   background-color: #f36b37;
+}

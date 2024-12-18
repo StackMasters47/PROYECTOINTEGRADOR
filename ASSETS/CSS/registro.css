@@ -105,7 +105,7 @@ label {
     border: 2px solid #9f2884;
 }
 
-#telefono {
+#apellido {
     border: 2px solid #f36b37;
 }
 
@@ -144,12 +144,12 @@ label {
     }
 }
 
-.text-danger {
+/*.text-danger {
     font-family: 'Montserrat';
     font-weight: 400;
     font-size: 0.75em;
     text-align: center;
-}
+}*/
 
 input:-webkit-autofill {
     background-color: black !important; /* Fondo negro */
