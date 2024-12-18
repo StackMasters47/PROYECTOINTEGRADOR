@@ -161,7 +161,7 @@ form, p {
     max-width: 800px;
   }
   
-  form {
+  .formRes {
     width: 100%;
     padding: 20px;
     background: var(--colorblack);
@@ -278,8 +278,7 @@ form, p {
   .rainbow-hover {
     font-size: 16px;
     font-weight: 700;
-    color: #ff7576;
-    background-color: #2B3044;
+    background-color: var(--colorblack);
     border: none;
     outline: none;
     cursor: pointer;
