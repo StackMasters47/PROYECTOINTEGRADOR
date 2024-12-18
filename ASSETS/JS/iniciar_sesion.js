@@ -1,4 +1,4 @@
-const iniciarSesion = document.querySelector('#iniciarSesion') //para seleccionar el elemento con id específico, en este caso, el form con id "registro"
+const iniciarSesion = document.querySelector('#iniciarSesion') //para seleccionar el elemento con id específico, en este caso, el form con id "iniciarSesion"
 iniciarSesion.addEventListener("submit", (event) => { //para atender el evento "submit" y ejecutar una función 
     event.preventDefault(); //previene la recarga automática de la página
 
@@ -27,21 +27,21 @@ iniciarSesion.addEventListener("submit", (event) => { //para atender el evento "
 
     if(valido) {
         // Para obtener los datos de local storage, y convertirlos de formato JSON a un array de objetos; si no hay datos en local storage, devuelve un array vacio
-        const Users = JSON.parse(localStorage.getItem('users')) || [];
+        const Usuarios = JSON.parse(localStorage.getItem('usuarios')) || [];
         // Para validar datos: comparar los datos obtenidos de local storage con los datos ingresados por el usuario; ambos condiciones deben cumplirse para continuar
-        const validUser = Users.find(user => user.email === email.value.trim() && user.password === password.value.trim());
+        const usuarioValido = Usuarios.find(usuario => usuario.email === email.value.trim() && usuario.password === password.value.trim());
 
         //Si el usuario no es valido, retorna una alerta con este mensaje
-        if (!validUser && (email.value.trim() !== adminUser.correo || password.value.trim() !== adminUser.contraseña)) {
-            return alert('Usuario y/o contraseña incorrectos');
+        if (!usuarioValido && (email.value.trim() !== adminUser.correo || password.value.trim() !== adminUser.contraseña)) {
+            return alert('Correo electrónico y/o contraseña incorrectos');
         }
 
         if(email.value===adminUser.correo && password.value===adminUser.contraseña){
             window.location.href = '/PAGES/backOffice/formProducts.html'; 
-        }else{
+        } else {
             //Si los datos son validos, retorna una alerta con el mensaje y redirige a la página de inicio
-            alert(`Bienvenido ${validUser.nombre}`);
-            localStorage.setItem('login_success', JSON.stringify(validUser));
+            alert(`¡Bienvenid@, ${usuarioValido.nombre}!`);
+            localStorage.setItem('login_success', JSON.stringify(usuarioValido));
             window.location.href = '/index.html'; 
         }
     }
