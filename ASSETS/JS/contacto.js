@@ -65,9 +65,6 @@ document.getElementById("Enviar").addEventListener("click",function(event){
 
 
     if(valido){
-        // alert("Formulario enviado");
-        // form.classList.add('was-validated');
-        //Datos de prueba
         const templateParams = {
             nombre: nombre.value,
             apellido: apellido.value,
@@ -76,15 +73,69 @@ document.getElementById("Enviar").addEventListener("click",function(event){
             email: email.value,
             mensaje: mensaje.value
         };
-        console.log(templateParams);
+
+        //Inicializa el servicio de correo.
         emailjs.init('Psm2YGmZjcvgWMnjt')
         emailjs.send("service_1y4sfmj", "template_ykv4kti", templateParams)
             .then(function(response) {
-                alert("Formulario enviado exitosamente.");
-                // document.getElementById("miFormulario").reset();
+                mostrarAlerta('Formulario enviado exitosamente.', 'success');
+                limpiarFormulario();
             }, function(error) {
                 alert("Ocurrió un error al enviar el formulario, por favor intenta de nuevo.");
                 console.error("Error:", error);
             });
+    }else{
+        mostrarAlerta("Completa los campos correctamente", "danger"); 
     }
 });
+
+// Función para mostrar alertas 
+function mostrarAlerta(mensaje, tipo) {
+    const alerta = document.getElementById('alertaFormulario');
+    alerta.className = `alert alert-${tipo} show`; 
+    alerta.textContent = mensaje;
+
+    setTimeout(() => {
+        alerta.className = 'alert d-none';
+        alerta.textContent = '';
+    }, 3000);
+}
+
+function limpiarFormulario() {
+    const formulario = document.getElementById('formulario');
+
+    // Restablece los valores del formulario
+    formulario.reset();
+
+    // Elimina las clases de validación
+    formulario.querySelectorAll('.is-invalid, .is-valid').forEach(field => {
+        field.classList.remove('is-invalid', 'is-valid');
+    });
+}
+let navLinks = document.querySelectorAll('.nav-link');
+const currentUrl = window.location.href;
+
+// Función asíncrona para esperar a que navLinks tenga datos
+async function paginaActiva() {
+    if (navLinks.length > 0) {
+    return;
+    }
+  // Si no tiene datos, crea un intervalo para verificar
+    let intervalId = setInterval(() => {
+        navLinks = document.querySelectorAll('.nav-link');
+        if (navLinks.length > 0) {
+            clearInterval(intervalId);
+            // console.log('navLinks tiene datos:', navLinks);
+            navLinks.forEach(link => {
+                // console.log(link.href)
+                if (link.href.includes("contacto.html")) {
+                    
+                    link.classList.add('active');
+                } else {
+                    link.classList.remove('active');
+                }
+            });
+        }
+    }, 100); 
+}
+paginaActiva();

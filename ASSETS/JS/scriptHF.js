@@ -13,7 +13,11 @@ async function cargarComponente(url, selector) {
 
 // Cargar header y footer al iniciar la página
 document.addEventListener('DOMContentLoaded', () => {
-  cargarComponente('/COMPONENTS/header.html', 'header');
+  const user = JSON.parse(localStorage.getItem('login_success'));
+  //Seleccionar header segun el inicio de sesión
+  const headerUrl = user ? '/COMPONENTS/headerLogged.html' : '/COMPONENTS/header.html';
+
+  cargarComponente(headerUrl, 'header');
   cargarComponente('/COMPONENTS/footer.html', 'footer');
   // cargarComponente('/COMPONENTS/headerBO.html', '#headerBO');
 });

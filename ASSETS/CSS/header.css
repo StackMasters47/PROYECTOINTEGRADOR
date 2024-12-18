@@ -22,13 +22,14 @@ body{
   /* margin-left: 20%; */
 }
 
-#carrito{
+.carrito{
   width: 1.7rem;  /* Ajusta este valor según lo que necesites */
   height: auto;
   filter: invert(1);
 }
 
 .nav-link{
+  font-family: "Montserrat";
   color: #c8c8c8;
   position: relative;
 }
