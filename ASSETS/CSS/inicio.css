@@ -22,6 +22,7 @@ body{
     background-position: center;
     background-size: cover;
     background-repeat: repeat;
+   
 }
 
 
@@ -192,7 +193,19 @@ body{
     text-decoration: none;
 }
 
+.btn-2 {
+	display: inline-block;
+	padding: 10px 20px;
+	background-color: var(--color2);
+	color: #fff;
+	font-size: 14px;
+	text-transform: uppercase;
+	text-decoration: none;
+}
 
+.overlay a:hover{
+    color: var(--colorblack);
+}
 
 .info-area {
     padding: 10px 20px;
