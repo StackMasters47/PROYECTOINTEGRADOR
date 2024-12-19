@@ -10,7 +10,7 @@ async function paginaActiva() {
         navLinks = document.querySelectorAll('.nav-link');
         if (navLinks.length > 0) {
             clearInterval(intervalId);
-            console.log('navLinks tiene datos:', navLinks);
+            //console.log('navLinks tiene datos:', navLinks);
             navLinks.forEach(link => {
                 // console.log(link.href)
                 if (link.href.includes("index.html")) {
