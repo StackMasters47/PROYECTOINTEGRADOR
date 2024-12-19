@@ -42,7 +42,7 @@
             <div class="carousel-item">
                 <img src="/ASSETS/IMG/imgInicio/banner3.png" class="d-block w-100" alt="image3">
             </div>
-            
+
         </div>
         <a class="carousel-control-prev" href="#carouselExampleFade" role="button" data-bs-slide="prev">
             <span class="carousel-control-prev-icon" aria-hidden="true"></span>
@@ -125,9 +125,8 @@
                 <img alt="Product 1" src="/ASSETS/IMG/productos/cremaFacialRosa.jpg">
                 <div class="product-overlay">
                     <div class="overlay">
-                        <a class="btn-1" href="/PAGES/carrito.html">Agregar al carito</a>
-                        <a class="btn-2" href="/PAGES/producto1.html">Ver detalles</a>
-
+                        <button onclick="addToCart(1,'Crema corporal piel normal',140)" class="btn-1">Añadir al
+                            carrito</button>
                     </div>
                 </div>
             </div>
@@ -142,7 +141,7 @@
                     <span class="fa fa-star checked"></span>
                 </div>
                 <div class="product-price">
-                    <div class="offer hidden">Oferta</div>
+                    <div class="offer">Oferta</div>
                     <strong class="price"><del></del> $203.99</strong>
                 </div>
             </div>
@@ -153,8 +152,8 @@
                 <img alt="" src="/ASSETS/IMG/productos/cremaCorporalS.jpg">
                 <div class="product-overlay">
                     <div class="overlay">
-                        <a class="btn-1" href="/PAGES/carrito.html">Agregar al carito</a>
-                        <a class="btn-2" href="/PAGES/producto2.html">Ver detalles</a>
+                        <button onclick="addToCart(2,'Crema corporal piel seca',130)" class="btn-1">Añadir al
+                            carrito</button>
 
                     </div>
                 </div>
@@ -169,7 +168,7 @@
                     <span class="fa fa-star"></span>
                 </div>
                 <div class="product-price">
-                    <div class="offer hidden">Oferta</div>
+                    <div class="offer">Oferta</div>
                     <strong class="price"><del></del> $149.00</strong>
                     
                 </div>
@@ -180,8 +179,8 @@
                 <img alt="" src="/ASSETS/IMG/productos/acondicionadorRizo.jpg">
                 <div class="product-overlay">
                     <div class="overlay">
-                        <a class="btn-1" href="/PAGES/carrito.html">Agregar al carito</a>
-                        <a class="btn-2" href="/PAGES/producto3.html">Ver detalles</a>
+                        <button onclick="addToCart(52,'Acondicionador',100)" class="btn-1">Añadir al carrito</button>
+
                     </div>
                     
                 </div>
@@ -196,8 +195,9 @@
                     <span class="fa fa-star checked"></span>
                 </div>
                 <div class="product-price">
-                    <div class="offer hidden">Oferta</div>
-                    <strong class="price"><del></del> $123.99</strong>
+                    <div class="offer">Oferta</div>
+                    <strong class="price"><del>$139.99</del> $100.00</strong>
+
                 </div>
             </div>
         </div>
@@ -206,8 +206,8 @@
                 <img alt="" src="/ASSETS/IMG/productos/acondicionadorLiso.jpg">
                 <div class="product-overlay">
                     <div class="overlay">
-                        <a class="btn-1" href="/PAGES/carrito.html">Agregar al carito</a>
-
+                        <button onclick="addToCart(17,'Acondicionador cabello rizado',110)" class="btn-1">Añadir al
+                            carrito</button>
                     </div>
                 </div>
             </div>
@@ -221,8 +221,12 @@
                     <span class="fa fa-star checked"></span>
                 </div>
                 <div class="product-price">
-                    <div class="offer hidden">Oferta</div>
-                    <strong class="price"><del></del> $23.99</strong>
+
+                    <div class="offer">Oferta</div>
+                    <strong class="price"><del>$139.99</del> $110.00</strong>
+
+             
+
                 </div>
             </div>
         </div>
@@ -232,8 +236,8 @@
                 <img alt="" src="/ASSETS/IMG/productos/shampooR.jpg">
                 <div class="product-overlay">
                     <div class="overlay">
-                        <a class="btn-1" href="/PAGES/carrito.html">Agregar al carito</a>
-
+                        <button onclick="addToCart(14,'Shampoo cabello rizado',90)" class="btn-1">Añadir al
+                            carrito</button>
                     </div>
                 </div>
             </div>
@@ -284,7 +288,7 @@
                     <div class="overlay">
                         <a class="btn-1" href="/PAGES/carrito.html">Agregar al carito</a>
 
-                    </div> 
+                    </div>
                 </div>
             </div>
           
@@ -394,7 +398,7 @@
                                 <span class="fa fa-star checked"></span>
                                 <span class="fa fa-star checked"></span>
                                 <span class="fa fa-star checked"></span>
-                                 <!-- 5 estrellas -->
+                                <!-- 5 estrellas -->
                             </div>
                             <p>"Me encanta este producto, es absolutamente maravilloso!"</p>
                             <p>- Comprador Contento</p>
@@ -419,7 +423,7 @@
                     </div>
                 </div>
             </div>
-           
+
         </div>
     </div>
     <br>
@@ -436,6 +440,8 @@
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
     <script src="/ASSETS/JS/scriptHF.js"></script>
+    <script src="/ASSETS/JS/agregarProductos.js"></script>
+
 
     <script>
         document.addEventListener("DOMContentLoaded", () => {
@@ -453,6 +459,7 @@
             }, 1000); 
         });
     </script>
+
 </body>
 
 </html>

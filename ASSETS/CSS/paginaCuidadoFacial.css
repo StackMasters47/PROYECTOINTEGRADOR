@@ -16,21 +16,29 @@
    background:  url('/ASSETS/IMG/fondo.webp') rgba(6, 3, 3, 0.6)!important; 
 }
 
-main{
-   padding-top: 20px;
-   padding-bottom: 20px;
-}
-main .card{
+
+main .card {
+
+
    height: 100%;
    border-color: black;
+   display: flex;
+   flex-direction: column;
+   justify-content: space-between;
+   align-items: center;
 }
 
-.card-body{
+main .card-body {
    background-color: black;
    color: #ffffff !important;
    font-family: 'Montserrat' !important;
    text-align: center;
+   font-size: small;
+   display: flex;
+   flex-direction: column;
    justify-content: space-between;
+   flex-grow: 1;
+   align-items: center;
 }
 
 h5 .card-title{
@@ -57,6 +65,7 @@ h5 .card-title{
    border-width: 5px;
    border-radius: 10%;
    color: #ffffff;
+   margin-top: auto;
 }
 #botonComprarCuCo:hover{
    background-color: #3dbfbb;
