@@ -69,19 +69,6 @@ main {
 
 .col-12 {
     margin: 5px 0 5px !important;
-
-    a {
-        display: flex;
-        justify-content: center;
-        color: white;
-        font-size: 0.75em;
-        text-decoration: none;
-        transition: text-decoration 0.3 ease;
-    }
-
-    a:hover {
-        text-decoration: underline;
-    }
 }
 
 .input {

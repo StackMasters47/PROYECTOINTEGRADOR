@@ -19,5 +19,4 @@ document.addEventListener('DOMContentLoaded', () => {
 
   cargarComponente(headerUrl, 'header');
   cargarComponente('/COMPONENTS/footer.html', 'footer');
-  // cargarComponente('/COMPONENTS/headerBO.html', '#headerBO');
 });

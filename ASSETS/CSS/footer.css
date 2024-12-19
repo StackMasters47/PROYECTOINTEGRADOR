@@ -18,7 +18,8 @@
  
 footer {
 	background: var(--colorblack);
-	padding: 86px 0;
+	padding: 20px 0;
+	height: auto;
     box-sizing: border-box;
 	
 }

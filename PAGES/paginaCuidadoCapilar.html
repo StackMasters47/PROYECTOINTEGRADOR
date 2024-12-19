@@ -8,9 +8,28 @@
    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
       integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
    <link rel="stylesheet" href="/ASSETS/CSS/paginaCuidadoCapilar.css">
+   <link rel="stylesheet" href="/ASSETS/CSS/loader.css">
+   <link rel="icon" href="/ASSETS/IMG/imgLogo/fondoPajaro.png" type="image/x-icon">
+   <style>
+      #loadingScreen{
+         background-color: black;
+      }
+   </style>
 </head>
 
 <body>
+   <div id="loadingScreen" class="d-flex justify-content-center align-items-center vh-100 bg-black">
+      <div class="text-center">
+            <div class="mb-4">
+               <img src="/ASSETS/IMG/imgLogo/sicaru_ave.webp" alt="Logo" class="logo-animation" style="max-width: 150px; margin-left: 10px;">
+            </div>
+            <div class="container-loader d-flex justify-content-center">
+               <div class="ring"></div>
+               <div class="ring"></div>
+               <div class="ring"></div>
+            </div>
+      </div>
+   </div>
    <header></header>
    <main>
 
@@ -194,6 +213,23 @@
    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js"
       integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF"
       crossorigin="anonymous"></script>
+
+      <script>
+         document.addEventListener("DOMContentLoaded", () => {
+               const loadingScreen = document.getElementById("loadingScreen");
+   
+               // Agregar una transición de opacidad para desaparecer la pantalla de carga
+               setTimeout(() => {
+                  loadingScreen.style.transition = "opacity 0.5s ease-out"; //Transición suave
+                  loadingScreen.style.opacity = "0"; //Hacer que desaparezca
+   
+                  //Esperar a que termine la transición  antes de eliminarlo
+                  setTimeout(() => {
+                     loadingScreen.remove(); // Eliminar el elemento del DOM
+                  }, 0); 
+               }, 1000); 
+         });
+      </script>
 </body>
 
 </html>
