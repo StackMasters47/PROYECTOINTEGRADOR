@@ -1,0 +1,340 @@
+@import "COLORES.css";
+
+@font-face {
+	font-family: 'Montserrat';
+	src: url('/ASSETS/FONTS/Montserrat/Montserrat-Regular.ttf') format('truetype'); 
+	font-weight: normal;
+	font-style: normal;
+  }
+  
+  @font-face {
+	font-family: 'Overlock';
+	src: url('/ASSETS/FONTS/Overlock/Overlock-Bold.ttf') format('truetype'); 
+	font-weight: 700;
+	font-style: normal;
+  }
+  body{
+    background:  url('/ASSETS/IMG/fondo.webp') rgba(6, 3, 3, 0.6) !important; 
+    background-blend-mode: multiply;
+    background-position: center;
+    background-size: cover;
+    background-repeat: repeat;
+}
+
+.hanni{
+    background-color: var(--colorblack);
+    padding: 20px;
+    border-radius: 10px;
+    max-width: 1300px;
+    margin: 0 auto;
+    text-align: center;
+    color: var(--color12);
+    
+
+}
+
+.title2 h1 {
+    color: var(--color8);
+    text-align: center;
+    font-size: 50px;
+    background-color: var(--colorblack);
+    padding: 20px;
+    font-family: 'Overlock';
+
+
+}
+
+.descripcionMVV {
+    margin: 2% 0 2% !important;
+    padding: 0 !important;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 80% !important;
+    background-color: #111 !important;
+    border-radius: 10px;
+  }
+  
+  .row ul {
+    list-style: none;
+  } 
+  
+ 
+  
+  #acercaNosotros{
+    margin: 3% 0 0;
+    padding: 0;
+  }
+  
+  #mv {
+    margin: 3% 0 3%;
+    padding: 0;
+   font-family: 'overlock';
+  }
+  
+  #v {
+    margin: 1% 0 0;
+    padding: 0;
+  }
+  
+  #parrafoNosotros {
+    margin: 2% 0 2%;
+    padding: 0 3% 0;
+    font-size: 22px;
+  }
+  
+  .mision, .vision, .valores {
+    border-radius: 10px;
+    background-color: transparent;
+    font-size: 22px;
+  }
+  
+  .mision, .vision {
+    margin: 0 2.5% 2%;
+  }
+  
+  .valores {
+    margin: 1% 3% 3% !important;
+  }
+  
+  .mision {
+    border: 5px solid #246784;
+    transition: background-color 0.3s ease;
+  }
+  
+  .vision {
+    border: 5px solid #f36b37;
+    transition: background-color 0.3s ease;
+   
+  }
+  
+  .valores {
+    border: 5px solid #9f2884;
+    transition: background-color 0.3s ease;
+    
+  }
+  
+  .mision:hover {
+    background-color: #246784;
+  }
+  
+  .vision:hover {
+    background-color: #f36b37;
+  }
+  
+  .valores:hover {
+    background-color: #9f2884;
+  }
+
+ /**TEAM **/
+
+ .title-team{
+  color: var(--color8);
+  text-align: center;
+  font-size: 70px;
+  background-color: var(--colorblack);
+  padding: 20px;
+  font-family: 'Overlock';
+  
+ }
+.parent-container {
+  display: flex;
+  justify-content: center; 
+
+ 
+}
+
+.team-area {
+  max-width: 1500px; 
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+  padding: 70px;
+  align-items: center;
+  background-color: var(--colorblack);
+ 
+}
+
+.team-area > * {
+  margin-bottom: 70px; /* Add space below each card */
+  justify-content: center;
+}
+
+
+
+.flip-card {
+  background-color: transparent;
+  width: 390px;
+  height: 470px;
+  perspective: 1000px;
+  font-family: Overlock;
+}
+
+.flip-card img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 10px;
+}
+ 
+
+.title {
+  font-size: 1.5em;
+  font-weight: 900;
+  text-align: center;
+  margin: 0;
+}
+
+.flip-card-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  transition: transform 0.8s;
+  transform-style: preserve-3d;
+}
+
+.flip-card:hover .flip-card-inner {
+  transform: rotateY(180deg);
+}
+
+.flip-card-front, .flip-card-back {
+  box-shadow: 0 8px 14px 0 rgba(0,0,0,0.2);
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  border: 1px ;
+  border-radius: 1rem;
+}
+
+
+
+.flip-card-back {
+  background:var(--colorblack)
+
+  
+}
+
+.flip-card-back{
+  display: flex;
+  text-align: center;
+  background-color: #000;
+  color: white;
+  transform: rotateY(180deg);
+  padding: 10px;
+  overflow-y: auto;
+  max-height: 100%;
+  justify-content: flex-start;
+  box-sizing: border-box;
+  font-family: 'Montserrat', sans-serif;
+  border: 2px  solid var(--color8);
+  
+}
+
+.title{
+  color: var(--color8);
+  background-color: var(--colorblack);
+  border-radius: 10px;
+}
+
+/*social*/
+.social-buttons {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  
+  box-shadow: 0px 0px 15px #00000027;
+  padding: 15px 10px;
+  border-radius: 5em;
+}
+
+.social-button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  margin: 0 10px;
+  background-color: var(--colorwhite);
+  box-shadow: 0px 0px 4px #00000027;
+  transition: 0.3s;
+}
+
+.social-button:hover {
+  background-color: var(--colorwhite);
+  box-shadow: 0px 0px 6px 3px #00000027;
+}
+
+
+.social-buttons svg {
+  transition: 0.3s;
+  height: 20px;
+}
+.github {
+  background-color: #333;
+}
+
+.github svg {
+  width: 25px;
+  height: 25px;
+  fill: #f2f2f2;
+}
+
+.github:hover svg {
+  fill: #333;
+}
+
+.linkedin {
+  background-color: #0077b5;
+}
+
+.linkedin svg {
+  fill: #f2f2f2;
+}
+
+.linkedin:hover svg {
+  fill: #0077b5;
+}
+
+
+/* Estilos personalizados para la barra de desplazamiento */
+
+.flip-card-back::-webkit-scrollbar {
+  width: 3px;
+
+}
+
+
+.flip-card-back::-webkit-scrollbar-track {
+
+  border-radius: 4px;
+}
+
+.flip-card-back::-webkit-scrollbar-thumb {
+  background: var(--color8); 
+ border-radius: 50px;
+
+}
+
+@media (max-width: 991px) {
+  .team-area {
+    grid-template-columns: repeat(2, 1fr);
+    justify-items: center;
+  }
+}
+
+@media (max-width: 600px) {
+  .team-area {
+    grid-template-columns: 1fr;
+    justify-items: center;
+  }
+}
+
+

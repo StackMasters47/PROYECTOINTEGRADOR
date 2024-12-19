@@ -112,6 +112,10 @@ function limpiarFormulario() {
         field.classList.remove('is-invalid', 'is-valid');
     });
 }
+
+
+
+
 let navLinks = document.querySelectorAll('.nav-link');
 const currentUrl = window.location.href;
 
