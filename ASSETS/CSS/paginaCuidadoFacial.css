@@ -16,9 +16,11 @@
    background:  url('/ASSETS/IMG/fondo.webp') rgba(6, 3, 3, 0.6)!important; 
 }
 
-
+main{
+   padding-top: 20px;
+   padding-bottom: 20px;
+}
 main .card{
-
    height: 100%;
    border-color: black;
 }
