@@ -5,34 +5,14 @@ registro.addEventListener("submit", function (event) {
     // Inputs del formulario
     const nombre = document.getElementById("nombre");
     const apellido = document.getElementById("apellido");
-    //const telefono = document.getElementById("telefono");
     const email = document.getElementById("email");
     const password1 = document.getElementById("password1");
     const password2 = document.getElementById("password2");
-    //const termsCheckbox = document.getElementById("gridCheck");
-    //const alertContainer = document.getElementById("alertContainer");
 
     // Expresiones regulares
     const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/; // Validar formato de email
-    //const telefonoRegex = /^\d{10}$/; // Teléfono de 10 dígitos
 
     let valido = true;
-
-    // Función para mostrar alertas
-    /*const showAlert = (message, type) => {
-        const alert = document.createElement("div");
-        alert.className = `alert alert-${type} mt-3`;
-        alert.textContent = message;
-        alertContainer.appendChild(alert);
-
-        // Eliminar alerta después de 5 segundos
-        setTimeout(() => {
-            alert.remove();
-        }, 5000);
-    };
-
-    // Limpiar alertas previas
-    alertContainer.innerHTML = "";*/
 
     // Validación de nombre
     if (nombre.value.trim() === "") {
@@ -53,16 +33,6 @@ registro.addEventListener("submit", function (event) {
         apellido.classList.remove("is-invalid");
         apellido.classList.add("is-valid");
     }
-
-    // Validación de Teléfono
-    /*if (telefono.value === "" || !telefonoRegex.test(telefono.value)) {
-        telefono.classList.add("is-invalid");
-        valido = false;
-
-    } else {
-        telefono.classList.remove("is-invalid");
-        telefono.classList.add("is-valid");
-    }*/
 
     // Validación de Email
     if (email.value === "" || !emailRegex.test(email.value)) {
@@ -93,36 +63,52 @@ registro.addEventListener("submit", function (event) {
         password2.classList.add("is-valid");
     }
 
-    // Validación de Checkbox (Términos y condiciones)
-    /*if (!termsCheckbox.checked) {
-        termsCheckbox.classList.add("is-invalid");
-        valido = false;
-        showAlert("Debes aceptar los términos y condiciones.", "danger");
-    } else {
-        termsCheckbox.classList.remove("is-invalid");
-        termsCheckbox.classList.add("is-valid");
-    }*/
 
     // Mensaje final si todo es válido
     if (valido) {
-        const Usuarios = JSON.parse(localStorage.getItem('usuarios')) || []; // Para obtener los datos de local storage, y convertirlos de formato JSON a un array de objetos; si no hay datos en local storage, devuelve un array vacio
-        const esUsuarioRegistrado = Usuarios.find(usuario => usuario.email === email.value.trim()); //para consultar si el email proporcionado por el ususario existe dentro de Users
-
-        if (esUsuarioRegistrado) { //si se cumple la condición anterior, devulve una alerta de que ya hay una cuenta vinculada con ese correo
-            return alert('El correo electrónico ya tiene una cuenta vinculada');
-        } else {
-            Usuarios.push({ //Añadir objeto con datos del usuario
-                nombre: nombre.value.trim(),
-                apellido: apellido.value.trim(),
-                email: email.value.trim(),
-                password: password1.value.trim()
-            });
-
-            localStorage.setItem('usuarios', JSON.stringify(Usuarios)); //Guardar los datos en local storage
-            console.log("Datos del usuario guardados en Local Storage:", Usuarios);
-            alert('Su cuenta ha sido creada exitosamente');
-            window.location.href = '/PAGES/iniciar_sesion.html';
-
+        const usuario = {
+            name: nombre.value.trim(),
+            lastName: apellido.value.trim(),
+            email: email.value.trim(),
+            password: password1.value.trim()
         }
-    }
+        const usuarioLocal = {
+            email: email.value.trim()
+        }
+        const url = `http://localhost:8080/api/v1/users/email/${email.value.trim()}`;
+        const url1 = `http://localhost:8080/api/v1/new-user`
+        
+
+        fetch(url)
+            .then((response => {
+                if (response.ok) {
+                    console.log('Este correo existe en la base de datos');
+                    return alert('El correo electrónico ingresado ya tiene una cuenta vinculada');
+                } 
+                console.log('Este correo no existe en la base de datos');
+                fetch(url1, {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json'
+                    },
+                    body: JSON.stringify(usuario)
+                })
+                    .then(response => {
+                        return response.json();
+                    })
+                    .then(data => {
+                        console.log('Guardado', data)
+                    })
+                    .catch(error => {
+                        console.error(error);
+                    })
+                localStorage.setItem('login_success', JSON.stringify(usuarioLocal));
+                console.log("Datos del usuario guardados en Local Storage:", usuarioLocal);
+                alert('¡Bienvenido! Su cuenta ha sido creada exitosamente');
+                window.location.href = '/PAGES/iniciar_sesion.html';
+            }))
+            .catch(error => {
+                console.log('Error al recuperar los datos:', error);
+            }) 
+    };
 });

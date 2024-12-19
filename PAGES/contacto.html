@@ -10,10 +10,28 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
     <link rel="stylesheet" href="/ASSETS/CSS/contacto.css">
+    <link rel="stylesheet" href="/ASSETS/CSS/loader.css">
+    <style>
+      #loadingScreen{
+         background-color: black;
+      }
+   </style>
     <link rel="icon" href="/ASSETS/IMG/imgLogo/fondoPajaro.png" type="image/x-icon"> <!--Agrego esta etiqueta para que salga el favicon-->
 </head>
 
 <body>
+  <div id="loadingScreen" class="d-flex justify-content-center align-items-center vh-100 bg-black">
+    <div class="text-center">
+          <div class="mb-4">
+             <img src="/ASSETS/IMG/imgLogo/sicaru_ave.webp" alt="Logo" class="logo-animation" style="max-width: 150px; margin-left: 10px;">
+          </div>
+          <div class="container-loader d-flex justify-content-center">
+             <div class="ring"></div>
+             <div class="ring"></div>
+             <div class="ring"></div>
+          </div>
+    </div>
+ </div>
   <header></header>
   
   <h2 id="titulo"> Contáctanos</h2>
@@ -107,4 +125,21 @@
     <script src="/ASSETS/JS/contacto.js"></script>
     <script src="/ASSETS/JS/scriptHF.js"></script>
     <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+
+    <script>
+      document.addEventListener("DOMContentLoaded", () => {
+            const loadingScreen = document.getElementById("loadingScreen");
+
+            // Agregar una transición de opacidad para desaparecer la pantalla de carga
+            setTimeout(() => {
+               loadingScreen.style.transition = "opacity 0.5s ease-out"; //Transición suave
+               loadingScreen.style.opacity = "0"; //Hacer que desaparezca
+
+               //Esperar a que termine la transición  antes de eliminarlo
+               setTimeout(() => {
+                  loadingScreen.remove(); // Eliminar el elemento del DOM
+               }, 0); 
+            }, 1000); 
+      });
+   </script>
 </body>
