@@ -2,7 +2,8 @@
 async function fetchOrders() {
     try {
         // Realiza la petición GET a la API
-        const response = await fetch('http://localhost:8080/api/v1/orders');
+        
+        const response = await fetch('http://3.14.129.170/api/v1/orders');
         if (!response.ok) {
             throw new Error('Error al obtener los pedidos');
         }
@@ -69,7 +70,8 @@ async function fetchOrders() {
                     y: {
                         beginAtZero: true,  // Comenzar el eje Y desde 0
                         ticks: {
-                            color: '#FFFFFF'  // Texto blanco para las etiquetas del eje Y
+                            color: '#FFFFFF',  // Texto blanco para las etiquetas del eje Y
+                            stepSize: 1
                         },
                         grid: {
                             color: 'rgba(255, 255, 255, 0.2)'  // Líneas de la cuadrícula en blanco (semi-transparente)

@@ -6,7 +6,7 @@
 // }
 let productos = [];
 //End point para obtener todos los productos
-const url = "http://localhost:8080/api/v1/products";
+const url = "http://3.14.129.170/api/v1/products";
 
 selectedId="";
 
@@ -119,7 +119,7 @@ async function addProduct(name, description, price, category, stock) {
         stock
     };
 
-    const url = `http://localhost:8080/api/v1/new-product`;
+    const url = `http://3.14.129.170/api/v1/new-product`;
 
     try {
         const response = await fetch(url, {
@@ -145,7 +145,7 @@ async function addProduct(name, description, price, category, stock) {
 }
 
 async function eliminarProducto(id) {
-    const url = `http://localhost:8080/api/v1/delete-product/${id}`;
+    const url = `http://3.14.129.170/api/v1/delete-product/${id}`;
 
     try {
         const response = await fetch(url, {
@@ -176,7 +176,7 @@ async function modificarProducto(id, category, name, description, price, stock) 
         stock
     };
 
-    const url = `http://localhost:8080/api/v1/update-product/${id}`;
+    const url = `http://3.14.129.170/api/v1/update-product/${id}`;
 
     try {
         const response = await fetch(url, {

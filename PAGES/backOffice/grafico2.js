@@ -2,7 +2,7 @@
 async function fetchAndClassifyOrdersByCategory() {
     try {
         // Realiza la petición GET a la API para obtener los pedidos
-        const response = await fetch('http://localhost:8080/api/v1/orders');
+        const response = await fetch('http://3.14.129.170/api/v1/orders');
         if (!response.ok) {
             throw new Error('Error al obtener los pedidos');
         }

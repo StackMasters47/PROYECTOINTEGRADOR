@@ -1,7 +1,7 @@
 // Realizamos la petición asincrona
 async function obtenerPedidos() {
     try {
-        const response = await fetch('http://localhost:8080/api/v1/orders');
+        const response = await fetch('http://3.14.129.170/api/v1/orders');
         const pedidos = await response.json();
         
         const listaDePedidos = document.getElementById('listaDePedidos');
@@ -32,13 +32,16 @@ async function obtenerPedidos() {
                         <h6 class="mb-1 text-center">${fecha}</h6>
                     </div>
                     <div class="col-lg-2">
-                        <h6 class="mb-1 text-center">${pedido.total}</h6>
+                        <h6 class="mb-1 text-center">${pedido.status}</h6>
                     </div>
                     <div class="col-lg-2">
                         <h6 class="mb-1 text-center">${pedido.user.id}</h6>
                     </div>
                     <div class="col-lg-3 text-wrap text-break">
                         <h6 class="mb-1 text-center">${idProductos}</h6>
+                    </div>
+                    <div class="col-lg-2">
+                        <h6 class="mb-1 text-center">$${pedido.total}</h6>
                     </div>
                 </div>
             `;
