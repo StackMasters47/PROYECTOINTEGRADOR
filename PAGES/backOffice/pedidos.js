@@ -1,7 +1,7 @@
 // Realizamos la petición asincrona
 async function obtenerPedidos() {
     try {
-        const response = await fetch('http://3.14.129.170/api/v1/orders');
+        const response = await fetch('/api/v1/orders');
         const pedidos = await response.json();
         
         const listaDePedidos = document.getElementById('listaDePedidos');
