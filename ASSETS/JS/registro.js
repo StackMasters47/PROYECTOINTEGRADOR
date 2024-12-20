@@ -75,8 +75,8 @@ registro.addEventListener("submit", function (event) {
         const usuarioLocal = {
             email: email.value.trim()
         }
-        const url = `http://localhost:8080/api/v1/users/email/${email.value.trim()}`;
-        const url1 = `http://localhost:8080/api/v1/new-user`
+        const url = `http://3.14.129.170/api/v1/users/email/${email.value.trim()}`;
+        const url1 = `http://3.14.129.170/api/v1/new-user`
         
 
         fetch(url)
