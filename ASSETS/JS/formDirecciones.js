@@ -116,26 +116,31 @@ direccion.addEventListener("submit", function (event) {
 
     // Mensaje final si todo es válido
     if (valido) {
-        alert('Su dirección ha sido registrada exitosamente');
+        const direccion = {
+            fullName : nombre.value.trim(),
+            telephone : telefono.value.trim(),
+            streetAndNumber : calleNumero.value.trim(),
+            neighborhood : colonia.value.trim(),
+            city : municipio.value.trim(),
+            state : estado.value.trim(),
+            postalCode : cp.value.trim()
+        }
 
-        //const domicilio = JSON.parse(localStorage.getItem('usuarios')) || []; // Para obtener los datos de local storage, y convertirlos de formato JSON a un array de objetos; si no hay datos en local storage, devuelve un array vacio
-        //const esUsuarioRegistrado = Usuarios.find(usuario => usuario.email === email.value.trim()); //para consultar si el email proporcionado por el ususario existe dentro de Users
-
-        /*if (esUsuarioRegistrado) { //si se cumple la condición anterior, devulve una alerta de que ya hay una cuenta vinculada con ese correo
-            return alert('El correo electrónico ya tiene una cuenta vinculada');
-        } else {
-            Usuarios.push({ //Añadir objeto con datos del usuario
-                nombre: nombre.value.trim(),
-                apellido: apellido.value.trim(),
-                email: email.value.trim(),
-                password: password1.value.trim()
-            });
-
-            localStorage.setItem('usuarios', JSON.stringify(Usuarios)); //Guardar los datos en local storage
-            console.log("Datos del usuario guardados en Local Storage:", Usuarios);
-            alert('Su cuenta ha sido creada exitosamente');
-            window.location.href = '/PAGES/iniciar_sesion.html';
-
-        }*/
+        function guardarDireccion () {
+            localStorage.setItem('direcciones', JSON.stringify(direccion));
+            alert('Su dirección ha sido registrada exitosamente');
+        }
+        guardarDireccion();
     }
 });
+
+function limpiarForm() {
+
+    // Restablece los valores del formulario
+    direccion.reset();
+
+    // Elimina las clases de validación
+    direccion.querySelectorAll('.is-invalid, .is-valid').forEach(field => {
+        field.classList.remove('is-invalid', 'is-valid');
+    });
+}

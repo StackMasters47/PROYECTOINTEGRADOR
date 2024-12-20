@@ -24,7 +24,7 @@ iniciarSesion.addEventListener("submit", (event) => {
     }
 
     if (valido) {
-        const url = `http://localhost:8080/api/v1/users/email/${email.value.trim()}`
+        const url = `http://3.14.129.170/api/v1/users/email/${email.value.trim()}`
         const adminUser = {
             correo: "stackMaster@gmail.com",
             contrasena: "Password"
