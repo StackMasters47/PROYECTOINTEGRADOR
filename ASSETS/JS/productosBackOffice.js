@@ -1,35 +1,23 @@
-const subcategorias = {
-    "Cuidado Corporal":["Exfoliantes", "Hidratantes", "Limpieza"],
-    "Cuidado Facial": ["Sérums", "Hidratantes", "Limpieza", "Protector Solar"],
-    "Cuidado Capilar": ["Shampoo", "Acondicionador", "Tratamientos"],
-    "Belleza":["Ojos", "Labios", "Rostro"]
-}
-
-const productos = [
-    { id: 1, titulo: "Shampoo Hidratante", marca: "Dove", desc: "Para cabello seco", precio: 120, cat: "Cuidado Capilar", subcat: "Shampoo", rutaimg: "/ASSETS/IMG/productos/shampooCafe.jpg"},
-    { id: 2, titulo: "Crema Facial", marca: "Nivea", desc: "Hidratante facial", precio: 85, cat: "Cuidado Facial", subcat: "Hidratantes", rutaimg: "/ASSETS/IMG/productos/cremaFacialG.jpg" },
-    { id: 3, titulo: "Jabón en barra", marca: "Palmolive", desc: "Aroma a lavanda", precio: 60, cat: "Cuidado Corporal", subcat: "Limpieza", rutaimg: "/ASSETS/IMG/productos/jabonCorporalBarra.jpg"},
-    { id: 4, titulo: "Exfoliante corporal", marca: "Chanel", desc: "Esencia floral", precio: 1500, cat: "Belleza", subcat: "Rostro", rutaimg: "/ASSETS/IMG/productos/exfolianteCorporalRosa.jpg"},
-    { id: 5, titulo: "Labial Rosa", marca: "Oraos", desc: "Labial color rosa", precio: 130, cat: "Belleza", subcat: "Labios", rutaimg: "/ASSETS/IMG/productos/labialRosa.jpg"},
-    { id: 6, titulo: "Protector Solar", marca: "Eucerin", desc: "FPS 50", precio: 300, cat: "Cuidado Facial", subcat: "Protector Solar", rutaimg: "/ASSETS/IMG/productos/BloqueadorSolarPielSeca.jpg"},
-    { id: 7, titulo: "Tónico Facial", marca: "La Roche-Posay", desc: "Purificante facial", precio: 200, cat: "Cuidado Facial", subcat: "Limpieza", rutaimg: "/ASSETS/IMG/productos/sueroFacialRosa.jpg"},
-    { id: 8, titulo: "Mascarilla Facial", marca: "L'Oréal", desc: "De arcilla", precio: 110, cat: "Cuidado Facial", subcat: "Hidratantes", rutaimg: "/ASSETS/IMG/productos/máscaraNegra.jpg"},
-    { id: 9, titulo: "Acondicionador", marca: "Pantene", desc: "Para cabello rizado", precio: 95, cat: "Cuidado Capilar", subcat: "Acondicionador", rutaimg: "/ASSETS/IMG/productos/acondicionadorVerde.jpg"},
-    { id: 10, titulo: "Bloqueador", marca: "Purell", desc: "Con aloe vera", precio: 50, cat: "Cuidado Facial", subcat: "Protector Solar", rutaimg: "/ASSETS/IMG/productos/bloqueadorSolar.jpg"}
-];
+// const subcategorias = {
+//     "Cuidado Corporal":["Exfoliantes", "Hidratantes", "Limpieza"],
+//     "Cuidado Facial": ["Sérums", "Hidratantes", "Limpieza", "Protector Solar"],
+//     "Cuidado Capilar": ["Shampoo", "Acondicionador", "Tratamientos"],
+//     "Belleza":["Ojos", "Labios", "Rostro"]
+// }
+let productos = [];
+//End point para obtener todos los productos
+const url = "http://localhost:8080/api/v1/products";
 
 selectedId="";
 
-document.addEventListener("DOMContentLoaded",()=>{
-    document.getElementById('category').addEventListener('change', actualizarSubcategorias);    
+document.addEventListener("DOMContentLoaded",()=>{   
     document.getElementById('modelForm').addEventListener('submit', function (event) {
         event.preventDefault(); // Previene el comportamiento predeterminado del formulario
         const title = document.getElementById('title').value.trim();
         const description = document.getElementById('description').value.trim();
         const price = document.getElementById('price').value.trim();
         const category = document.getElementById('category').value;
-        const subcategory = document.getElementById('subcategory').value;
-        const imageFile = document.getElementById('imageInput').files;
+        const stock = document.getElementById('stock').value;
         // console.log(imageFile);
         // console.log(imageFile[0].name);
         let errors = [];
@@ -42,26 +30,19 @@ document.addEventListener("DOMContentLoaded",()=>{
             errors.push("La descripción es obligatoria.");
         }
         if (!price || isNaN(price) || price <= 0) {
-            errors.push("El precio debe ser un número válido mayor a 0.");
+            errors.push("El precio es necesario.");
         }
         if (!category) {
             errors.push("La categoría es obligatoria.");
         }
-        if (!subcategory) {
-            errors.push("La subcategoría es obligatoria.");
+
+        if (!stock || isNaN(stock) || stock <= 0) {
+            errors.push("El stock es necesario.");
         }
-        if (imageFile.length===0){
-            errors.push ("Agrega una imagen al producto.");
-        }
+
 
         const accion = event.submitter.value; 
-        if (accion === 'eliminar') {
-            eliminarProducto(selectedId+1);
-            renderProductos();
-        }  
-
-
-
+        
         const alertDiv = document.getElementById('alert');
         if (errors.length > 0 && accion !== "eliminar") {
             alertDiv.innerHTML = errors.join('<br>'); // Muestra los errores en el div de alerta
@@ -70,16 +51,22 @@ document.addEventListener("DOMContentLoaded",()=>{
             alertDiv.classList.add('d-none'); // Oculta el div de alerta si no hay errores
                 if (accion === 'agregar') {
                     const botonVisualizar = document.getElementById('btnVisualizar');
-                    addProduct(productos.length+1,title,description,price,category,subcategory,"/ASSETS/IMG/productos/shampooCafe.jpg")
-                    renderProductos();
+                    addProduct(title,description,price,category,stock).then(() => {
+                        renderProductos();
+                    });
                     // if(botonVisualizar.getAttribute('aria-pressed') === 'true'){
                     //     botonVisualizar.click();
                     // }
                     
                 }else if(accion === 'modificar'){
-                    modificarProducto(selectedId+1,title, description, price,category,subcategory);
-                    renderProductos();
-                }  
+                    modificarProducto(selectedId+1,category,title, description, price,stock).then(() => {
+                        renderProductos();
+                    });
+                }else if (accion === 'eliminar') {
+                    eliminarProducto(selectedId+1).then(() => {
+                        renderProductos();
+                    });
+                }    
                 
 
             //console.log("Modelo creado:", JSON.stringify(productos)); // Muestra el objeto JSON en la consola
@@ -106,131 +93,167 @@ botonVisualizar.addEventListener('click', () => {
 });
 
 
+function rellenarForm(id) {
+    // Buscar el producto con el id proporcionado
+    const producto = productos.find(p => p.id === id); 
 
-function renderProductos(){
-    const listaProductos=document.getElementById("listaDeProductos");
-    listaProductos.innerHTML="";
-    productos.forEach(producto=>{
-        const productoHTML=`
-            <button type="button" class="list-group-item list-group-item-action" data-id="${producto.id}">
-                <div class="row w-100 justify-content-between align-items-center">
-                    <div class="col-lg-1">
-                            <p class="mb-1 text-center">${producto.id}</p>
+    if (producto) {
+        // Llenar el formulario con la información del producto encontrado
+        document.getElementById('title').value = producto.name;
+        document.getElementById('description').value = producto.description;
+        document.getElementById('price').value = producto.price;
+        document.getElementById('category').value = producto.category;
+        document.getElementById('stock').value = producto.stock;
+    } else {
+        console.error("Producto no encontrado con ID:", id);
+    }
+}
+
+
+async function addProduct(name, description, price, category, stock) {
+    const producto = {
+        category,
+        name,
+        description,
+        price,
+        stock
+    };
+
+    const url = `http://localhost:8080/api/v1/new-product`;
+
+    try {
+        const response = await fetch(url, {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json', // Indicar que el cuerpo es JSON
+            },
+            body: JSON.stringify(producto), // Convertir el objeto a JSON
+        });
+
+        if (!response.ok) {
+            throw new Error(`Error en la solicitud: ${response.status}`);
+        }
+
+        const data = await response.json();
+        console.log('Producto guardado:', data);
+
+        // Actualizar la lista de productos después de agregar
+        await renderProductos();
+    } catch (error) {
+        console.error('Error al guardar el producto:', error);
+    }
+}
+
+async function eliminarProducto(id) {
+    const url = `http://localhost:8080/api/v1/delete-product/${id}`;
+
+    try {
+        const response = await fetch(url, {
+            method: 'DELETE',
+        });
+
+        if (!response.ok) {
+            throw new Error(`Error al eliminar el producto: ${response.status}`);
+        }
+
+        console.log(`Producto con ID ${id} eliminado con éxito.`);
+    } catch (error) {
+        console.error('Error al intentar eliminar el producto:', error);
+    }
+}
+
+async function renderProductos() {
+    await obtenerProductos(); // Espera a que los productos sean obtenidos antes de renderizar
+}
+
+async function modificarProducto(id, category, name, description, price, stock) {
+    const producto = {
+        id,
+        category,
+        name,
+        description,
+        price,
+        stock
+    };
+
+    const url = `http://localhost:8080/api/v1/update-product/${id}`;
+
+    try {
+        const response = await fetch(url, {
+            method: 'PUT',
+            headers: {
+                'Content-Type': 'application/json', // Indicar que el cuerpo es JSON
+            },
+            body: JSON.stringify(producto), // Convertir el objeto a JSON
+        });
+
+        if (!response.ok) {
+            throw new Error(`Error en la solicitud: ${response.status}`);
+        }
+
+        const updatedProduct = await response.json();
+        console.log('Producto actualizado:', updatedProduct);
+
+        // Actualizar la lista de productos después de modificar
+        await renderProductos();
+    } catch (error) {
+        console.error('Error al modificar el producto:', error);
+    }
+}
+
+
+async function obtenerProductos() {
+    try {
+        const response = await fetch(url);
+
+        // Verificamos si la respuesta fue exitosa
+        if (!response.ok) {
+            throw new Error(`Error al obtener los productos: ${response.statusText}`);
+        }
+
+        // Parsear la respuesta a JSON
+        productos = await response.json();
+
+        //Renderizar los productos en la pagina
+        const listaProductos=document.getElementById("listaDeProductos");
+        listaProductos.innerHTML="";
+        productos.forEach(producto=>{
+            const productoHTML=`
+                <button type="button" class="list-group-item list-group-item-action" data-id="${producto.id}">
+                    <div class="row w-100 justify-content-between align-items-center">
+                        <div class="col-lg-1">
+                                <p class="mb-1 text-center">${producto.id}</p>
+                        </div>
+                        <div class="col-lg-3">
+                            <h5 class="mb-1 text-center">${producto.name}</h5>
+                        </div>
+                        <div class="col-lg-1">
+                            <p class="mb-1 text-center"> $${producto.price}</p>
+                        </div>
+                        <div class="col-lg-2">
+                            <p class="mb-1 text-center">${producto.category}</p>
+                        </div>
+                        <div class="col-lg-2 text-wrap text-break">
+                            <p class="mb-1 text-center"> ${producto.stock}</p>
+                        </div>
                     </div>
-                    <div class="img-fluid col-lg-1 text-center">
-                        <img src="${producto.rutaimg}" class="img-thumbnail" style="width: 50px; height: 50px;" alt="Producto">
-                    </div>
-                    <div class="col-lg-3">
-                        <h5 class="mb-1 text-center">${producto.titulo}</h5>
-                    </div>
-                    <div class="col-lg-1">
-                        <p class="mb-1 text-center"> $${producto.precio}</p>
-                    </div>
-                    <div class="col-lg-2">
-                        <p class="mb-1 text-center">${producto.cat}</p>
-                    </div>
-                    <div class="col-lg-2 text-wrap text-break">
-                        <p class="mb-1 text-center"> ${producto.subcat}</p>
-                    </div>
-                </div>
-            </button>
-            `;
-            listaProductos.innerHTML += productoHTML;
-    });
-    
-    // Asignando seleccion de IDs a los eventos de los botones
-    document.querySelectorAll('.list-group-item').forEach(boton => {
+                </button>
+                `;
+                listaProductos.innerHTML += productoHTML;
+        });
+
+       // Asignando selección de IDs a los eventos de los botones después de renderizar
+        document.querySelectorAll('.list-group-item').forEach(boton => {
         boton.addEventListener('click', function () {
             const productoId = this.getAttribute('data-id'); // Obtener el ID
-            selectedId=productoId-1;
-            // console.log(selectedId);
-            rellenarForm(selectedId);
+            selectedId = productoId - 1;  // Ajuste de ID para acceder al índice
+            //console.log(selectedId);
+            rellenarForm(selectedId+1);
             // Desplazar la ventana hacia arriba
             window.scrollTo({ top: 0, behavior: 'smooth' });
         });
     });
-}
-
-function rellenarForm(){
-    document.getElementById('title').value=productos[selectedId].titulo;
-    document.getElementById('description').value=productos[selectedId].desc;
-    document.getElementById('price').value=productos[selectedId].precio;
-    document.getElementById('category').value=productos[selectedId].cat;
-    
-    actualizarSubcategorias();
-    
-    // Luego asignar la subcategoría seleccionada, ya que las opciones deben estar cargadas en el select
-    const subcategoryValue = productos[selectedId].subcat.toLowerCase();
-    const subcategorySelect = document.getElementById('subcategory');
-    
-    // Verificar si el valor de subcategoría existe en las opciones
-    const option = Array.from(subcategorySelect.options).find(option => option.value === subcategoryValue);
-    if (option) {
-        subcategorySelect.value = subcategoryValue;
-    }
-
-}
-
-function actualizarSubcategorias() {
-    const category = document.getElementById('category').value;
-    const subcategorySelect = document.getElementById('subcategory');
-    // Limpiar las opciones anteriores de subcategoría
-    subcategorySelect.innerHTML = '<option value="" disabled selected>Seleccione una subcategoría</option>';
-    
-    if (subcategorias[category]) {
-        subcategorias[category].forEach(subcategoria => {
-            const option = document.createElement('option');
-            option.value = subcategoria.toLowerCase();
-            option.textContent = subcategoria;
-            subcategorySelect.appendChild(option);
-        });
+    } catch (error) {
+        console.error("Error al obtener los productos:", error);
     }
 }
-
-
-// Función para agregar un producto a la lista
-function addProduct(id,titulo, desc, precio,cat,subcat,rutaimg) {
-    const producto = {
-        id,
-        titulo,
-        desc,
-        precio,
-        cat,
-        subcat: subcat.charAt(0).toUpperCase() + subcat.slice(1).toLowerCase(),
-        rutaimg
-    };
-    productos.push(producto);
-    // console.log(`Producto agregado: ${JSON.stringify(productos)}`);
-}
-
-function eliminarProducto(id){
-    
-    const productosActualizados = productos.filter(producto => producto.id !==id);
-
-    productosActualizados.forEach((producto,index)=>{
-        producto.id = index+1;
-    })
-
-    productos.length =0;
-    productos.push(...productosActualizados);
-}
-
-function modificarProducto(id,titulo,descripcion,precio,cat,subcat){
-    const producto = {
-        id,
-        titulo,
-        descripcion,
-        precio,
-        cat,
-        subcat: subcat.charAt(0).toUpperCase() + subcat.slice(1).toLowerCase(),
-    };
-    const index = productos.findIndex(producto=> producto.id ===id);
-
-    if (index !==-1){
-        productos[index]={...productos[index],...producto};
-    }else{
-        console.log("No se encontró el producto.")
-    }
-}
-
-//Modelo de datos a exportar "productos"

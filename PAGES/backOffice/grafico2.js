@@ -1,8 +1,59 @@
+// Función asincrónica que obtiene los pedidos y clasifica por categoría
+async function fetchAndClassifyOrdersByCategory() {
+    try {
+        // Realiza la petición GET a la API para obtener los pedidos
+        const response = await fetch('http://localhost:8080/api/v1/orders');
+        if (!response.ok) {
+            throw new Error('Error al obtener los pedidos');
+        }
+        const orders = await response.json();
+
+        // Crear un objeto para contar la cantidad de productos por categoría
+        const categoryCounts = {
+            'Cuidado capilar': 0,
+            'Cuidado corporal': 0,
+            'Cuidado facial': 0,
+            'Belleza': 0
+        };
+
+        // Itera sobre los pedidos y clasifica los productos por categoría
+        orders.forEach(order => {
+            order.products.forEach(product => {
+                if (categoryCounts.hasOwnProperty(product.category)) {
+                    categoryCounts[product.category]++;
+                }
+            });
+        });
+
+        // Muestra el conteo de productos por categoría en la consola
+        console.log(categoryCounts);
+
+        // Actualiza el gráfico
+        updateChart(categoryCounts);
+
+    } catch (error) {
+        console.error('Error al obtener o clasificar los pedidos:', error);
+    }
+}
+
+// Función para actualizar el gráfico
+function updateChart(categoryCounts) {
+    // Actualiza los datos en el gráfico
+    const chart = Chart.instances[0]; // Suponiendo que solo existe una instancia del gráfico
+    chart.data.datasets[0].data = Object.values(categoryCounts);
+    chart.data.labels = Object.keys(categoryCounts);
+    chart.update();
+}
+
+// Llamar a la función
+fetchAndClassifyOrdersByCategory();
+
+// Configuración inicial del gráfico (se mantiene igual)
 const data = {
     labels: ['Cuidado capilar', 'Cuidado corporal', 'Cuidado facial', 'Belleza'], // Etiquetas de los datos
     datasets: [{
         label: 'Ventas',
-        data: [12, 19, 3, 5],  // Valores manuales para el ejemplo
+        data: [0, 0, 0, 0],  // Inicialmente todos los valores son 0
         backgroundColor: [  // Colores personalizados para cada sección
             '#F1645A',  // Rojo
             '#9f2884',  // Naranja
@@ -14,7 +65,6 @@ const data = {
             'rgba(255, 255, 255, 1)',
             'rgba(255, 255, 255, 1)',
             'rgba(255, 255, 255, 1)',
-            'rgba(255, 255, 255, 1)'
         ],
         borderWidth: 2
     }]
@@ -55,7 +105,6 @@ const config = {
                     size: 18
                 }
             }
-            
         }
     }
 };
