@@ -30,6 +30,7 @@ body{
   
    
   }
+  
         .containerP {
             display: flex;
             flex-direction: row;
@@ -85,6 +86,7 @@ body{
             cursor: pointer;
             border-radius: 5px;
             align-items: center;
+            text-decoration: none;
         }
         .add-to-cart:hover {
             background-color:var(--color8);
