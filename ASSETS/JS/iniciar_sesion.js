@@ -1,11 +1,9 @@
-const iniciarSesion = document.querySelector('#iniciarSesion') //para seleccionar el elemento con id específico, en este caso, el form con id "registro"
-iniciarSesion.addEventListener("submit", (event) => { //para atender el evento "submit" y ejecutar una función 
-    event.preventDefault(); //previene la recarga automática de la página
+const iniciarSesion = document.querySelector('#iniciarSesion')
+iniciarSesion.addEventListener("submit", (event) => {
+    event.preventDefault();
 
-    //Obtener datos del usuario a traves de las entradas con los ids especificados
-    const email = document.querySelector("#email");
-    const password = document.querySelector("#password1");
-    //const alertContainer = document.getElementById("alertContainer");
+    const email = document.getElementById("email");
+    const password = document.getElementById("password1");
 
     let valido = true;
 
@@ -25,29 +23,44 @@ iniciarSesion.addEventListener("submit", (event) => { //para atender el evento "
         password.classList.add("is-valid");
     }
 
-    if(valido) {
-        // Para obtener los datos de local storage, y convertirlos de formato JSON a un array de objetos; si no hay datos en local storage, devuelve un array vacio
-        const Users = JSON.parse(localStorage.getItem('users')) || [];
-        // Para validar datos: comparar los datos obtenidos de local storage con los datos ingresados por el usuario; ambos condiciones deben cumplirse para continuar
-        const validUser = Users.find(user => user.email === email.value.trim() && user.password === password.value.trim());
-
-        //Si el usuario no es valido, retorna una alerta con este mensaje
-        if (!validUser && (email.value.trim() !== adminUser.correo || password.value.trim() !== adminUser.contraseña)) {
-            return alert('Usuario y/o contraseña incorrectos');
+    if (valido) {
+        const url = `http://3.14.129.170/api/v1/users/email/${email.value.trim()}`
+        const adminUser = {
+            correo: "stackMaster@gmail.com",
+            contrasena: "Password"
         }
-
-        if(email.value===adminUser.correo && password.value===adminUser.contraseña){
-            window.location.href = '/PAGES/backOffice/formProducts.html'; 
-        }else{
-            //Si los datos son validos, retorna una alerta con el mensaje y redirige a la página de inicio
-            alert(`Bienvenido ${validUser.nombre}`);
-            localStorage.setItem('login_success', JSON.stringify(validUser));
-            window.location.href = '/index.html'; 
+        const usuarioLocal = {
+            email: email.value.trim()
         }
+        
+        fetch(url)
+            .then(response => {
+                if (!response.ok) {
+                    console.log('Este correo no tiene una cuenta vinculada');
+                    return alert('Este correo no tiene una cuenta vinculada');
+                }
+                return response.json();
+            })
+            .then(data => {
+                const nombre = data.name;
+                const email1 = data.email;
+                const password1 = data.password;
+                console.log(`Email: ${email1}`)
+
+                if (email.value.trim() === email1 && password.value.trim() !== password1) {
+                    console.log('La contraseña es incorrecta');
+                    return alert('La contraseña es incorrecta, inténtalo de nuevo');
+                } else if (email1 === adminUser.correo && password1 === adminUser.contrasena) {
+                    alert(`¡Bienvenid@, Administrador(a)!`);
+                    window.location.href = '/PAGES/backOffice/formProducts.html';
+                } else if (email.value.trim() === email1 && password.value.trim() === password1) {
+                    alert(`¡Bienvenid@, ${nombre}!`);
+                    localStorage.setItem('login_success', JSON.stringify(usuarioLocal));
+                    window.location.href = '/index.html';
+                }
+            })
+            .catch(error => {
+                console.log('Error al recuperar los datos:', error);
+            })
     }
 });
-
-const adminUser ={
-    correo: "StackMaster",
-    contraseña: "Password"
-}

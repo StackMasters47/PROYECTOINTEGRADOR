@@ -8,13 +8,33 @@
    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
       integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
    <link rel="stylesheet" href="/ASSETS/CSS/paginaCuidadoFacial.css">
+   <link rel="stylesheet" href="/ASSETS/CSS/loader.css">
+   <style>
+      #loadingScreen{
+         background-color: black;
+      }
+   </style>
+   <link rel="icon" href="/ASSETS/IMG/imgLogo/fondoPajaro.png" type="image/x-icon">
 </head>
 
 <body>
+   <div id="loadingScreen" class="d-flex justify-content-center align-items-center vh-100 bg-black">
+      <div class="text-center">
+            <div class="mb-4">
+               <img src="/ASSETS/IMG/imgLogo/sicaru_ave.webp" alt="Logo" class="logo-animation" style="max-width: 150px; margin-left: 10px;">
+            </div>
+            <div class="container-loader d-flex justify-content-center">
+               <div class="ring"></div>
+               <div class="ring"></div>
+               <div class="ring"></div>
+            </div>
+      </div>
+   </div>
+
    <header></header>
    <main>
 
-      <div class="row row-cols-lg-6 row-cols-md-4 row-cols-sm-2 row-cols-s-1 g-2 mx-auto">
+      <div class="row row-cols-lg-5 row-cols-md-3 row-cols-sm-2 row-cols-s-1 g-2 mx-auto">
          <div class="col">
             <div class="card" id="tituloSuero">
                <img src="/ASSETS/IMG/productos/serumFacialN.jpg" class="card-img-top" alt="...">
@@ -22,7 +42,10 @@
                   <h6 class="card-title">Suero facial piel normal</h6>
                   <p class="card-text">Transforma tu piel con nuestro suero facial, formulado para hidratar
                      profundamente, reducir líneas de expresión y mejorar la luminosidad natural.</p>
-                  <a href="/PAGES/carrito.html" class="btn btn-outline-secondary" id="botonComprarCuCo">Comprar</a>
+                  <p class="card-text">$140</p>
+                  <button onclick="addToCart(24,'Suero facial piel normal',140)" class="btn btn-outline-secondary"
+                     id="botonComprarCuCo">Añadir al carrito</button>
+
                </div>
             </div>
          </div>
@@ -33,7 +56,10 @@
                   <h6 class="card-title">Suero facial piel seca</h6>
                   <p class="card-text">Transforma tu piel con nuestro suero facial, formulado para hidratar
                      profundamente, reducir líneas de expresión y mejorar la luminosidad natural.</p>
-                  <a href="/PAGES/carrito.html" class="btn btn-outline-secondary" id="botonComprarCuCo">Comprar</a>
+                  <p class="card-text">$140</p>
+                  <button onclick="addToCart(25,'Suero facial piel seca',140)" class="btn btn-outline-secondary"
+                     id="botonComprarCuCo">Añadir al carrito</button>
+
                </div>
             </div>
          </div>
@@ -44,7 +70,10 @@
                   <h6 class="card-title">Suero facial piel grasa</h6>
                   <p class="card-text">Transforma tu piel con nuestro suero facial, formulado para hidratar
                      profundamente, reducir líneas de expresión y mejorar la luminosidad natural.</p>
-                  <a href="/PAGES/carrito.html" class="btn btn-outline-secondary" id="botonComprarCuCo">Comprar</a>
+                  <p class="card-text">$140</p>
+                  <button onclick="addToCart(26,'Suero facial piel grasa',140)" class="btn btn-outline-secondary"
+                     id="botonComprarCuCo">Añadir al carrito</button>
+
                </div>
             </div>
          </div>
@@ -55,12 +84,14 @@
                   <h6 class="card-title">Suero facial v1</h6>
                   <p class="card-text">Transforma tu piel con nuestro suero facial, formulado para hidratar
                      profundamente, reducir líneas de expresión y mejorar la luminosidad natural.</p>
-                  <a href="/PAGES/carrito.html" class="btn btn-outline-secondary" id="botonComprarCuCo">Comprar</a>
+                  <p class="card-text">$130</p>
+                  <button onclick="addToCart(27,'Suero facial v1',130)" class="btn btn-outline-secondary"
+                     id="botonComprarCuCo">Añadir al carrito</button>
                </div>
             </div>
          </div>
-<!--AQUI COMIENZAN LAS CREMAS-->
-     
+         <!--AQUI COMIENZAN LAS CREMAS-->
+
          <div class="col">
             <div class="card" id="tituloHidratacion">
                <img src="/ASSETS/IMG/productos/cremaFacialG.jpg" class="card-img-top" alt="...">
@@ -68,7 +99,9 @@
                   <h6 class="card-title">Crema facial piel grasa</h6>
                   <p class="card-text">Enriquecida con ingredientes naturales, esta fórmula ligera hidrata
                      profundamente, dejando tu piel suave, radiante y protegida durante todo el día</p>
-                  <a href="/PAGES/carrito.html" class="btn btn-outline-secondary" id="botonComprarCuCo">Comprar</a>
+                  <p class="card-text">$135</p>
+                  <button onclick="addToCart(28,'Crema facial piel grasa',135)" class="btn btn-outline-secondary"
+                     id="botonComprarCuCo">Añadir al carrito</button>
                </div>
             </div>
          </div>
@@ -79,7 +112,9 @@
                   <h6 class="card-title">Crema facial piel normal</h6>
                   <p class="card-text">Enriquecida con ingredientes naturales, esta fórmula ligera hidrata
                      profundamente, dejando tu piel suave, radiante y protegida durante todo el día</p>
-                  <a href="/PAGES/carrito.html" class="btn btn-outline-secondary" id="botonComprarCuCo">Comprar</a>
+                  <p class="card-text">$135</p>
+                  <button onclick="addToCart(29,'Crema facial piel normal',135)" class="btn btn-outline-secondary"
+                     id="botonComprarCuCo">Añadir al carrito</button>
                </div>
             </div>
          </div>
@@ -90,7 +125,10 @@
                   <h6 class="card-title">crema facial piel seca</h6>
                   <p class="card-text">Enriquecida con ingredientes naturales, esta fórmula ligera hidrata
                      profundamente, dejando tu piel suave, radiante y protegida durante todo el día</p>
-                  <a href="/PAGES/carrito.html" class="btn btn-outline-secondary" id="botonComprarCuCo">Comprar</a>
+                  <p class="card-text">$135</p>
+                  <button onclick="addToCart(30,'Crema facial piel seca',135)" class="btn btn-outline-secondary"
+                     id="botonComprarCuCo">Añadir al carrito</button>
+
                </div>
             </div>
          </div>
@@ -101,20 +139,24 @@
                   <h6 class="card-title">Crema facial v1</h6>
                   <p class="card-text">Enriquecida con ingredientes naturales, esta fórmula ligera hidrata
                      profundamente, dejando tu piel suave, radiante y protegida durante todo el día</p>
-                  <a href="/PAGES/carrito.html" class="btn btn-outline-secondary" id="botonComprarCuCo">Comprar</a>
+                  <p class="card-text">$130</p>
+                  <button onclick="addToCart(31,'Crema facial v1',135)" class="btn btn-outline-secondary"
+                     id="botonComprarCuCo">Añadir al carrito</button>
                </div>
             </div>
          </div>
-  
-<!--AQUI COMIENZAN LOS LIMPIADORES-->
+
+         <!--AQUI COMIENZAN LOS LIMPIADORES-->
          <div class="col">
-            <div class="card"id="tituloLimpieza">
+            <div class="card" id="tituloLimpieza">
                <img src="/ASSETS/IMG/productos/limpiadorFacialPielS.jpg" class="card-img-top" alt="...">
                <div class="card-body">
                   <h6 class="card-title">Limpiador facial piel seca</h6>
                   <p class="card-text">Limpia profundamente tu piel con nuestro limpiador facial, diseñado para eliminar
                      impurezas, exceso de grasa y maquillaje sin resecar.</p>
-                  <a href="/PAGES/carrito.html" class="btn btn-outline-secondary" id="botonComprarCuCo">Comprar</a>
+                  <p class="card-text">$140</p>
+                  <button onclick="addToCart(32,'Limpiador facial piel seca',140)" class="btn btn-outline-secondary"
+                     id="botonComprarCuCo">Añadir al carrito</button>
                </div>
             </div>
          </div>
@@ -125,7 +167,9 @@
                   <h6 class="card-title">Limpiador facial piel normal</h6>
                   <p class="card-text">Limpia profundamente tu piel con nuestro limpiador facial, diseñado para eliminar
                      impurezas, exceso de grasa y maquillaje sin resecar.</p>
-                  <a href="/PAGES/carrito.html" class="btn btn-outline-secondary" id="botonComprarCuCo">Comprar</a>
+                  <p class="card-text">$140</p>
+                  <button onclick="addToCart(33,'Limpiador facial piel normal',140)" class="btn btn-outline-secondary"
+                     id="botonComprarCuCo">Añadir al carrito</button>
                </div>
             </div>
          </div>
@@ -136,7 +180,9 @@
                   <h6 class="card-title">Limpiador facial piel grasa</h6>
                   <p class="card-text">Limpia profundamente tu piel con nuestro limpiador facial, diseñado para eliminar
                      impurezas, exceso de grasa y maquillaje sin resecar.</p>
-                  <a href="/PAGES/carrito.html" class="btn btn-outline-secondary" id="botonComprarCuCo">Comprar</a>
+                  <p class="card-text">$140</p>
+                  <button onclick="addToCart(34,'Limpiador facial piel grasa',140)" class="btn btn-outline-secondary"
+                     id="botonComprarCuCo">Añadir al carrito</button>
                </div>
             </div>
          </div>
@@ -147,21 +193,25 @@
                   <h6 class="card-title">Limpiador facial</h6>
                   <p class="card-text">Limpia profundamente tu piel con nuestro limpiador facial, diseñado para eliminar
                      impurezas, exceso de grasa y maquillaje sin resecar.</p>
-                  <a href="/PAGES/carrito.html" class="btn btn-outline-secondary" id="botonComprarCuCo">Comprar</a>
+                  <p class="card-text">$135</p>
+                  <button onclick="addToCart(35,'Limpiador facial',135)" class="btn btn-outline-secondary"
+                     id="botonComprarCuCo">Añadir al carrito</button>
                </div>
             </div>
          </div>
-<!--AQUI COMIENZAN LOS BLOQUEADORES-->
+         <!--AQUI COMIENZAN LOS BLOQUEADORES-->
 
          <div class="col">
-            <div class="card"id="tituloBloqueador">
+            <div class="card" id="tituloBloqueador">
                <img src="/ASSETS/IMG/productos/blloqueadorSolarPielGrasa.jpg" class="card-img-top" alt="...">
                <div class="card-body">
                   <h6 class="card-title">Bloqueador solar piel grasa</h6>
                   <p class="card-text">Protege tu piel todos los días con nuestro bloqueador solar. Ofrece una alta
                      protección contra rayos UVA/UVB, es resistente al agua y su fórmula ligera no deja sensación
                      grasosa. </p>
-                  <a href="/PAGES/carrito.html" class="btn btn-outline-secondary" id="botonComprarCuCo">Comprar</a>
+                  <p class="card-text">$180</p>
+                  <button onclick="addToCart(36,'Bloqueador solar piel grasa',180)" class="btn btn-outline-secondary"
+                     id="botonComprarCuCo">Añadir al carrito</button>
                </div>
             </div>
          </div>
@@ -173,7 +223,9 @@
                   <p class="card-text">Protege tu piel todos los días con nuestro bloqueador solar. Ofrece una alta
                      protección contra rayos UVA/UVB, es resistente al agua y su fórmula ligera no deja sensación
                      grasosa. </p>
-                  <a href="/PAGES/carrito.html" class="btn btn-outline-secondary" id="botonComprarCuCo">Comprar</a>
+                  <p class="card-text">$180</p>
+                  <button onclick="addToCart(37,'Bloqueador solar piel normal',180)" class="btn btn-outline-secondary"
+                     id="botonComprarCuCo">Añadir al carrito</button>
                </div>
             </div>
          </div>
@@ -185,7 +237,9 @@
                   <p class="card-text">Protege tu piel todos los días con nuestro bloqueador solar. Ofrece una alta
                      protección contra rayos UVA/UVB, es resistente al agua y su fórmula ligera no deja sensación
                      grasosa. </p>
-                  <a href="/PAGES/carrito.html" class="btn btn-outline-secondary" id="botonComprarCuCo">Comprar</a>
+                  <p class="card-text">$180</p>
+                  <button onclick="addToCart(38,'Bloqueador solar piel seca',180)" class="btn btn-outline-secondary"
+                     id="botonComprarCuCo">Añadir al carrito</button>
                </div>
             </div>
          </div>
@@ -197,7 +251,9 @@
                   <p class="card-text">Protege tu piel todos los días con nuestro bloqueador solar. Ofrece una alta
                      protección contra rayos UVA/UVB, es resistente al agua y su fórmula ligera no deja sensación
                      grasosa. </p>
-                  <a href="/PAGES/carrito.html" class="btn btn-outline-secondary" id="botonComprarCuCo">Comprar</a>
+                  <p class="card-text">$175</p>
+                  <button onclick="addToCart(39,'Bloqueador solar',175)" class="btn btn-outline-secondary"
+                     id="botonComprarCuCo">Añadir al carrito</button>
                </div>
             </div>
          </div>
@@ -208,12 +264,30 @@
 
 
    <script src="/ASSETS/JS/scriptHF.js"></script>
+   <script src="/ASSETS/JS/agregarProductos.js"></script>
    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"
       integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p"
       crossorigin="anonymous"></script>
    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js"
       integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF"
       crossorigin="anonymous"></script>
+
+      <script>
+         document.addEventListener("DOMContentLoaded", () => {
+               const loadingScreen = document.getElementById("loadingScreen");
+   
+               // Agregar una transición de opacidad para desaparecer la pantalla de carga
+               setTimeout(() => {
+                  loadingScreen.style.transition = "opacity 0.5s ease-out"; //Transición suave
+                  loadingScreen.style.opacity = "0"; //Hacer que desaparezca
+   
+                  //Esperar a que termine la transición  antes de eliminarlo
+                  setTimeout(() => {
+                     loadingScreen.remove(); // Eliminar el elemento del DOM
+                  }, 0); 
+               }, 1000); 
+         });
+      </script>
 </body>
 
 </html>

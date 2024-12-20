@@ -16,18 +16,26 @@
 html main{
    background:rgba(6, 3, 3, 0.6);
    padding-top: 0%;
+   padding-top: 20px;
 }
 
 main #container-productos{
 width: 80%;
 flex-wrap: wrap;
 margin-top: 30px;
+padding-bottom: 20px;;
 text-align: center;
 }
 
 main #container-productos h5{
    color: #ffffff;
    font-family: 'Overlock';
+}
+
+main #container-productos h4{
+   color: #ffffff;
+   font-family: 'Overlock';
+   font-size: 1.8rem;
 }
 
 main #container-productos p{
@@ -153,18 +161,24 @@ main .card{
 
 .card-body{
    background-color: black;
+   display:flex;
+   flex-direction: column;
+   align-items: center;
+
 }
 
-.card-body #botonComprarcuCo{
+.card-body #botonComprarCuCo{
    border-color: #98bf3e !important;
+   margin-top: auto;
 }
 
-.card-body #botonComprarcuCo:hover{
+.card-body #botonComprarCuCo:hover{
    background-color: #98bf3e;
 }
 
 .card-body #botonComprarCapilar{
    border-color: #9f2884 !important;
+   margin-top: auto;
 }
 
 .card-body #botonComprarCapilar:hover{
@@ -173,6 +187,7 @@ main .card{
 
 .card-body #botonComprarFa{
    border-color: #3dbfbb !important;
+   margin-top: auto;
 }
 
 .card-body #botonComprarFa:hover{
@@ -181,9 +196,13 @@ main .card{
 
 .card-body #botonComprarBe{
    border-color: #f1645a !important;
+   margin-top: auto;
 }
 
 .card-body #botonComprarBe:hover{
    background-color: #f1645a;
 }
 
+#botonComprar{
+   margin-top: auto;
+}

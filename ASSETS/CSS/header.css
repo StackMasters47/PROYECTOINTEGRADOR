@@ -55,44 +55,36 @@ body{
 .nav-link.active::before {
   width: 100%;
   visibility: visible;
-  
 }
 
-.dropdown-menu{
-  background-color: rgba(0, 0, 0, 1);
-    
-}
 .dropdown-item{
   color:rgb(255,255,255);
 }
+
 @media (max-width: 991px){
   .sidebar {
       background-color: rgba(255, 255, 255, 0.15) !important;
       backdrop-filter: blur(10px);
-      
-  }
-  .dropdown-menu{
-    background-color: rgba(255, 255, 255, 0);
-      backdrop-filter: blur(1px);
   }
 }
 .nav-link.dropdown-toggle::after {
   display: none;
 }
 
-#cuidadoCorporal:hover{
+#cuidadoCorporal:hover a{
   background-color: #98bf3e;
 
 }
 #cuidadoCorporal a:active{
   background-color: #98bf3e;
 }
-/* .dropdown:hover .dropdown-menu {
+
+.dropdown:hover .dropdown-menu {
   display: block;
-} */
+}
 
 
-#cuidadoCapilar:hover{
+#cuidadoCapilar:hover a{
   background-color: #9f2884;
 
 }
@@ -101,16 +93,14 @@ body{
 }
 
 
-#cuidadoFacial:hover{
+#cuidadoFacial:hover a{
   background-color: #3dbfbb;
 
 }
-#cuidadoFacial a:active{
-  background-color: #3dbfbb;
-}
 
 
-#Belleza:hover{
+
+#Belleza:hover a{
   background-color: #f1645a;
 
 }

@@ -4,6 +4,22 @@ function flipCard(card) {
 let navLinks = document.querySelectorAll('.nav-link');
 const currentUrl = window.location.href;
 
+
+document.addEventListener("DOMContentLoaded", () => {
+    const loadingScreen = document.getElementById("loadingScreen");
+
+    // Agregar una transición de opacidad para desaparecer la pantalla de carga
+    setTimeout(() => {
+        loadingScreen.style.transition = "opacity 0.5s ease-out"; //Transición suave
+        loadingScreen.style.opacity = "0"; //Hacer que desaparezca
+
+        //Esperar a que termine la transición  antes de eliminarlo
+        setTimeout(() => {
+            loadingScreen.remove(); // Eliminar el elemento del DOM
+        }, 0); 
+    }, 1000); 
+});
+
 // Función asíncrona para esperar a que navLinks tenga datos
 async function paginaActiva() {
     if (navLinks.length > 0) {

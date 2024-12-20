@@ -17,18 +17,28 @@
 }
 
 
-main .card{
+main .card {
+
 
    height: 100%;
    border-color: black;
+   display: flex;
+   flex-direction: column;
+   justify-content: space-between;
+   align-items: center;
 }
 
-.card-body{
+main .card-body {
    background-color: black;
    color: #ffffff !important;
    font-family: 'Montserrat' !important;
    text-align: center;
+   font-size: small;
+   display: flex;
+   flex-direction: column;
    justify-content: space-between;
+   flex-grow: 1;
+   align-items: center;
 }
 
 h5 .card-title{
@@ -47,7 +57,7 @@ h5 .card-title{
    width: 80%;
    max-width: 80%;
    min-width: 80%;
-   opacity: 85%;
+
 }
 
 #botonComprarCuCo{
@@ -55,6 +65,7 @@ h5 .card-title{
    border-width: 5px;
    border-radius: 10%;
    color: #ffffff;
+   margin-top: auto;
 }
 #botonComprarCuCo:hover{
    background-color: #3dbfbb;

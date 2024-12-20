@@ -6,11 +6,32 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="/ASSETS/CSS/inicio.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="icon" href="/ASSETS/IMG/imgLogo/fondoPajaro.png" type="image/x-icon">
+    <link rel="stylesheet" href="/ASSETS/CSS/loader.css">
+    <script type="text/javascript"
+  src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+
+<script type="text/javascript">
+  emailjs.init('Psm2YGmZjcvgWMnjt')
+</script>
     <title>Home</title>
 </head>
 
 <body>
+    <div id="loadingScreen" class="d-flex justify-content-center align-items-center vh-100 bg-black">
+        <div class="text-center">
+            <div class="mb-4">
+                <img src="/ASSETS/IMG/imgLogo/sicaru_ave.webp" alt="Logo" class="logo-animation" style="max-width: 150px; margin-left: 10px;">
+            </div>
+            <div class="container-loader d-flex justify-content-center">
+                <div class="ring"></div>
+                <div class="ring"></div>
+                <div class="ring"></div>
+            </div>
+        </div>
+    </div>
+
     <header></header>
 
     <!-- Carrusel banner -->
@@ -28,7 +49,7 @@
             <div class="carousel-item">
                 <img src="/ASSETS/IMG/imgInicio/banner3.png" class="d-block w-100" alt="image3">
             </div>
-            
+
         </div>
         <a class="carousel-control-prev" href="#carouselExampleFade" role="button" data-bs-slide="prev">
             <span class="carousel-control-prev-icon" aria-hidden="true"></span>
@@ -44,48 +65,51 @@
     <br>
     <br>
 
-    <!-- Categorías -->
-    <div class="hm-page-block">
-        <div class="container">
-            <div class="header-title">
-                <h1 data-aos="fade-up" data-aos-duration="3000">Básicos para tu rutina</h1>
-            </div>
-            <div class="hm-grid-category">
-                <div class="grid-item" data-aos="fade-up" data-aos-duration="1000">
-                    <a href="/PAGES/paginaBelleza.html">
-                        <img src="/ASSETS/IMG/imgInicio/belleza.jpg" alt="">
-                        <div class="c-info">
-                            <h3>Belleza</h3>
-                        </div>
-                    </a>
-                </div>
-                <div class="grid-item" data-aos="fade-up" data-aos-duration="1500">
-                    <a href="/PAGES/paginaCuidadoFacial.html">
-                        <img src="/ASSETS/IMG/imgInicio/facial.jpg" alt="">
-                        <div class="c-info">
-                            <h3>Cuidado Facial</h3>
-                        </div>
-                    </a>
-                </div>
-                <div class="grid-item" data-aos="fade-up" data-aos-duration="2000">
-                    <a href="/PAGES/paginaCuidadoCorporal.html">
-                        <img src="/ASSETS/IMG/imgInicio/corporal.jpg" alt="">
-                        <div class="c-info">
-                            <h3>Cuidado corporal</h3>
-                        </div>
-                    </a>
-                </div>
-                <div class="grid-item" data-aos="fade-up" data-aos-duration="2000">
-                    <a href="/PAGES/paginaCuidadoCapilar.html">
-                        <img src="/ASSETS/IMG/imgInicio/capilar.jpg" alt="">
-                        <div class="c-info">
-                            <h3>Cuidado capilar</h3>
-                        </div>
-                    </a>
-                </div>
-            </div>
-        </div>
+    
+
+    <!--Versioon 2 categorias-->
+
+    <div class="title2">
+        <h1>Básicos para tu rutina</h1>
     </div>
+    <div class="team-area"> 
+        
+        <figure class="box">
+            <figcaption>
+                <h2><a href="/PAGES/paginaBelleza.html" >Belleza</a></h2>
+            </figcaption>
+            
+            <img alt="" src="/ASSETS/IMG/imgInicio/belleza.jpg">
+        </figure>
+        
+        <figure class="box">
+            <figcaption>
+                <h2><a href="/PAGES/paginaCuidadoCorporal.html">Cuidado corporal</a></h2>
+                
+            </figcaption>
+            
+            <img alt="" src="/ASSETS/IMG/imgInicio/corporal.jpg">
+        </figure>
+        
+        <figure class="box">
+            <figcaption>
+                <h2><a href="/PAGES/paginaCuidadoFacial.html">Cuidado facial</a></h2>
+                
+            </figcaption>
+            
+            <img alt="" src="/ASSETS/IMG/imgInicio/facial.jpg">
+        </figure>
+
+        <figure class="box">
+            <figcaption>
+                <h2><a href="/PAGES/paginaCuidadoCapilar.html">Cuidado capilar</a></h2>
+                
+            </figcaption>
+            
+            <img alt="" src="/ASSETS/IMG/imgInicio/capilar.jpg">
+        </figure>
+    </div>
+
     <br>
     <br>
     <br>
@@ -97,7 +121,7 @@
     <!---productos-->
 
     <div class="title2">
-        <h1>Top productos</h1>
+        <h1>Favoritos </h1>
     </div>
 
     <div class="wrapper">
@@ -105,17 +129,20 @@
         <div class="product-area">
 
             <div class="img-area">
-                <img alt="Product 1" src="/ASSETS/IMG/productos/cremaCorporalN.jpg">
+                <img alt="Product 1" src="/ASSETS/IMG/productos/cremaFacialRosa.jpg">
                 <div class="product-overlay">
                     <div class="overlay">
-                        <a class="btn-1" href="/PAGES/carrito.html">Agregar al carito</a>
+                        <button onclick="addToCart(1,'Crema corporal piel normal',140)" class="btn-1">Añadir al
+                            carrito</button>
+                        <!--<a class="btn-1" href="/PAGES/carrito.html">Agregar al carito</a>-->
+                        <a class="btn-2" href="/PAGES/producto1.html">Ver detalles</a>
 
                     </div>
                 </div>
             </div>
 
             <div class="info-area">
-                <h3>Crema corporal piel normal</h3>
+                <h3>Hidratante facial piel mixta</h3>
                 <div class="rating">
                     <span class="fa fa-star checked"></span>
                     <span class="fa fa-star checked"></span>
@@ -125,7 +152,7 @@
                 </div>
                 <div class="product-price">
                     <div class="offer">Oferta</div>
-                    <strong class="price"><del>$39.99</del> $23.99</strong>
+                    <strong class="price"><del></del> $203.99</strong>
                 </div>
             </div>
         </div>
@@ -135,13 +162,16 @@
                 <img alt="" src="/ASSETS/IMG/productos/cremaCorporalS.jpg">
                 <div class="product-overlay">
                     <div class="overlay">
-                        <a class="btn-1" href="/PAGES/carrito.html">Agregar al carito</a>
+                        <!--<a class="btn-1" href="/PAGES/carrito.html">Agregar al carito</a>-->
+                        <button onclick="addToCart(1,'Crema corporal piel normal',140)" class="btn-1">Añadir al
+                            carrito</button>
+                        <a class="btn-2" href="/PAGES/producto2.html">Ver detalles</a>
 
                     </div>
                 </div>
             </div>
             <div class="info-area">
-                <h3>Crema corporal piel seca</h3>
+                <h3>Hidratante corporal piel seca</h3>
                 <div class="rating">
                     <span class="fa fa-star checked"></span>
                     <span class="fa fa-star checked"></span>
@@ -151,17 +181,55 @@
                 </div>
                 <div class="product-price">
                     <div class="offer">Oferta</div>
-                    <strong class="price"><del>$229.00</del> $149.00</strong>
+                    <strong class="price"><del></del> $149.00</strong>
                     
                 </div>
             </div>
         </div>
         <div class="product-area">
             <div class="img-area">
+                <img alt="" src="/ASSETS/IMG/productos/acondicionadorRizo.jpg">
+                <div class="product-overlay">
+                    <div class="overlay">
+                        <!--<a class="btn-1" href="/PAGES/carrito.html">Agregar al carito</a>-->
+                        <button onclick="addToCart(1,'Crema corporal piel normal',140)" class="btn-1">Añadir al
+                            carrito</button>
+                        <a class="btn-2" href="/PAGES/producto3.html">Ver detalles</a>
+                    </div>
+                    
+                </div>
+            </div>
+            
+            <div class="info-area">
+                <h3>Acondicionador cabello rizado</h3>
+                <div class="rating">
+                    <span class="fa fa-star checked"></span>
+                    <span class="fa fa-star checked"></span>
+                    <span class="fa fa-star checked"></span>
+                    <span class="fa fa-star checked"></span>
+                    <span class="fa fa-star checked"></span>
+                </div>
+                <div class="product-price">
+                    <div class="offer">Oferta</div>
+                    <strong class="price"><del>$139.99</del> $100.00</strong>
+
+                </div>
+            </div>
+        </div>
+        </div>
+
+        <div class="title2">
+            <h1>Top productos</h1>
+        </div>
+
+        <div class="wrapper">
+        <div class="product-area">
+            <div class="img-area">
                 <img alt="" src="/ASSETS/IMG/productos/acondicionadorLiso.jpg">
                 <div class="product-overlay">
                     <div class="overlay">
-                        <a class="btn-1" href="/PAGES/carrito.html">Agregar al carito</a>
+                        <a class="btn-1" href="/PAGES/carrito.html">Añadir al
+                            carrito</a>
 
                     </div>
                 </div>
@@ -176,42 +244,23 @@
                     <span class="fa fa-star checked"></span>
                 </div>
                 <div class="product-price">
-                    <div class="offer">Oferta</div>
-                    <strong class="price"><del>$39.99</del> $23.99</strong>
-                </div>
-            </div>
-        </div>
-        <div class="product-area">
-            <div class="img-area">
-                <img alt="" src="/ASSETS/IMG/productos/acondicionadorRizo.jpg">
-                <div class="product-overlay">
-                    <div class="overlay">
-                        <a class="btn-1" href="/PAGES/carrito.html">Agregar al carito</a>
 
-                    </div>
-                </div>
-            </div>
-            <div class="info-area">
-                <h3>Acondicionador cabello rizado</h3>
-                <div class="rating">
-                    <span class="fa fa-star checked"></span>
-                    <span class="fa fa-star checked"></span>
-                    <span class="fa fa-star checked"></span>
-                    <span class="fa fa-star checked"></span>
-                    <span class="fa fa-star checked"></span>
-                </div>
-                <div class="product-price">
                     <div class="offer">Oferta</div>
-                    <strong class="price"><del>$39.99</del> $23.99</strong>
+                    <strong class="price"><del>$139.99</del> $110.00</strong>
+
+             
+
                 </div>
             </div>
         </div>
+       
         <div class="product-area">
             <div class="img-area">
                 <img alt="" src="/ASSETS/IMG/productos/shampooR.jpg">
                 <div class="product-overlay">
                     <div class="overlay">
-                        <a class="btn-1" href="/PAGES/carrito.html">Agregar al carito</a>
+                        <a class="btn-1" href="/PAGES/carrito.html">Añadir al
+                            carrito</a>
 
                     </div>
                 </div>
@@ -236,7 +285,8 @@
                 <img alt="" src="/ASSETS/IMG/productos/shampooLacio.jpg">
                 <div class="product-overlay">
                     <div class="overlay">
-                        <a class="btn-1" href="/PAGES/carrito.html">Agregar al carito</a>
+                        <a class="btn-1" href="/PAGES/carrito.html">Añadir al
+                            carrito</a>
 
                     </div>
                 </div>
@@ -258,41 +308,45 @@
         </div>
         <div class="product-area">
             <div class="img-area">
-                <img alt="" src="/ASSETS/IMG/productos/cremaFacialG.jpg">
+                <img alt="" src="/ASSETS/IMG/productos/bloqueadorSolar.jpg">
                 <div class="product-overlay">
                     <div class="overlay">
-                        <a class="btn-1" href="/PAGES/carrito.html">Agregar al carito</a>
+                        <a class="btn-1" href="/PAGES/carrito.html">Añadir al
+                            carrito</a>
 
-                    </div> 
+                    </div>
                 </div>
             </div>
+          
             <div class="info-area">
-                <h3>Crema facial piel normal </h3>
+                <h3>Bloqueador solar</h3>
                 <div class="rating">
                     <span class="fa fa-star checked"></span>
                     <span class="fa fa-star checked"></span>
                     <span class="fa fa-star checked"></span>
                     <span class="fa fa-star checked"></span>
-                    <span class="fa fa-star"></span>
+                    <span class="fa fa-star checked"></span>
                 </div>
                 <div class="product-price">
                     <div class="offer hidden">Oferta</div>
-                    <strong class="price"><del></del> $100</strong>
+                    <strong class="price"><del></del> $150.00</strong>
                 </div>
             </div>
         </div>
         <div class="product-area">
             <div class="img-area">
-                <img alt="" src="/ASSETS/IMG/productos/cremaFacialN.jpg">
+                <img alt="" src="/ASSETS/IMG/productos/cremaFacialG.jpg">
                 <div class="product-overlay">
                     <div class="overlay">
-                        <a class="btn-1" href="/PAGES/carrito.html">Agregar al carito</a>
+                        <a class="btn-1" href="/PAGES/carrito.html">Añadir al
+                            carrito</a>
 
-                    </div>
+                    </div> 
                 </div>
             </div>
+          
             <div class="info-area">
-                <h3>Crema facial piel seca</h3>
+                <h3>Hidratante facial piel seca</h3>
                 <div class="rating">
                     <span class="fa fa-star checked"></span>
                     <span class="fa fa-star checked"></span>
@@ -302,7 +356,7 @@
                 </div>
                 <div class="product-price">
                     <div class="offer hidden">Oferta</div>
-                    <strong class="price"><del></del> $100</strong>
+                    <strong class="price"><del></del> $100.00</strong>
                 </div>
             </div>
         </div>
@@ -311,7 +365,8 @@
                 <img alt="" src="/ASSETS/IMG/productos/serumFacialN.jpg">
                 <div class="product-overlay">
                     <div class="overlay">
-                        <a class="btn-1" href="/PAGES/carrito.html">Agregar al carito</a>
+                        <a class="btn-1" href="/PAGES/carrito.html">Añadir al
+                            carrito</a>
 
                     </div>
                 </div>
@@ -332,6 +387,7 @@
             </div>
         </div>
     </div>
+    
 
 
 
@@ -370,7 +426,7 @@
                                 <span class="fa fa-star checked"></span>
                                 <span class="fa fa-star checked"></span>
                                 <span class="fa fa-star checked"></span>
-                                 <!-- 5 estrellas -->
+                                <!-- 5 estrellas -->
                             </div>
                             <p>"Me encanta este producto, es absolutamente maravilloso!"</p>
                             <p>- Comprador Contento</p>
@@ -395,28 +451,119 @@
                     </div>
                 </div>
             </div>
-           
+
         </div>
     </div>
     <br>
     <br>
     <br>
+<div class="footerC">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-3 col-sm-6">
+                <div class="single-box">
+                    <img src="/ASSETS/IMG/imgLogo/SicaruBlanco.webp" alt="">
+                <p>Nuestra plataforma de e-commerce destaca en el mercado de cuidado personal por ofrecer una experiencia única,
+                    enfocada en las necesidades individuales de lxs usuarixs.</p>
+                    <h3>Formas de pago</h3>
+                    <div class="card-area">
+                            <i class="fa fa-cc-visa"></i>
+                            <i class="fa fa-credit-card"></i>
+                            <i class="fa fa-cc-mastercard"></i>
+                            <i class="fa fa-cc-paypal"></i>
+                    </div>
+                
+                </div>
+            </div>
+            <div class="col-lg-3 col-sm-6">
+                <div class="single-box">
+                    
+                <ul>
+                    <h2>Información</h2>
+                    <li><a href="/PAGES/contacto.html">Contacto</a></li>
+                    <li><a href="/PAGES/nosotros.html">Nosotros</a></li>
+                    <li><a href="/PAGES/registro.html">Registrarse</a></li>
+                    <li><a href="/PAGES/iniciar_sesion.html">Iniciar sesión</a></li>
+                    <li><a href="/PAGES/terminosYCondiciones.html">Aviso de privacidad</a></li>
+                    
+                </ul>
+                </div>                    
+            </div>
+            <div class="col-lg-3 col-sm-6">
+                <div class="single-box">
+                    
+                <ul>
+                    <h2>Productos</h2>
+
+                    <li><a href="/index.html">Inicio</a></li>
+                    <li><a href="/PAGES/paginaBelleza.html">Belleza</a></li>
+                    <li><a href="/PAGES/paginaCuidadoFacial.html">Cuidado facial</a></li>
+                    <li><a href="/PAGES/paginaCuidadoCapilar.html">Cuidado capilar</a></li>
+                    <li><a href="/PAGES/paginaCuidadoCorporal.html">Cuidado Corporal</a></li>
+
+
+                 
+                </ul>
+                </div>                    
+            </div>
+            <div class="col-lg-3 col-sm-6">
+               <div class="single-box">
+                     <h2>Newsletter</h2>
+                    <p>Sé parte de nuestra comunidad exclusiva. Suscríbete a nuestro boletín y recibe las mejores ofertas, noticias y eventos antes que nadie.
+                    </p>
+                   <form id="form">
+                        <div class="field">
+                          <!--<label for="email_id">email_id</label>-->
+                          <input type="text" name="email_id" id="email_id" placeholder="Introduce tu correo" aria-label="Enter your Email ..." aria-describedby="basic-addon2">
+                        </div>
+                      
+                        <input type="submit" id="button" value="Suscribirme" >
+                      </form>
+                      
+                    <h2>Siguenos</h2>
+                    <p class="socials">
+                        <i class="fa fa-facebook"></i>
+                        <i class="fa fa-dribbble"></i>
+                        <i class="fa fa-pinterest"></i>
+                        <i class="fa fa-twitter"></i>
+                    </p>
+                
+                </div>
+            </div>
+        </div>
+    </div>
+
+</div>
 
 
 
-
-
-
-
-
-
-    <footer></footer>
+   
 
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/5.1.0/js/bootstrap.bundle.min.js"></script>
     <script src="ASSETS/JS/index.js"></script>
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
     <script src="/ASSETS/JS/scriptHF.js"></script>
+    <script src="/ASSETS/JS/agregarProductos.js"></script>
+    <script src="/ASSETS/JS/newsletter.js"></script>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+            const loadingScreen = document.getElementById("loadingScreen");
+    
+            // Agregar una transición de opacidad para desaparecer la pantalla de carga
+            setTimeout(() => {
+                loadingScreen.style.transition = "opacity 0.5s ease-out"; //Transición suave
+                loadingScreen.style.opacity = "0"; //Hacer que desaparezca
+    
+                //Esperar a que termine la transición  antes de eliminarlo
+                setTimeout(() => {
+                    loadingScreen.remove(); // Eliminar el elemento del DOM
+                }, 0); 
+            }, 1000); 
+        });
+    </script>
+
 </body>
 
 </html>
